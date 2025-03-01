@@ -1,0 +1,344 @@
+testing-5,000
+	images: raw RGB
+
+training-18,000
+	images: raw RGB
+	v1.2
+	v2.0
+
+validation-2,000 
+	images: raw RGB
+	v1.2
+		instances: instance-specific annotations (16-bit) 
+		labels: class-specific labels for semantic segmentation (8-bit with color-palette)
+		panoptic: panoptic annotations (24-bit RGB images)
+	v2.0
+		instances:  70 object classes are annotated in an instance-specific manner 
+				(i.e. individual instances are labeled separately)
+		labels
+		panoptic
+		polygons: raw polygonal annotations (JSON files) 
+				pixel-wise labels based on polygon annotations for 124 object classes
+
+config_v1.2
+config _v2.0
+demo:  run 'python demo.py'  to access label information and for mappings between label IDs and category names.
+LICENSE
+README
+
+
+
+
+labels from the example image:
+There are 124 labels in the config file
+                          Bird ( 0): animal--bird                             has instances: True
+                 Ground Animal ( 1): animal--ground-animal                    has instances: True
+             Ambiguous Barrier ( 2): construction--barrier--ambiguous         has instances: False
+                Concrete Block ( 3): construction--barrier--concrete-block    has instances: False
+                          Curb ( 4): construction--barrier--curb              has instances: False
+                         Fence ( 5): construction--barrier--fence             has instances: False
+                    Guard Rail ( 6): construction--barrier--guard-rail        has instances: False
+                       Barrier ( 7): construction--barrier--other-barrier     has instances: False
+                   Road Median ( 8): construction--barrier--road-median       has instances: False
+                     Road Side ( 9): construction--barrier--road-side         has instances: False
+                Lane Separator (10): construction--barrier--separator         has instances: False
+             Temporary Barrier (11): construction--barrier--temporary         has instances: True
+                          Wall (12): construction--barrier--wall              has instances: False
+                     Bike Lane (13): construction--flat--bike-lane            has instances: False
+             Crosswalk - Plain (14): construction--flat--crosswalk-plain      has instances: True
+                      Curb Cut (15): construction--flat--curb-cut             has instances: False
+                      Driveway (16): construction--flat--driveway             has instances: True
+                       Parking (17): construction--flat--parking              has instances: False
+                 Parking Aisle (18): construction--flat--parking-aisle        has instances: False
+               Pedestrian Area (19): construction--flat--pedestrian-area      has instances: False
+                    Rail Track (20): construction--flat--rail-track           has instances: False
+                          Road (21): construction--flat--road                 has instances: False
+                 Road Shoulder (22): construction--flat--road-shoulder        has instances: False
+                  Service Lane (23): construction--flat--service-lane         has instances: False
+                      Sidewalk (24): construction--flat--sidewalk             has instances: False
+                Traffic Island (25): construction--flat--traffic-island       has instances: False
+                        Bridge (26): construction--structure--bridge          has instances: False
+                      Building (27): construction--structure--building        has instances: False
+                        Garage (28): construction--structure--garage          has instances: False
+                        Tunnel (29): construction--structure--tunnel          has instances: False
+                        Person (30): human--person--individual                has instances: True
+                  Person Group (31): human--person--person-group              has instances: False
+                     Bicyclist (32): human--rider--bicyclist                  has instances: True
+                  Motorcyclist (33): human--rider--motorcyclist               has instances: True
+                   Other Rider (34): human--rider--other-rider                has instances: True
+    Lane Marking - Dashed Line (35): marking--continuous--dashed              has instances: False
+  Lane Marking - Straight Line (36): marking--continuous--solid               has instances: False
+    Lane Marking - Zigzag Line (37): marking--continuous--zigzag              has instances: False
+      Lane Marking - Ambiguous (38): marking--discrete--ambiguous             has instances: False
+   Lane Marking - Arrow (Left) (39): marking--discrete--arrow--left           has instances: True
+  Lane Marking - Arrow (Other) (40): marking--discrete--arrow--other          has instances: True
+  Lane Marking - Arrow (Right) (41): marking--discrete--arrow--right          has instances: True
+Lane Marking - Arrow (Split Left or Straight) (42): marking--discrete--arrow--split-left-or-straight has instances: True
+Lane Marking - Arrow (Split Right or Straight) (43): marking--discrete--arrow--split-right-or-straight has instances: True
+Lane Marking - Arrow (Straight) (44): marking--discrete--arrow--straight       has instances: True
+      Lane Marking - Crosswalk (45): marking--discrete--crosswalk-zebra       has instances: True
+ Lane Marking - Give Way (Row) (46): marking--discrete--give-way-row          has instances: True
+Lane Marking - Give Way (Single) (47): marking--discrete--give-way-single       has instances: True
+Lane Marking - Hatched (Chevron) (48): marking--discrete--hatched--chevron      has instances: False
+Lane Marking - Hatched (Diagonal) (49): marking--discrete--hatched--diagonal     has instances: False
+          Lane Marking - Other (50): marking--discrete--other-marking         has instances: True
+      Lane Marking - Stop Line (51): marking--discrete--stop-line             has instances: True
+Lane Marking - Symbol (Bicycle) (52): marking--discrete--symbol--bicycle       has instances: True
+ Lane Marking - Symbol (Other) (53): marking--discrete--symbol--other         has instances: True
+           Lane Marking - Text (54): marking--discrete--text                  has instances: True
+Lane Marking (only) - Dashed Line (55): marking-only--continuous--dashed         has instances: False
+Lane Marking (only) - Crosswalk (56): marking-only--discrete--crosswalk-zebra  has instances: False
+   Lane Marking (only) - Other (57): marking-only--discrete--other-marking    has instances: False
+    Lane Marking (only) - Test (58): marking-only--discrete--text             has instances: False
+                      Mountain (59): nature--mountain                         has instances: False
+                          Sand (60): nature--sand                             has instances: False
+                           Sky (61): nature--sky                              has instances: False
+                          Snow (62): nature--snow                             has instances: False
+                       Terrain (63): nature--terrain                          has instances: False
+                    Vegetation (64): nature--vegetation                       has instances: False
+                         Water (65): nature--water                            has instances: False
+                        Banner (66): object--banner                           has instances: True
+                         Bench (67): object--bench                            has instances: True
+                     Bike Rack (68): object--bike-rack                        has instances: True
+                   Catch Basin (69): object--catch-basin                      has instances: True
+                   CCTV Camera (70): object--cctv-camera                      has instances: True
+                  Fire Hydrant (71): object--fire-hydrant                     has instances: True
+                  Junction Box (72): object--junction-box                     has instances: True
+                       Mailbox (73): object--mailbox                          has instances: True
+                       Manhole (74): object--manhole                          has instances: True
+                 Parking Meter (75): object--parking-meter                    has instances: True
+                   Phone Booth (76): object--phone-booth                      has instances: True
+                       Pothole (77): object--pothole                          has instances: False
+       Signage - Advertisement (78): object--sign--advertisement              has instances: True
+           Signage - Ambiguous (79): object--sign--ambiguous                  has instances: True
+                Signage - Back (80): object--sign--back                       has instances: True
+         Signage - Information (81): object--sign--information                has instances: True
+               Signage - Other (82): object--sign--other                      has instances: True
+               Signage - Store (83): object--sign--store                      has instances: True
+                  Street Light (84): object--street-light                     has instances: True
+                          Pole (85): object--support--pole                    has instances: True
+                    Pole Group (86): object--support--pole-group              has instances: False
+            Traffic Sign Frame (87): object--support--traffic-sign-frame      has instances: True
+                  Utility Pole (88): object--support--utility-pole            has instances: True
+                  Traffic Cone (89): object--traffic-cone                     has instances: True
+Traffic Light - General (Single) (90): object--traffic-light--general-single    has instances: True
+   Traffic Light - Pedestrians (91): object--traffic-light--pedestrians       has instances: True
+Traffic Light - General (Upright) (92): object--traffic-light--general-upright   has instances: True
+Traffic Light - General (Horizontal) (93): object--traffic-light--general-horizontal has instances: True
+      Traffic Light - Cyclists (94): object--traffic-light--cyclists          has instances: True
+         Traffic Light - Other (95): object--traffic-light--other             has instances: True
+      Traffic Sign - Ambiguous (96): object--traffic-sign--ambiguous          has instances: True
+           Traffic Sign (Back) (97): object--traffic-sign--back               has instances: True
+Traffic Sign - Direction (Back) (98): object--traffic-sign--direction-back     has instances: True
+Traffic Sign - Direction (Front) (99): object--traffic-sign--direction-front    has instances: True
+          Traffic Sign (Front) (100): object--traffic-sign--front              has instances: True
+        Traffic Sign - Parking (101): object--traffic-sign--information-parking has instances: True
+Traffic Sign - Temporary (Back) (102): object--traffic-sign--temporary-back     has instances: True
+Traffic Sign - Temporary (Front) (103): object--traffic-sign--temporary-front    has instances: True
+                     Trash Can (104): object--trash-can                        has instances: True
+                       Bicycle (105): object--vehicle--bicycle                 has instances: True
+                          Boat (106): object--vehicle--boat                    has instances: True
+                           Bus (107): object--vehicle--bus                     has instances: True
+                           Car (108): object--vehicle--car                     has instances: True
+                       Caravan (109): object--vehicle--caravan                 has instances: True
+                    Motorcycle (110): object--vehicle--motorcycle              has instances: True
+                      On Rails (111): object--vehicle--on-rails                has instances: True
+                 Other Vehicle (112): object--vehicle--other-vehicle           has instances: True
+                       Trailer (113): object--vehicle--trailer                 has instances: True
+                         Truck (114): object--vehicle--truck                   has instances: True
+                 Vehicle Group (115): object--vehicle--vehicle-group           has instances: False
+                  Wheeled Slow (116): object--vehicle--wheeled-slow            has instances: True
+                   Water Valve (117): object--water-valve                      has instances: True
+                     Car Mount (118): void--car-mount                          has instances: False
+                       Dynamic (119): void--dynamic                            has instances: False
+                   Ego Vehicle (120): void--ego-vehicle                        has instances: False
+                        Ground (121): void--ground                             has instances: False
+                        Static (122): void--static                             has instances: False
+                     Unlabeled (123): void--unlabeled                          has instances: False
+
+
+Panoptic segments:
+
+segment        1: label nature                                  , area 4476772, bbox [0, 0, 3983, 1453]
+segment        2: label construction                            , area 3208466, bbox [0, 1752, 3983, 1178]
+segment        3: label construction                            , area    366, bbox [1608, 1742, 72, 15]
+segment        4: label construction                            , area  38557, bbox [1912, 1853, 997, 151]
+segment        5: label construction                            , area   1365, bbox [2674, 1932, 237, 46]
+segment        6: label void                                    , area 506624, bbox [0, 2835, 3983, 152]
+segment        7: label construction                            , area 829956, bbox [0, 829, 3176, 1097]
+segment        8: label construction                            , area   1700, bbox [0, 1866, 454, 45]
+segment        9: label human                                   , area    213, bbox [859, 1781, 19, 17]
+segment       10: label construction                            , area   5910, bbox [2262, 1832, 290, 63]
+segment       11: label construction                            , area   3674, bbox [0, 1878, 455, 48]
+segment       12: label object                                  , area   1618, bbox [449, 1688, 42, 40]
+segment       13: label human                                   , area   1541, bbox [2047, 1797, 28, 114]
+segment       14: label object                                  , area   1768, bbox [0, 1831, 79, 78]
+segment       15: label object                                  , area   2709, bbox [122, 1586, 30, 273]
+segment       16: label object                                  , area   4553, bbox [77, 1613, 56, 91]
+segment       17: label object                                  , area    755, bbox [130, 1555, 30, 31]
+segment       18: label object                                  , area    677, bbox [142, 1710, 28, 47]
+segment       19: label object                                  , area    601, bbox [229, 1728, 13, 162]
+segment       20: label object                                  , area    414, bbox [260, 1770, 8, 115]
+segment       21: label marking                                 , area    408, bbox [1636, 1778, 122, 6]
+segment       22: label object                                  , area    245, bbox [1894, 1764, 12, 23]
+segment       23: label object                                  , area    343, bbox [239, 1758, 31, 12]
+segment       24: label object                                  , area    659, bbox [225, 1796, 20, 36]
+segment       25: label nature                                  , area 614889, bbox [136, 1189, 2136, 700]
+segment       26: label marking                                 , area  16423, bbox [197, 1905, 1773, 55]
+segment       27: label marking                                 , area    755, bbox [563, 1882, 224, 28]
+segment       28: label marking                                 , area    812, bbox [378, 1909, 353, 5]
+segment       29: label marking                                 , area  22896, bbox [614, 1959, 1534, 48]
+segment       30: label marking                                 , area   2871, bbox [565, 1984, 1564, 29]
+segment       31: label marking                                 , area   5554, bbox [0, 1988, 927, 156]
+segment       32: label marking                                 , area  20372, bbox [0, 2031, 1206, 403]
+segment       33: label marking                                 , area   4206, bbox [2136, 2001, 312, 42]
+segment       34: label marking                                 , area   3062, bbox [2115, 2006, 360, 45]
+segment       35: label marking                                 , area   2547, bbox [2469, 2024, 694, 37]
+segment       36: label marking                                 , area  18137, bbox [2507, 1994, 658, 56]
+segment       37: label marking                                 , area   3063, bbox [2733, 1970, 435, 14]
+segment       38: label construction                            , area   2526, bbox [2280, 1884, 338, 39]
+segment       39: label object                                  , area    437, bbox [210, 1727, 29, 16]
+segment       40: label void                                    , area   2297, bbox [2125, 1865, 83, 42]
+segment       41: label object                                  , area    637, bbox [2493, 1751, 9, 89]
+segment       42: label object                                  , area    322, bbox [2587, 1679, 26, 26]
+segment       43: label void                                    , area   2232, bbox [2211, 1877, 69, 34]
+segment       44: label nature                                  , area   2399, bbox [2463, 1836, 55, 55]
+segment       45: label void                                    , area   2166, bbox [2461, 1890, 62, 38]
+segment       46: label nature                                  , area 879458, bbox [2504, 391, 1479, 1484]
+segment       47: label void                                    , area   3629, bbox [2523, 1870, 77, 60]
+segment       48: label human                                   , area   1659, bbox [2702, 1822, 33, 104]
+segment       49: label object                                  , area   9723, bbox [2618, 1833, 85, 127]
+segment       50: label void                                    , area   3521, bbox [2716, 1863, 45, 83]
+segment       51: label object                                  , area    319, bbox [2582, 1746, 15, 25]
+segment       52: label object                                  , area   9100, bbox [2575, 1373, 57, 594]
+segment       53: label object                                  , area    520, bbox [2485, 1724, 25, 27]
+segment       54: label object                                  , area    415, bbox [2618, 1746, 21, 25]
+segment       55: label object                                  , area     70, bbox [2766, 1784, 3, 20]
+segment       56: label object                                  , area    326, bbox [2759, 1760, 19, 23]
+segment       57: label object                                  , area   3206, bbox [2910, 1412, 156, 247]
+segment       58: label object                                  , area    405, bbox [3217, 1603, 8, 82]
+segment       59: label object                                  , area     64, bbox [3225, 1603, 14, 4]
+segment       60: label object                                  , area    895, bbox [3065, 1408, 61, 20]
+segment       61: label object                                  , area    432, bbox [3057, 1804, 45, 12]
+segment       62: label object                                  , area   5044, bbox [3050, 1814, 82, 113]
+segment       63: label object                                  , area  64200, bbox [2804, 1656, 276, 297]
+segment       64: label object                                  , area  30741, bbox [3102, 1685, 198, 258]
+segment       65: label human                                   , area   1258, bbox [91, 1798, 33, 54]
+segment       66: label human                                   , area   5150, bbox [3178, 1760, 81, 144]
+segment       67: label human                                   , area   5845, bbox [2936, 1797, 71, 180]
+segment       68: label human                                   , area   1660, bbox [2776, 1831, 56, 148]
+segment       69: label human                                   , area  12273, bbox [2738, 1774, 119, 237]
+segment       70: label object                                  , area   2300, bbox [2607, 1519, 54, 52]
+segment       71: label object                                  , area   3079, bbox [2572, 1603, 56, 56]
+segment       72: label object                                  , area   3070, bbox [2561, 1487, 32, 93]
+segment       73: label human                                   , area   1919, bbox [2335, 1813, 41, 148]
+segment       74: label object                                  , area   8064, bbox [2370, 1122, 92, 843]
+segment       75: label object                                  , area   8879, bbox [2252, 1335, 114, 627]
+segment       76: label object                                  , area   4640, bbox [2379, 1733, 74, 77]
+segment       77: label object                                  , area   2206, bbox [2397, 1694, 58, 41]
+segment       78: label object                                  , area   2348, bbox [2277, 1740, 81, 28]
+segment       79: label object                                  , area   1370, bbox [2345, 1604, 22, 74]
+segment       80: label object                                  , area   2185, bbox [2274, 1612, 35, 66]
+segment       81: label object                                  , area   2454, bbox [2351, 1460, 41, 124]
+segment       82: label construction                            , area   1344, bbox [2594, 1967, 85, 24]
+segment       83: label object                                  , area   4446, bbox [2291, 1367, 45, 133]
+segment       84: label object                                  , area   4499, bbox [2311, 1484, 70, 95]
+segment       85: label object                                  , area   6566, bbox [2380, 1336, 73, 94]
+segment       86: label object                                  , area   5379, bbox [2407, 1482, 72, 94]
+segment       87: label object                                  , area   6417, bbox [2447, 1289, 56, 139]
+segment       88: label object                                  , area   8537, bbox [2368, 1598, 89, 95]
+segment       89: label human                                   , area   8288, bbox [2329, 1772, 106, 221]
+segment       90: label void                                    , area   2484, bbox [2347, 1861, 49, 62]
+segment       91: label construction                            , area    915, bbox [2495, 1994, 69, 23]
+segment       92: label void                                    , area    297, bbox [2406, 1829, 22, 26]
+segment       93: label construction                            , area   1051, bbox [2544, 1972, 58, 36]
+segment       94: label construction                            , area    216, bbox [2153, 1983, 29, 21]
+segment       95: label construction                            , area   8687, bbox [2158, 1986, 353, 34]
+segment       96: label construction                            , area   1257, bbox [1992, 1957, 139, 13]
+segment       97: label construction                            , area   2270, bbox [1909, 1900, 103, 66]
+segment       98: label construction                            , area   1384, bbox [2114, 1959, 56, 43]
+segment       99: label object                                  , area   1497, bbox [3629, 1474, 31, 51]
+segment      100: label object                                  , area   2352, bbox [3415, 1461, 218, 104]
+segment      101: label object                                  , area   5153, bbox [3580, 1442, 47, 116]
+segment      102: label object                                  , area   7187, bbox [3357, 1404, 58, 127]
+segment      103: label object                                  , area   2468, bbox [3675, 1522, 57, 47]
+segment      104: label object                                  , area    607, bbox [3877, 1458, 87, 120]
+segment      105: label object                                  , area   4386, bbox [3932, 1475, 51, 103]
+segment      106: label construction                            , area   3431, bbox [3798, 2239, 120, 60]
+segment      107: label object                                  , area   7165, bbox [3821, 1485, 87, 91]
+segment      108: label object                                  , area  11446, bbox [3151, 1858, 129, 282]
+segment      109: label object                                  , area 514960, bbox [3192, 1556, 791, 826]
+segment      110: label object                                  , area   1346, bbox [1770, 1708, 38, 85]
+segment      111: label object                                  , area    400, bbox [1783, 1697, 4, 95]
+segment      112: label object                                  , area    353, bbox [1795, 1685, 6, 109]
+segment      113: label object                                  , area    156, bbox [1779, 1679, 12, 18]
+segment      114: label object                                  , area    223, bbox [1791, 1669, 15, 17]
+segment      115: label object                                  , area    842, bbox [1792, 1747, 21, 52]
+segment      116: label object                                  , area    312, bbox [1815, 1764, 15, 24]
+segment      117: label object                                  , area    117, bbox [1822, 1762, 3, 38]
+segment      118: label object                                  , area    364, bbox [1814, 1739, 16, 22]
+segment      119: label object                                  , area   1484, bbox [1824, 1679, 28, 53]
+segment      120: label object                                  , area    745, bbox [1856, 1695, 7, 105]
+segment      121: label object                                  , area    214, bbox [1859, 1749, 19, 10]
+segment      122: label object                                  , area    618, bbox [1902, 1786, 16, 40]
+segment      123: label object                                  , area    473, bbox [1915, 1784, 7, 100]
+segment      124: label object                                  , area    812, bbox [1906, 1756, 31, 27]
+segment      125: label object                                  , area    569, bbox [1956, 1805, 30, 47]
+segment      126: label object                                  , area   2924, bbox [1921, 1834, 45, 67]
+segment      127: label object                                  , area    422, bbox [1972, 1841, 7, 88]
+segment      128: label object                                  , area   1887, bbox [1961, 1737, 20, 104]
+segment      129: label object                                  , area    718, bbox [1987, 1812, 25, 41]
+segment      130: label object                                  , area   4033, bbox [1993, 1830, 64, 97]
+segment      131: label human                                   , area   1821, bbox [2071, 1790, 31, 106]
+segment      132: label void                                    , area    865, bbox [362, 1867, 92, 17]
+segment      133: label void                                    , area    218, bbox [2091, 1836, 8, 26]
+segment      134: label human                                   , area   3573, bbox [2094, 1790, 47, 135]
+segment      135: label object                                  , area   1742, bbox [1998, 1693, 66, 62]
+segment      136: label object                                  , area   4665, bbox [2016, 1503, 49, 437]
+segment      137: label object                                  , area   2477, bbox [2016, 1684, 50, 50]
+segment      138: label object                                  , area   3071, bbox [2032, 1578, 34, 89]
+segment      139: label object                                  , area   1594, bbox [2041, 1546, 56, 31]
+segment      140: label object                                  , area    277, bbox [272, 1764, 15, 19]
+segment      141: label human                                   , area   1085, bbox [370, 1799, 26, 78]
+segment      142: label object                                  , area    818, bbox [362, 1824, 15, 54]
+segment      143: label object                                  , area    945, bbox [536, 1680, 26, 126]
+segment      144: label object                                  , area   2483, bbox [517, 1685, 38, 68]
+segment      145: label object                                  , area   1635, bbox [724, 1676, 35, 58]
+segment      146: label object                                  , area    363, bbox [787, 1743, 19, 20]
+segment      147: label object                                  , area    500, bbox [943, 1705, 17, 29]
+segment      148: label construction                            , area   4581, bbox [811, 1817, 443, 40]
+segment      149: label object                                  , area   6586, bbox [721, 1788, 89, 94]
+segment      150: label construction                            , area  19499, bbox [788, 1826, 460, 78]
+segment      151: label construction                            , area   7561, bbox [731, 1862, 493, 56]
+segment      152: label nature                                  , area   3897, bbox [822, 1825, 153, 32]
+segment      153: label object                                  , area  10227, bbox [596, 1783, 129, 111]
+segment      154: label human                                   , area    528, bbox [517, 1787, 79, 21]
+segment      155: label human                                   , area   1718, bbox [439, 1790, 38, 86]
+segment      156: label object                                  , area  14937, bbox [455, 1807, 185, 102]
+segment      157: label object                                  , area    457, bbox [422, 1769, 41, 11]
+segment      158: label construction                            , area  13982, bbox [0, 1939, 689, 61]
+segment      159: label construction                            , area    525, bbox [624, 1955, 53, 19]
+segment      160: label construction                            , area  21303, bbox [0, 1953, 632, 89]
+segment      161: label construction                            , area   1174, bbox [656, 1940, 62, 29]
+segment      162: label object                                  , area   6048, bbox [339, 1171, 82, 95]
+segment      163: label object                                  , area   1196, bbox [354, 1289, 51, 135]
+segment      164: label object                                  , area  16408, bbox [314, 1115, 73, 844]
+segment      165: label object                                  , area   7904, bbox [327, 1316, 81, 98]
+segment      166: label construction                            , area  13731, bbox [0, 1853, 269, 126]
+segment      167: label object                                  , area    283, bbox [1565, 1720, 29, 11]
+segment      168: label construction                            , area    236, bbox [1631, 1760, 73, 11]
+segment      169: label object                                  , area    536, bbox [1675, 1736, 34, 20]
+segment      170: label construction                            , area    194, bbox [1633, 1763, 71, 11]
+segment      171: label marking                                 , area    214, bbox [1653, 1799, 41, 22]
+segment      172: label object                                  , area  14658, bbox [1770, 1800, 143, 120]
+segment      173: label object                                  , area    210, bbox [1596, 1669, 4, 78]
+segment      174: label object                                  , area    111, bbox [1597, 1715, 9, 11]
+segment      175: label object                                  , area    110, bbox [1588, 1714, 8, 13]
+segment      176: label object                                  , area    204, bbox [1590, 1728, 15, 14]
+segment      177: label object                                  , area  12036, bbox [1516, 1744, 165, 273]
+segment      178: label object                                  , area 122489, bbox [1206, 1733, 448, 368]
+segment      179: label object                                  , area   2509, bbox [899, 1414, 22, 438]
+segment      180: label object                                  , area   1960, bbox [888, 1600, 46, 44]
+segment      181: label object                                  , area   2604, bbox [887, 1649, 47, 56]
+segment      182: label object                                  , area   2253, bbox [905, 1508, 29, 79]
+segment      183: label object                                  , area    162, bbox [290, 1799, 12, 12]
