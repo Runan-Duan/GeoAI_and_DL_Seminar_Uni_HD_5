@@ -22,17 +22,24 @@ def load_streetsurfacevis(data_dir):
     csv_path = os.path.join(data_dir, "streetSurfaceVis_v1_0.csv")  # annotations file
     try:
         df = pd.read_csv(csv_path)
-        images = []
-        labels = []
+        train_images, train_labels = [], []
+        test_images, test_labels = [], []
         for _, row in df.iterrows():
-            image_path = os.path.join(data_dir, "images_1024", row["image_file"])
+            image_path = os.path.join(data_dir, "s_1024", row["image_file"])
             if not os.path.exists(image_path):
                 logging.warning(f"Image file not found: {image_path}")
                 continue
             label = row["surface_type"]
-            images.append(image_path)
-            labels.append(label)
-        return images, labels
+
+            # test data contains data from 5 cities excluded in the training data
+            # use the `train` column to split to avoid data leakage
+            if row["train"]:  
+                train_images.append(image_path)
+                train_labels.append(label)
+            else:
+                test_images.append(image_path)
+                test_labels.append(label)
+        return train_images, train_labels, test_images, test_labels
     except Exception as e:
         logging.error(f"Error loading dataset: {e}")
         raise
@@ -94,7 +101,6 @@ def validate(model, device, test_loader, criterion):
     return test_loss, accuracy
 
 
-# Main function
 def main():
     parser = argparse.ArgumentParser(description='StreetSurfaceVis road surface classification')
     parser.add_argument('--batch-size', type=int, default=32, metavar='N',
@@ -122,25 +128,34 @@ def main():
     use_cuda = not args.no_cuda and torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
 
-    # Load dataset
-    images, labels = load_streetsurfacevis(args.data_dir)
-    dataset = SurfaceDataset(images, labels, transform=transforms.Compose([
+    # Define transforms
+    train_transforms = transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.RandomHorizontalFlip(),  # Data augmentation
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+    ])
+
+    test_transforms = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-    ]))
+    ])
 
-    # Split dataset into training and validation sets
-    train_size = int(0.8 * len(dataset))
-    test_size = len(dataset) - train_size
-    train_dataset, test_dataset = random_split(dataset, [train_size, test_size])
+    # Load dataset
+    train_images, train_labels, test_images, test_labels = load_streetsurfacevis(args.data_dir)
 
+    # Create datasets
+    train_dataset = SurfaceDataset(train_images, train_labels, transform=train_transforms)
+    test_dataset = SurfaceDataset(test_images, test_labels, transform=test_transforms)
+
+    # Create data loaders
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=args.test_batch_size, shuffle=False)
 
     # Load pre-trained model
     model = models.efficientnet_b0(pretrained=True)
-    num_classes = len(set(labels))
+    num_classes = len(set(train_labels + test_labels))  # Total number of unique classes
     model.classifier[1] = nn.Linear(model.classifier[1].in_features, num_classes)
     model = model.to(device)
 
@@ -157,6 +172,8 @@ def main():
     # Save model
     torch.save(model.state_dict(), "road_surface_classification.pth")
     logging.info("Model saved to road_surface_classification.pth")
+
+
 
 if __name__ == "__main__":
     main()
