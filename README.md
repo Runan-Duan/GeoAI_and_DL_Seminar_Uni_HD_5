@@ -19,20 +19,23 @@
 #### 4.1 Extract the road region from Mapillary Vistas Dataset
 * create a mask, including labels from the origin dataset
 
-        "construction--flat--road",               
+        "construction--flat--road",
+        "construction--flat--sidewalk",               
         "construction--flat--crosswalk-plain",  
+        "construction--flat--bike-lane",
+        "construction--flat--service-lane",
         "marking--discrete--crosswalk-zebra",  
         "marking--discrete--arrow--left",    
         "marking--discrete--arrow--right",   
         "marking--discrete--arrow--straight",  
+        "marking--discrete--symbol--bicycle",
         "marking--discrete--stop-line",  
         "marking--continuous--dashed",  
-        "marking--continuous--solid",   
-        "marking--discrete--symbol--bicycle", 
-        "construction--flat--bike-lane",
-        "construction--flat--service-lane"
+        "marking--continuous--solid"
+        
 <img src="./Road_test_plot.png" alt="Road Mask Example" width="500"/>
 
+<img src="./image_overview.png" alt="Road Mask Example" width="500"/>
 
 #### 4.2 Pre-training model for surface classification based on StreetSurfaceVis
 
