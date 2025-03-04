@@ -16,7 +16,7 @@ conda env create -f environment.yml
 conda activate geoai
 ```
 
-3. Link the dataset:
+3. Link the dataset or move the dataset under the raw:
 ```bash
 ln -s /test/StreetSurfaceVis_1024 data/raw
 ```
@@ -28,7 +28,7 @@ sbatch jobs/train_job.sh
 
 
 ## Directory Structure
-data/raw/: Raw dataset (linked to /test/StreetSurfaceVis_1024).
+data/raw/: Raw dataset
 
 data/processed/: Processed data (e.g., train/val/test splits).
 

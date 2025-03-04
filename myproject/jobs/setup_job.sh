@@ -2,16 +2,15 @@
 #SBATCH --job-name=setup
 #SBATCH --output=../logs/setup_job_%j.out
 #SBATCH --error=../logs/setup_job_%j.err
+#SBATCH --ntasks=1
+#SBATCH --gres gpu:1
 #SBATCH --cpus-per-task=2
 #SBATCH --time=01:00:00
-#SBATCH --gres gpu:1
-#SBATCH --mem 10G
+#SBATCH --mem=10G
+#SBATCH --partition=gpu_4
 
 # Load necessary modules
-module load miniconda
-
-# Navigate to the project directory
-cd ..
+module load devel/miniconda/23.9.0-py3.9.15
 
 # Create Conda environment
 echo "Creating Conda environment..."
@@ -25,8 +24,5 @@ conda activate geoai
 echo "Creating directories..."
 mkdir -p data/processed models logs results
 
-# Link the dataset
-echo "Linking dataset..."
-ln -sf /test/StreetSurfaceVis_1024 data/raw
 
 echo "Setup complete!"
