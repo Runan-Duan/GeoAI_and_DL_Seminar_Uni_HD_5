@@ -4,7 +4,7 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from src.datasets.street_surface_loader import load_streetsurfacevis, SurfaceDataset
-from src.models.model_utils import initialize_model, load_model
+from wait.model_utils import initialize_model, load_model
 from src.trainers.metrics import accuracy
 from src.visualization.visualize_predictions import visualize_predictions
 from src.utils.config import load_config

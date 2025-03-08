@@ -5,7 +5,9 @@ from torch.utils.data import Dataset
 from PIL import Image
 import logging
 
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 def load_streetsurfacevis(data_dir):
     """
@@ -32,6 +34,7 @@ def load_streetsurfacevis(data_dir):
     except Exception as e:
         logging.error(f"Error loading dataset: {e}")
         raise
+
 
 class SurfaceDataset(Dataset):
     def __init__(self, images, labels, transform=None):
@@ -60,6 +63,7 @@ class SurfaceDataset(Dataset):
         except Exception as e:
             logging.error(f"Error loading image {image_path}: {e}")
             return None, None
+
 
 def split_and_save_data(data_dir, processed_dir, val_size=0.2, random_state=42):
     """
