@@ -4,11 +4,11 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from src.datasets.street_surface_loader import load_streetsurfacevis, SurfaceDataset
-from wait.model_utils import initialize_model, load_model
-from src.trainers.metrics import accuracy
-from src.visualization.visualize_predictions import visualize_predictions
+from src.models.efficient_net_classifier import EfficientNetWithAttention
 from src.utils.config import load_config
 from src.utils.logger import setup_logging
+from src.utils.utils import load_model
+from src.visualization.visualize_predictions import visualize_predictions
 import logging
 
 def evaluate(model, device, test_loader, criterion):
@@ -45,24 +45,27 @@ def main():
     config = load_config(args.config)
 
     # Set up logging
-    setup_logging()
+    setup_logging(log_dir=config['logs_dir'])
 
     # Use CUDA if available
     use_cuda = not config['no_cuda'] and torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
 
+    # Define test transforms (same as in train.py)
+    test_transforms = transforms.Compose([
+        transforms.Resize((config['image_size'], config['image_size'])),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=config['mean'], std=config['std'])
+    ])
+
     # Load dataset
     _, _, test_images, test_labels = load_streetsurfacevis(config['data_dir'])
-    test_dataset = SurfaceDataset(test_images, test_labels, transform=transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-    ]))
+    test_dataset = SurfaceDataset(test_images, test_labels, transform=test_transforms)
     test_loader = DataLoader(test_dataset, batch_size=config['test_batch_size'], shuffle=False)
 
-    # Initialize model
-    num_classes = len(set(test_labels))
-    model = initialize_model("efficientnet", num_classes=num_classes).to(device)
+    # Initialize model (same as in train.py)
+    num_classes = config['num_classes']
+    model = EfficientNetWithAttention(num_classes=num_classes).to(device)
 
     # Load trained model
     model = load_model(model, args.model_path, device)
@@ -74,7 +77,7 @@ def main():
     test_loss, test_accuracy, all_preds, all_targets = evaluate(model, device, test_loader, criterion)
 
     # Visualize predictions
-    class_names = ["asphalt", "concrete", "paving_stones", "sett", "unpaved"]
+    class_names = ["asphalt", "concrete", "paving_stones", "sett", "unpaved"]  # Update with your class names
     visualize_predictions(test_dataset.images[:5], all_preds[:5], all_targets[:5], class_names)
 
 if __name__ == "__main__":

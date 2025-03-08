@@ -33,7 +33,7 @@ def main():
     device = torch.device("cuda" if use_cuda else "cpu")
 
     # Set up logging
-    setup_logging()
+    setup_logging(log_dir=config['logs_dir'])
 
     # Create directories
     create_directories([config['processed_dir'], config['models_dir'], config['logs_dir'], config['results_dir']])

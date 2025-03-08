@@ -1,5 +1,5 @@
 # Dataset paths
-data_dir: "../data/StreetSurfaceVis_1024"
+data_dir: "../data/raw/StreetSurfaceVis_1024"
 processed_dir: "../data/processed"
 models_dir: "../models"
 logs_dir: "../logs"

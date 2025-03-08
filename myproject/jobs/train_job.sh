@@ -4,8 +4,8 @@
 #SBATCH --error=../logs/train_job_%j.err
 #SBATCH --error=../logs/train_job_%j.err
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=5
-#SBATCH --cpus-per-task=8
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
 #SBATCH --time=24:00:00
 #SBATCH --mem=64G
