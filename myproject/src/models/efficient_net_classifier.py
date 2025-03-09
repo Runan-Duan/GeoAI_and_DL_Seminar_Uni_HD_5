@@ -48,7 +48,7 @@ class ChannelAttention(nn.Module):
     
 
 class EfficientNetWithAttention(nn.Module):
-    def __init__(self, num_classes):
+    def __init__(self, num_classes, dropout_prob=0.5):
         super(EfficientNetWithAttention, self).__init__()
         # Load the pre-trained EfficientNet-B0 model
         self.efficientnet = models.efficientnet_b0(pretrained=True)
@@ -57,8 +57,23 @@ class EfficientNetWithAttention(nn.Module):
         self.channel_attention = ChannelAttention(in_channels=1280)  # EfficientNet-B0's final feature map has 1280 channels
         self.spatial_attention = SpatialAttention()
 
+        # Add batch normalization
+        self.bn = nn.BatchNorm1d(self.efficientnet.classifier[1].in_features)
+
+        # Add dropout for regularization
+        self.dropout = nn.Dropout(dropout_prob)
+
         # Replace the final classification layer
         self.efficientnet.classifier[1] = nn.Linear(self.efficientnet.classifier[1].in_features, num_classes)
+        
+        # Initialize the final layer weights
+        self._initialize_weights(self.efficientnet.classifier[1])
+
+    def _initialize_weights(self, layer):
+        if isinstance(layer, nn.Linear):
+            nn.init.kaiming_normal_(layer.weight, mode='fan_out', nonlinearity='relu')
+            if layer.bias is not None:
+                nn.init.constant_(layer.bias, 0)
 
     def forward(self, x):
         # Extract features from EfficientNet
@@ -72,8 +87,16 @@ class EfficientNetWithAttention(nn.Module):
         spatial_att = self.spatial_attention(x)
         x = x * spatial_att
         
-        # Global average pooling and classification
+        # Global average pooling
         x = self.efficientnet.avgpool(x)
         x = torch.flatten(x, 1)
+        
+        # Apply batch normalization
+        x = self.bn(x)
+        
+        # Apply dropout
+        x = self.dropout(x)
+        
+        # Classification
         x = self.efficientnet.classifier(x)
         return x

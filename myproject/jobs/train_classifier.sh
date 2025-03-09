@@ -4,10 +4,10 @@
 #SBATCH --error=../logs/train_job_%j.err
 #SBATCH --error=../logs/train_job_%j.err
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=4
+#SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --time=24:00:00
+#SBATCH --time=48:00:00
 #SBATCH --mem=64G
 #SBATCH --partition=gpu_4
 
@@ -18,15 +18,12 @@ module load devel/miniconda/23.9.0-py3.9.15
 echo "Activating Conda environment..."
 conda activate geoai
 
-# Navigate to the code directory
-cd code
-
 # Run the training script
 echo "Starting training..."
-python scripts/train.py --config ../config/street_surface.yaml
+python src/train_classifier.py --config config/street_surface.yaml
 
 # Optionally run evaluation after training
 echo "Starting evaluation..."
-python scripts/evaluate.py --config ../config/street_surface.yaml --model-path ../models/road_surface_classification.pth
+python src/evaluate.py --config config/street_surface.yaml --model-path models/road_surface_classification.pth --task classification
 
 echo "Training and evaluation complete!"
