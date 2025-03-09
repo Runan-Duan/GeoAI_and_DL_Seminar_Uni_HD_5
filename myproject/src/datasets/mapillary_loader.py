@@ -19,7 +19,7 @@ class MapillaryDataset(Dataset):
             self.config = json.load(config_file)
         self.labels_info = self.config['labels']
 
-        # Define road-related labels
+        # Define road-related labels and their corresponding IDs
         self.road_related_labels = [
             "construction--flat--road",
             "construction--flat--sidewalk",
@@ -36,11 +36,13 @@ class MapillaryDataset(Dataset):
             "marking--continuous--solid"
         ]
 
-        # Get road-related label IDs
-        self.road_label_ids = []
+        # Create a mapping from label IDs to class IDs
+        self.label_to_class = {}
+        self.class_names = ["background"]  # Class 0 is for "no road"
         for label_id, label in enumerate(self.labels_info):
             if label["name"] in self.road_related_labels:
-                self.road_label_ids.append(label_id)
+                self.label_to_class[label_id] = len(self.class_names)
+                self.class_names.append(label["name"])
 
     def __len__(self):
         return len(self.images)
@@ -54,22 +56,21 @@ class MapillaryDataset(Dataset):
         label = Image.open(label_path).convert("L")  # Grayscale label
 
         # Resize image and label
-        resize_transform = transforms.Resize(self.image_size)
+        resize_transform = transforms.Resize(self.image_size, interpolation=Image.NEAREST)
         image = resize_transform(image)
         label = resize_transform(label)
 
         # Convert label to numpy array
         label_array = np.array(label)
 
-        # Create road mask
-        road_mask = np.zeros_like(label_array, dtype=bool)
-        for label_id in self.road_label_ids:
-            road_mask |= (label_array == label_id)
-        road_mask = road_mask.astype(np.float32)  # Convert to float for PyTorch
+        # Create multi-class segmentation mask
+        segmentation_mask = np.zeros_like(label_array, dtype=np.uint8)
+        for label_id, class_id in self.label_to_class.items():
+            segmentation_mask[label_array == label_id] = class_id
 
         # Apply additional transforms (if any)
         if self.transform:
             image = self.transform(image)
-            road_mask = self.transform(road_mask)
+            segmentation_mask = torch.tensor(segmentation_mask, dtype=torch.long)
 
-        return image, road_mask
+        return image, segmentation_mask

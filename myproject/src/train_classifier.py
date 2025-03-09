@@ -7,19 +7,19 @@ import torch.optim as optim
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from torchvision import transforms
-from torch.optim.lr_scheduler import StepLR
+from torch.optim.lr_scheduler import StepLR, CosineAnnealingLR
 from torch.cuda.amp import GradScaler, autocast
 
 from datasets.street_surface_loader import load_streetsurfacevis, SurfaceDataset, split_and_save_data
 from models.efficient_net_classifier import EfficientNetWithAttention
 from utils.logger import setup_logging
 from utils.config import load_config
-from utils.utils import create_directories, save_model
+from utils.utils import create_directories, save_model, load_model
 from visualization.plot_loss import plot_loss
 from visualization.plot_metrics import plot_metrics
 
 
-def train(model, device, train_loader, optimizer, criterion, epoch, log_interval, scaler, gradient_accumulation_steps):
+def train(model, device, train_loader, optimizer, criterion, epoch, log_interval, scaler, gradient_accumulation_steps, max_grad_norm):
     model.train()
     running_loss = 0.0
     optimizer.zero_grad()
@@ -31,6 +31,8 @@ def train(model, device, train_loader, optimizer, criterion, epoch, log_interval
         scaler.scale(loss).backward()
 
         if (batch_idx + 1) % gradient_accumulation_steps == 0:
+            # Gradient clipping
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_grad_norm)
             scaler.step(optimizer)
             scaler.update()
             optimizer.zero_grad()
@@ -92,6 +94,10 @@ def main():
             saturation=config['data_augmentation']['ColorJitter']['saturation'],
             hue=config['data_augmentation']['ColorJitter']['hue']
         ),
+        transforms.RandomResizedCrop(
+            size=config['data_augmentation']['RandomResizedCrop']['size'],
+            scale=config['data_augmentation']['RandomResizedCrop']['scale']
+        ),
         transforms.ToTensor(),
         transforms.Normalize(mean=config['mean'], std=config['std'])
     ])
@@ -111,8 +117,8 @@ def main():
     test_dataset = SurfaceDataset(test_images, test_labels, transform=test_transforms)
 
     # Create data loaders
-    train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True)
-    test_loader = DataLoader(test_dataset, batch_size=config['test_batch_size'], shuffle=False)
+    train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, num_workers=4, pin_memory=True)
+    test_loader = DataLoader(test_dataset, batch_size=config['test_batch_size'], shuffle=False, num_workers=4, pin_memory=True)
 
     # Initialize model
     num_classes = config['num_classes']
@@ -123,7 +129,10 @@ def main():
     optimizer = optim.Adam(model.parameters(), lr=config['lr'])
 
     # Learning rate scheduler
-    scheduler = StepLR(optimizer, step_size=config['lr_scheduler']['step_size'], gamma=config['lr_scheduler']['gamma'])
+    scheduler = CosineAnnealingLR(optimizer, T_max=config['epochs'], eta_min=1e-6)  # Cosine annealing scheduler
+
+    # Mixed precision training
+    scaler = GradScaler()
 
     # Early stopping
     best_val_loss = float('inf')
@@ -134,7 +143,7 @@ def main():
     # Training loop
     train_losses, val_losses, val_accuracies = [], [], []
     for epoch in range(1, config['epochs'] + 1):
-        train_loss = train(model, device, train_loader, optimizer, criterion, epoch, config['log_interval'])
+        train_loss = train(model, device, train_loader, optimizer, criterion, epoch, config['log_interval'], scaler, config['gradient_accumulation_steps'], config['max_grad_norm'])
         val_loss, val_accuracy = validate(model, device, test_loader, criterion)
         train_losses.append(train_loss)
         val_losses.append(val_loss)
@@ -148,14 +157,17 @@ def main():
         if val_loss < best_val_loss - min_delta:
             best_val_loss = val_loss
             trigger_times = 0
+            # Save the best model
+            model_save_path = os.path.join(config['models_dir'], "best_road_surface_classification.pth")
+            save_model(model, model_save_path)
         else:
             trigger_times += 1
             if trigger_times >= patience:
                 logging.info("Early stopping triggered!")
                 break
 
-    # Save model
-    model_save_path = os.path.join(config['models_dir'], "road_surface_classification.pth")
+    # Save final model
+    model_save_path = os.path.join(config['models_dir'], "final_road_surface_classification.pth")
     save_model(model, model_save_path)
 
     # Plot loss and metrics

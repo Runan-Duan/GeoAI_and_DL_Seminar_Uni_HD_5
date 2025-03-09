@@ -8,12 +8,13 @@ results_dir: "results"
 # Training parameters
 batch_size: 16  # Reduced batch size for high-resolution images
 test_batch_size: 16
-epochs: 1  # Reduced epochs
+epochs: 80  # Reduced epochs
 lr: 0.001
 seed: 1
 log_interval: 10
 no_cuda: False
 gradient_accumulation_steps: 4  # Simulate larger batch size
+max_grad_norm: 1.0  # Gradient clipping
 
 # Learning rate scheduler
 lr_scheduler:
@@ -42,3 +43,6 @@ data_augmentation:
     contrast: 0.2
     saturation: 0.2
     hue: 0.1
+  RandomResizedCrop:
+    size: 512
+    scale: [0.8, 1.0]

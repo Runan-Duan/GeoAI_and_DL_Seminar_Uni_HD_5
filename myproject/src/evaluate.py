@@ -4,9 +4,9 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from datasets.street_surface_loader import SurfaceDataset, load_streetsurfacevis
-from datasets.mapillary_loader import MapillaryDataset
+#from datasets.mapillary_loader import MapillaryDataset
 from models.efficient_net_classifier import EfficientNetWithAttention
-from models.unet_segmenter import UNetSegmenter
+#from models.unet_segmenter import UNetSegmenter
 from utils.metrics import iou_score
 from utils.config import load_config
 from utils.logger import setup_logging
@@ -37,10 +37,11 @@ def evaluate_classification(model, device, test_loader, criterion):
                  f"({accuracy:.2f}%)")
     return test_loss, accuracy, all_preds, all_targets
 
+"""
 def evaluate_segmentation(model, device, test_loader, criterion):
-    """
-    Evaluate the segmentation model on the test dataset.
-    """
+    
+    # Evaluate the segmentation model on the test dataset.
+
     model.eval()
     test_loss = 0
     total_iou = 0
@@ -53,7 +54,8 @@ def evaluate_segmentation(model, device, test_loader, criterion):
     test_loss /= len(test_loader.dataset)
     avg_iou = total_iou / len(test_loader)
     logging.info(f"Test set: Average loss: {test_loss:.4f}, IoU: {avg_iou:.4f}")
-    return test_loss, avg_iou
+    return test_loss, avg_iou"""
+
 
 def main():
     # Set up argument parser
@@ -85,7 +87,7 @@ def main():
         _, _, test_images, test_labels = load_streetsurfacevis(config['data_dir'])
         test_dataset = SurfaceDataset(test_images, test_labels, transform=test_transforms)
     else:
-        test_dataset = MapillaryDataset(config['data_dir'], transform=test_transforms)
+        pass #test_dataset = MapillaryDataset(config['data_dir'], transform=test_transforms)
 
     test_loader = DataLoader(test_dataset, batch_size=config['test_batch_size'], shuffle=False)
 
@@ -93,7 +95,7 @@ def main():
     if args.task == "classification":
         model = EfficientNetWithAttention(num_classes=config['num_classes']).to(device)
     else:
-        model = UNetSegmenter(num_classes=config['num_classes']).to(device)
+        pass #model = UNetSegmenter(num_classes=config['num_classes']).to(device)
 
     # Load trained model
     model = load_model(model, args.model_path, device)
@@ -107,7 +109,7 @@ def main():
         class_names = ["asphalt", "concrete", "paving_stones", "sett", "unpaved"]  # Update with your class names
         visualize_predictions(test_dataset.images[:5], all_preds[:5], all_targets[:5], class_names)
     else:
-        test_loss, test_iou = evaluate_segmentation(model, device, test_loader, criterion)
+        pass #test_loss, test_iou = evaluate_segmentation(model, device, test_loader, criterion)
 
 if __name__ == "__main__":
     main()
