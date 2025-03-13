@@ -11,6 +11,7 @@ dependencies:
   - scikit-learn=1.1.2
   - plotly=5.10.0
   - jupyter
+  - numpy
   - matplotlib
   - pip
   - pip:

@@ -5,12 +5,14 @@ from torchvision import models
 class EfficientNetClassifier(nn.Module):
     def __init__(self, num_classes):
         super(EfficientNetClassifier, self).__init__()
-        self.model = models.efficientnet_b0(pretrained=True)
+        # Load EfficientNet B4 with pre-trained weights
+        self.model = models.efficientnet_b4(weights=models.EfficientNet_B4_Weights.IMAGENET1K_V1)
+        # Replace the final classification layer
         self.model.classifier[1] = nn.Linear(self.model.classifier[1].in_features, num_classes)
 
     def forward(self, x):
         return self.model(x)
-    
+
 
 class SpatialAttention(nn.Module):
     def __init__(self, kernel_size=7):
@@ -25,7 +27,7 @@ class SpatialAttention(nn.Module):
         out = torch.cat([avg_out, max_out], dim=1)
         out = self.conv(out)
         return self.sigmoid(out)
-    
+
 
 class ChannelAttention(nn.Module):
     def __init__(self, in_channels, reduction_ratio=16):
@@ -45,16 +47,16 @@ class ChannelAttention(nn.Module):
         max_out = self.fc(self.max_pool(x).view(b, c))
         out = avg_out + max_out
         return out.view(b, c, 1, 1)
-    
+
 
 class EfficientNetWithAttention(nn.Module):
     def __init__(self, num_classes, dropout_prob=0.5):
         super(EfficientNetWithAttention, self).__init__()
-        # Load the pre-trained EfficientNet-B0 model
-        self.efficientnet = models.efficientnet_b0(pretrained=True)
+        # Load the pre-trained EfficientNet-B4 model
+        self.efficientnet = models.efficientnet_b4(weights=models.EfficientNet_B4_Weights.IMAGENET1K_V1)
         
         # Add attention modules
-        self.channel_attention = ChannelAttention(in_channels=1280)  # EfficientNet-B0's final feature map has 1280 channels
+        self.channel_attention = ChannelAttention(in_channels=1792)  # EfficientNet-B4's final feature map has 1792 channels
         self.spatial_attention = SpatialAttention()
 
         # Add batch normalization

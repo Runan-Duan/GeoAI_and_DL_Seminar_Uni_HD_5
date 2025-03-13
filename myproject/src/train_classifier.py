@@ -7,7 +7,7 @@ import torch.optim as optim
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from torchvision import transforms
-from torch.optim.lr_scheduler import StepLR, CosineAnnealingLR
+from torch.optim.lr_scheduler import ReduceLROnPlateau, LambdaLR
 from torch.cuda.amp import GradScaler, autocast
 
 from datasets.street_surface_loader import load_streetsurfacevis, SurfaceDataset, split_and_save_data
@@ -40,8 +40,10 @@ def train(model, device, train_loader, optimizer, criterion, epoch, log_interval
         running_loss += loss.item() * gradient_accumulation_steps
         if batch_idx % log_interval == 0:
             logging.info(f"Train Epoch: {epoch} [{batch_idx * len(data)}/{len(train_loader.dataset)} "
-                         f"({100. * batch_idx / len(train_loader):.0f}%)]\tLoss: {loss.item():.6f}")
+                         f"({100. * batch_idx / len(train_loader):.0f}%)]\tLoss: {loss.item():.6f}\t"
+                         f"Effective Batch Size: {train_loader.batch_size * gradient_accumulation_steps}")
     return running_loss / len(train_loader)
+
 
 def validate(model, device, test_loader, criterion):
     model.eval()
@@ -50,8 +52,9 @@ def validate(model, device, test_loader, criterion):
     with torch.no_grad():
         for data, target in test_loader:
             data, target = data.to(device), target.to(device)
-            output = model(data)
-            val_loss += criterion(output, target).item()
+            with autocast():  # Mixed precision
+                output = model(data)
+                val_loss += criterion(output, target).item()
             pred = output.argmax(dim=1, keepdim=True)
             correct += pred.eq(target.view_as(pred)).sum().item()
     val_loss /= len(test_loader.dataset)
@@ -59,6 +62,13 @@ def validate(model, device, test_loader, criterion):
     logging.info(f"Validation set: Average loss: {val_loss:.4f}, Accuracy: {correct}/{len(test_loader.dataset)} "
                  f"({accuracy:.2f}%)")
     return val_loss, accuracy
+
+
+def warmup_scheduler(optimizer, warmup_steps):
+    def lr_lambda(step):
+        return min(1.0, (step + 1) / warmup_steps)
+    return LambdaLR(optimizer, lr_lambda)
+
 
 def main():
     # Set up argument parser
@@ -117,19 +127,23 @@ def main():
     test_dataset = SurfaceDataset(test_images, test_labels, transform=test_transforms)
 
     # Create data loaders
-    train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, num_workers=4, pin_memory=True)
-    test_loader = DataLoader(test_dataset, batch_size=config['test_batch_size'], shuffle=False, num_workers=4, pin_memory=True)
+    train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, num_workers=8, pin_memory=True)
+    test_loader = DataLoader(test_dataset, batch_size=config['test_batch_size'], shuffle=False, num_workers=8, pin_memory=True)
 
     # Initialize model
     num_classes = config['num_classes']
     model = EfficientNetWithAttention(num_classes=num_classes).to(device)
 
     # Define loss function and optimizer
-    criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=config['lr'])
+    criterion = nn.CrossEntropyLoss(label_smoothing=config['label_smoothing'])
+    optimizer = optim.Adam(model.parameters(), lr=config['lr'], weight_decay=config['weight_decay'])
 
     # Learning rate scheduler
-    scheduler = CosineAnnealingLR(optimizer, T_max=config['epochs'], eta_min=1e-6)  # Cosine annealing scheduler
+    scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=config['lr_scheduler']['factor'], patience=config['lr_scheduler']['patience'], verbose=True)
+
+    # Learning rate warmup
+    warmup_steps = config['warmup_steps']
+    warmup_scheduler = warmup_scheduler(optimizer, warmup_steps)
 
     # Mixed precision training
     scaler = GradScaler()
@@ -143,6 +157,11 @@ def main():
     # Training loop
     train_losses, val_losses, val_accuracies = [], [], []
     for epoch in range(1, config['epochs'] + 1):
+        # Warmup scheduler step
+        if epoch == 1:
+            for batch_idx in range(warmup_steps):
+                warmup_scheduler.step()
+
         train_loss = train(model, device, train_loader, optimizer, criterion, epoch, config['log_interval'], scaler, config['gradient_accumulation_steps'], config['max_grad_norm'])
         val_loss, val_accuracy = validate(model, device, test_loader, criterion)
         train_losses.append(train_loss)
@@ -151,7 +170,7 @@ def main():
         logging.info(f"Epoch {epoch} - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.2f}%")
 
         # Learning rate scheduler step
-        scheduler.step()
+        scheduler.step(val_loss)
 
         # Early stopping logic
         if val_loss < best_val_loss - min_delta:
@@ -173,6 +192,7 @@ def main():
     # Plot loss and metrics
     plot_loss(train_losses, val_losses, save_path=os.path.join(config['results_dir'], "loss_plot.png"))
     plot_metrics(val_accuracies, "Accuracy", save_path=os.path.join(config['results_dir'], "accuracy_plot.png"))
+
 
 if __name__ == "__main__":
     main()

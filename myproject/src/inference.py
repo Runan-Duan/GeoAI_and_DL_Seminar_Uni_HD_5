@@ -75,23 +75,26 @@ def main():
     task = "classification"  # Change to "segmentation" for segmentation task
 
     # Load model
-    model_path = "../models/road_surface_classification.pth" if task == "classification" else "../models/road_segmentation.pth"
+    model_path = r"models/models/best_road_surface_classification.pth" if task == "classification" else "../models/road_segmentation.pth"
     model = load_model(model_path, num_classes=5, device=device, task=task)
 
     # Define class names (for classification)
     class_names = ["asphalt", "paving stones", "concrete", "sett", "unpaved"]
 
     # Define inference folder and output directory
-    inference_folder = "../data/inference"
-    output_dir = "../results/inference"
+    inference_folder = r"data/inference"
+    output_dir = r"results/inference"
 
+    print("Preparing images...")
     # Iterate through images
     image_paths = [os.path.join(inference_folder, img) for img in os.listdir(inference_folder) if img.endswith((".jpg"))]
     images = [preprocess_image(img_path, device, task, image_size=512) for img_path in image_paths]
     if not images:
+        print("No images")
         return  # Skip if no images in the folder
     images = torch.cat(images)  # Combine into a single batch
 
+    print("Inferencing...")
     # Run inference
     predictions = infer(model, images, device, task)
 
@@ -102,7 +105,7 @@ if __name__ == "__main__":
     main()
 
 
-#
+"""#
 
 import os
 import torch
@@ -168,4 +171,4 @@ def main():
     visualize_results(input_image, mask, prediction)
 
 if __name__ == "__main__":
-    main()
+    main()"""

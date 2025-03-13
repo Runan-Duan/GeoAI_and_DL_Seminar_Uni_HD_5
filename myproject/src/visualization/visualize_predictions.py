@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import torch
 
-def visualize_predictions(images, predictions, labels, class_names, num_images=5):
+def visualize_predictions(images, predictions, labels, class_names, save_path, num_images=5):
     """
     Visualize model predictions alongside ground truth labels.
     """
@@ -15,4 +15,7 @@ def visualize_predictions(images, predictions, labels, class_names, num_images=5
         axes[i].imshow(image)
         axes[i].set_title(f"Pred: {class_names[pred]}\nTrue: {class_names[label]}")
         axes[i].axis("off")
+    
+    plt.tight_layout()
+    plt.savefig(save_path)
     plt.show()

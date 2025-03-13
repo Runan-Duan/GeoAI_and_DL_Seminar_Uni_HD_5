@@ -13,6 +13,7 @@
 
 # Load necessary modules
 module load devel/miniconda/23.9.0-py3.9.15
+module load devel/cuda/12.4
 
 # Activate Conda environment
 echo "Activating Conda environment..."
@@ -22,8 +23,11 @@ conda activate geoai
 echo "Starting training..."
 python src/train_classifier.py --config config/street_surface.yaml
 
-# Optionally run evaluation after training
-echo "Starting evaluation..."
-python src/evaluate.py --config config/street_surface.yaml --model-path models/road_surface_classification.pth --task classification
+echo "Training complete!"
 
-echo "Training and evaluation complete!"
+# Run evaluation after training
+echo "Starting evaluation..."
+python evaluate.py --config config/street_surface.yaml --model-type best --task classification
+python evaluate.py --config config/street_surface.yaml --model-type final --task classification
+
+echo "Evaluation complete!"
