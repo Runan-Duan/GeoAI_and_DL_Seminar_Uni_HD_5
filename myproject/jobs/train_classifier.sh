@@ -18,8 +18,6 @@ module load devel/cuda/12.4
 # Activate Conda environment
 echo "Activating Conda environment..."
 conda activate geoai
-conda install conda=25.1.1
-conda install segmentation-models-pytorch
 
 # Run the training script
 echo "Starting training..."
@@ -29,7 +27,7 @@ echo "Training complete!"
 
 # Run evaluation after training
 echo "Starting evaluation..."
-python src/evaluate.py --config config/street_surface.yaml --model-type best --task classification
-python src/evaluate.py --config config/street_surface.yaml --model-type final --task classification
+python src/evaluate.py --config config/street_surface.yaml --model-type best --task surface_classification
+python src/evaluate.py --config config/street_surface.yaml --model-type final --task surface_classification
 
 echo "Evaluation complete!"

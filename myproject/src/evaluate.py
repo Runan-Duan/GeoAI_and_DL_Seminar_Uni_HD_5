@@ -6,7 +6,6 @@ from torchvision import transforms
 from sklearn.metrics import confusion_matrix, classification_report, jaccard_score
 import numpy as np
 import logging
-import matplotlib.pyplot as plt
 
 from datasets.mapillary_loader import MapillaryDataset
 from datasets.street_surface_loader import SurfaceDataset, load_streetsurfacevis
@@ -80,7 +79,6 @@ def evaluate_segmentation(model, device, test_loader):
     return mean_iou, mean_dice
 
 
-
 def main():
     # Set up argument parser
     parser = argparse.ArgumentParser(description='Evaluate model')
@@ -106,22 +104,22 @@ def main():
         transforms.Normalize(mean=config['mean'], std=config['std'])
     ])
 
-
-    # Load dataset
+    # Load dataset based on task
     if args.task == "surface_classification":
+        # Load StreetSurfaceVis test dataset for evaluation
         _, _, test_images, test_labels = load_streetsurfacevis(config['data_dir'])
         test_dataset = SurfaceDataset(test_images, test_labels, transform=test_transforms)
     elif args.task == "segmentation":
+        # Load Mapillary Vistas test dataset for inference
         test_dataset = MapillaryDataset(
-            data_dir=config['test_data_dir'],  # Path to testing data
+            data_dir=config['test_data_dir'],  # Path to Mapillary test data
             transform=test_transforms,
             is_testing=True  # No labels for testing
         )
     else:
         raise ValueError(f"Invalid task type: {args.task}")
-    
-    test_loader = DataLoader(test_dataset, batch_size=config['test_batch_size'], shuffle=False)
 
+    test_loader = DataLoader(test_dataset, batch_size=config['test_batch_size'], shuffle=False)
 
     # Initialize model
     if args.task == "surface_classification":
@@ -130,7 +128,6 @@ def main():
         model = DeepLabV3PlusSegmenter().to(device)
     else:
         raise ValueError(f"Invalid task type: {args.task}")
-    
 
     # Load trained model
     if args.model_type == 'best':
@@ -140,12 +137,10 @@ def main():
         model_path = os.path.join(config['models_dir'], f"final_road_{args.task}.pth")
         results_dir = os.path.join(config['results_dir'], "final_model")
 
-
     # Create results directory if it doesn't exist
     os.makedirs(results_dir, exist_ok=True)
 
     model = load_model(model, model_path, device)
-
 
     # Define loss function
     if args.task == "surface_classification":
@@ -154,10 +149,10 @@ def main():
         criterion = torch.nn.BCELoss()  # Binary Cross-Entropy Loss for segmentation
     else:
         raise ValueError(f"Invalid task type: {args.task}")
-    
 
-    # Evaluate model
+    # Evaluate or perform inference
     if args.task == "surface_classification":
+        # Evaluate classification model on StreetSurfaceVis test set
         test_loss, test_accuracy, all_preds, all_targets = evaluate_classification(model, device, test_loader, criterion)
         class_names = ["asphalt", "concrete", "paving_stones", "sett", "unpaved"]  # Update with your class names
 
@@ -186,18 +181,7 @@ def main():
             save_path=os.path.join(results_dir, f"predictions_{args.task}.png")
         )
     elif args.task == "segmentation":
-        mean_iou, mean_dice = evaluate_segmentation(model, device, test_loader)
-
-        # Save evaluation results
-        with open(os.path.join(results_dir, f"evaluation_{args.task}.txt"), "w") as f:
-            f.write(f"Mean IoU: {mean_iou:.4f}\n")
-            f.write(f"Mean Dice: {mean_dice:.4f}\n")
-
-        # Log evaluation results
-        logging.info(f"Mean IoU: {mean_iou:.4f}")
-        logging.info(f"Mean Dice: {mean_dice:.4f}")
-
-        # Visualize segmentation predictions
+        # Perform inference on Mapillary Vistas test set
         visualize_segmentation_predictions(
             model, test_loader, device, save_path=os.path.join(results_dir, f"predictions_{args.task}.png")
         )

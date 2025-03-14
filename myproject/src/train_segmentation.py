@@ -10,7 +10,7 @@ from torchvision import transforms
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.cuda.amp import GradScaler, autocast
 
-from datasets.street_surface_loader import MapillaryDataset
+from datasets.mapillary_loader import MapillaryDataset
 from myproject.src.models.deeplabV3_segmenter import DeepLabV3PlusSegmenter  # Updated model import
 from utils.logger import setup_logging
 from utils.config import load_config
