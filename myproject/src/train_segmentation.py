@@ -11,7 +11,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.cuda.amp import GradScaler, autocast
 
 from datasets.mapillary_loader import MapillaryDataset
-from myproject.src.models.deeplabV3_segmenter import DeepLabV3PlusSegmenter  # Updated model import
+from models.deeplabV3_segmenter import DeepLabV3PlusSegmenter
 from utils.logger import setup_logging
 from utils.config import load_config
 from utils.utils import create_directories, save_model

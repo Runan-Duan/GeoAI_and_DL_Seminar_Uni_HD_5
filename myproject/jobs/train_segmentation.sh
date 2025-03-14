@@ -25,11 +25,11 @@ conda install segmentation-models-pytorch
 echo "Starting training..."
 python src/train_segmentation.py --config config/mapillary_segmentation.yaml
 
-echo "Training complete!"
+echo "Segmentation Training complete!"
 
 # Run evaluation after training
 echo "Starting evaluation..."
 python src/evaluate.py --config config/mapillary_segmentation.yaml --model-type best --task segmentation
 python src/evaluate.py --config config/mapillary_segmentation.yaml --model-type final --task segmentation
 
-echo "Evaluation complete!"
+echo "Segmentation Evaluation complete!"

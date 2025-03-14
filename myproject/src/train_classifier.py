@@ -14,7 +14,7 @@ from datasets.street_surface_loader import load_streetsurfacevis, SurfaceDataset
 from models.efficient_net_classifier import EfficientNetWithAttention
 from utils.logger import setup_logging
 from utils.config import load_config
-from utils.utils import create_directories, save_model, load_model
+from utils.utils import create_directories, save_model
 from visualization.plot_loss import plot_loss
 from visualization.plot_metrics import plot_metrics
 
