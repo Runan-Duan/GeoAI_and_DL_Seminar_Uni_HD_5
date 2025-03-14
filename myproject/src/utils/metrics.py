@@ -10,14 +10,13 @@ def accuracy(output, target):
         pred = torch.argmax(output, dim=1)
         correct = (pred == target).float().sum()
         return correct / target.shape[0]
+    
 
-def iou_score(output, target):
+def dice_score(y_true, y_pred, smooth=1e-6):
     """
-    Compute Intersection over Union (IoU) for segmentation tasks.
+    Compute the Dice Score for binary segmentation.
     """
-    with torch.no_grad():
-        output = torch.argmax(output, dim=1)
-        intersection = (output & target).float().sum((1, 2))
-        union = (output | target).float().sum((1, 2))
-        iou = (intersection + 1e-6) / (union + 1e-6)
-        return iou.mean()
+    y_true = y_true.flatten()
+    y_pred = y_pred.flatten()
+    intersection = (y_true * y_pred).sum()
+    return (2.0 * intersection + smooth) / (y_true.sum() + y_pred.sum() + smooth)

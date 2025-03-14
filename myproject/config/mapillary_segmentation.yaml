@@ -1,24 +1,24 @@
 # Dataset paths
-data_dir: "../data/raw/mapillary_dataset"
-processed_dir: "../data/processed"
-models_dir: "../models"
-logs_dir: "../logs"
-results_dir: "../results"
+train_data_dir: "data/raw/mapillary_dataset/training"
+val_data_dir: "data/raw/mapillary_dataset/validation"
+test_data_dir: "data/raw/mapillary_dataset/testing"  # Optional, for inference
+models_dir: "models"
+logs_dir: "logs"
+results_dir: "results"
 
 # Training parameters
-batch_size: 8  # Increased batch size with gradient accumulation
-test_batch_size: 4
-epochs: 50  
+batch_size: 8
+epochs: 50
 lr: 0.001
 seed: 1
 log_interval: 10
 no_cuda: False
-gradient_accumulation_steps: 4  # Simulate larger batch size
+gradient_accumulation_steps: 4
 
 # Learning rate scheduler
 lr_scheduler:
-  step_size: 10
-  gamma: 0.1
+  factor: 0.1
+  patience: 5
 
 # Early stopping
 early_stopping:
@@ -26,10 +26,10 @@ early_stopping:
   min_delta: 0.001
 
 # Model parameters
-num_classes: 3  # Adjust based on your dataset
+num_classes: 1  # Binary segmentation (road vs. non-road)
 
 # Data augmentation and preprocessing
-image_size: [512, 1024]  # Lower resolution for training
+image_size: [512, 1024]
 mean: [0.485, 0.456, 0.406]
 std: [0.229, 0.224, 0.225]
 data_augmentation:

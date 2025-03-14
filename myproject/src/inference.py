@@ -5,7 +5,7 @@ import logging
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 from models.efficient_net_classifier import EfficientNetWithAttention
-from models.unet_segmenter import UNetSegmenter
+from myproject.src.models.deeplabV3_segmenter import UNetSegmenter
 from utils.utils import load_model
 from visualization.visualize_predictions import visualize_predictions
 

@@ -136,7 +136,7 @@ def main():
 
     # Define loss function and optimizer
     criterion = nn.CrossEntropyLoss(label_smoothing=config['label_smoothing'])
-    optimizer = optim.Adam(model.parameters(), lr=config['lr'], weight_decay=config['weight_decay'])
+    optimizer = optim.Adam(model.parameters(), lr=config['lr'], weight_decay=float(config['weight_decay']))
 
     # Learning rate scheduler
     scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=config['lr_scheduler']['factor'], patience=config['lr_scheduler']['patience'], verbose=True)
