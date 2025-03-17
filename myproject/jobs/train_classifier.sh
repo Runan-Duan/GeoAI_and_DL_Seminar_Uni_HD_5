@@ -18,9 +18,6 @@ module load devel/cuda/12.4
 # Activate Conda environment
 echo "Activating Conda environment..."
 conda activate geoai
-conda install conda=25.1.1
-conda install numpy
-conda install segmentation-models-pytorch
 
 # Run the training script
 echo "Starting training..."

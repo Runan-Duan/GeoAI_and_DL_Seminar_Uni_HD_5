@@ -13,7 +13,7 @@ dependencies:
   - jupyter
   - numpy
   - matplotlib
-  - segmentation_models_pytorch
   - pip
   - pip:
     - opencv-python
+    - segmentation_models_pytorch

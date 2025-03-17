@@ -64,7 +64,7 @@ def validate(model, device, test_loader, criterion):
     return val_loss, accuracy
 
 
-def warmup_scheduler(optimizer, warmup_steps):
+def create_warmup_scheduler(optimizer, warmup_steps):
     def lr_lambda(step):
         return min(1.0, (step + 1) / warmup_steps)
     return LambdaLR(optimizer, lr_lambda)
@@ -143,7 +143,7 @@ def main():
 
     # Learning rate warmup
     warmup_steps = config['warmup_steps']
-    warmup_scheduler = warmup_scheduler(optimizer, warmup_steps)
+    warmup_scheduler = create_warmup_scheduler(optimizer, warmup_steps)
 
     # Mixed precision training
     scaler = GradScaler()
