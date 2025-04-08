@@ -1,8 +1,0 @@
-2025-03-19 11:46:49,502 - INFO - Logging setup complete.
-2025-03-19 11:46:49,502 - INFO - Created directory: models
-2025-03-19 11:46:49,502 - INFO - Created directory: logs
-2025-03-19 11:46:49,503 - INFO - Created directory: results
-2025-03-19 11:47:49,989 - INFO - Logging setup complete.
-2025-03-19 11:47:49,989 - INFO - Created directory: models
-2025-03-19 11:47:49,989 - INFO - Created directory: logs
-2025-03-19 11:47:49,989 - INFO - Created directory: results
