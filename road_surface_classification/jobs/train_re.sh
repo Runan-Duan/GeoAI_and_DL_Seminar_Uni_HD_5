@@ -16,8 +16,8 @@ echo "running train.py"
 python train.py \
     --model_name resnet50 \
     --models_dir './models'\
-    --lr 0.001 \
-    --epochs 120 \
+    --lr 0.0001 \
+    --epochs 50 \
     --batch_size 32 \
     --logs_dir './logs'\
     --data_path 'data/raw/StreetSurfaceVis_1024/'
