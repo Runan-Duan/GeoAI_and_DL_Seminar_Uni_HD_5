@@ -1,6 +1,6 @@
 import argparse
 import torch
-from trainer import RoadSurfaceTrainer
+from visualizer import ModelVisualizer
 
 def main():
     parser = argparse.ArgumentParser()
@@ -9,18 +9,16 @@ def main():
                            'vit_b16', 'swin_b', 'convnext_large'],
                    help='Model architecture to use')
     parser.add_argument('--models_dir', default='./models', type=str, help='path to model')
-    parser.add_argument('--lr', default=0.001, type=float, help='learning rate')
-    parser.add_argument('--epochs', default=120, type=int, help='number of epochs')
     parser.add_argument('--batch_size', default=128, type=int, help='batch size')
     parser.add_argument('--cuda', default=torch.cuda.is_available(), type=bool, help='whether cuda is in use')
     parser.add_argument('--data_path', default='./data/raw/StreetSurfaceVis/s_1024', type=str, help='dataset path')
-    parser.add_argument('--logs_dir', default='./logs', type=str, help='logs path')
     args = parser.parse_args()
 
     print(f"Using Cuda: {torch.cuda.is_available()}")
-    trainer = RoadSurfaceTrainer(args)
-    trainer.train()
-
+    visualizer = ModelVisualizer(args)
+    
+    # Run visualizations
+    visualizer.test(visualization=True, run_gradcam=True)
 
 if __name__ == "__main__":
     main()

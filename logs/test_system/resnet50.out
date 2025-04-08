@@ -1,0 +1,5 @@
+Active Conda env:                       *  /csghome/sm330/conda_envs/seml_pyt-tf
+running test.py
+Using Cuda: True
+Model loaded with 23,518,277 parameters
+done
