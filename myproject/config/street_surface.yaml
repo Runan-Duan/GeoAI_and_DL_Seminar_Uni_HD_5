@@ -1,0 +1,52 @@
+# Dataset paths
+data_dir: "data/raw/StreetSurfaceVis_1024"
+processed_dir: "data/processed"
+models_dir: "models"
+logs_dir: "logs"
+results_dir: "results"
+
+# Training parameters
+batch_size: 32  # Reduced batch size for high-resolution images
+test_batch_size: 32
+epochs: 100  # Reduced epochs
+lr: 0.001
+seed: 1
+log_interval: 50
+no_cuda: False
+gradient_accumulation_steps: 4  # Simulate larger batch size
+max_grad_norm: 1.0  # Gradient clipping
+weight_decay: 1e-5  # L2 regularization
+label_smoothing: 0.1  # Label smoothing
+warmup_steps: 500  # Learning rate warmup steps
+
+# Learning rate scheduler
+lr_scheduler:
+  name: "ReduceLROnPlateau"
+  factor: 0.1  # Reduce LR by 10x
+  patience: 3  # Wait 3 epochs before reducing LR
+
+# Early stopping
+early_stopping:
+  patience: 15  # how many epochs to wait after the last time the validation loss improved before stopping the training
+  min_delta: 0.000001  # the minimum change in the validation loss to qualify as an improvement
+
+# Model parameters
+model_name: "efficientnet"
+num_classes: 5  # Number of road surface types
+
+# Data augmentation and preprocessing
+image_size: 512  # Lower resolution for training
+mean: [0.485, 0.456, 0.406]
+std: [0.229, 0.224, 0.225]
+data_augmentation:
+  RandomHorizontalFlip: True
+  RandomVerticalFlip: True
+  RandomRotation: 10
+  ColorJitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0.1
+  RandomResizedCrop:
+    size: 512
+    scale: [0.8, 1.0]
