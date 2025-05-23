@@ -151,7 +151,7 @@ class RoadSurfaceTrainer:
                 self.logger.warning(f"  Class [{cls}] has no samples in validation set.")
         
         if confusion_matrix:
-            self.confusion_matrix()
+            self.confusion_matrix(all_targets, all_preds)
 
         return total_loss, acc
 
@@ -197,7 +197,7 @@ class RoadSurfaceTrainer:
                 self.logger.warning(f"  Class [{cls}] has no samples in test set.")
         
         if confusion_matrix:
-            self.confusion_matrix()
+            self.confusion_matrix(all_targets, all_preds)
 
         return total_loss, acc
 
@@ -218,7 +218,7 @@ class RoadSurfaceTrainer:
         self.test()  # Add this call to evaluate on the test set
         return best_acc
 
-    def confusion_matrix(self):
+    def confusion_matrix(self, all_targets, all_preds):
         # Log confusion matrix and classification report
         cm = confusion_matrix(all_targets, all_preds)
         self.logger.info(f"\nConfusion Matrix:\n{cm}")

@@ -1,0 +1,31 @@
+running test.py
+Using Cuda: True
+Model resnet50 loaded with 23,518,277 parameters
+Test Loss: 5.9772, Accuracy: 94.19%
+  Class [asphalt] Accuracy: 97.05% (725/747)
+  Class [concrete] Accuracy: 81.96% (159/194)
+  Class [paving_stones] Accuracy: 94.85% (387/408)
+  Class [sett] Accuracy: 93.41% (255/273)
+  Class [unpaved] Accuracy: 95.07% (193/203)
+
+Confusion Matrix:
+[[725  13   1   1   7]
+ [ 32 159   0   0   3]
+ [  7   8 387   6   0]
+ [  2   0  10 255   6]
+ [  9   0   1   0 193]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.97      0.95       747
+     concrete       0.88      0.82      0.85       194
+paving_stones       0.97      0.95      0.96       408
+         sett       0.97      0.93      0.95       273
+      unpaved       0.92      0.95      0.94       203
+
+     accuracy                           0.94      1825
+    macro avg       0.94      0.92      0.93      1825
+ weighted avg       0.94      0.94      0.94      1825
+
+done

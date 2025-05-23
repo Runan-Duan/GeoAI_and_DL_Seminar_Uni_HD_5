@@ -1,5 +1,6 @@
 import argparse
 import torch
+import torch.nn as nn
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -9,6 +10,7 @@ from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 from pytorch_grad_cam.utils.image import show_cam_on_image
 from models import get_model
 from street_surface_loader import StreetSurfaceVis, SURFACE_CLASSES
+from sklearn.metrics import confusion_matrix, classification_report
 
 class ModelVisualizer:
     def __init__(self, args):
@@ -30,15 +32,17 @@ class ModelVisualizer:
         model_path = Path(self.args.models_dir) / f'best_model_{self.args.model_name}.pth'
         state_dict = torch.load(model_path, map_location=self.device)
         self.model.load_state_dict(state_dict)
+        class_weights = torch.tensor([1.0, 4.0, 2.0, 3.0, 4.0]).to(self.device)
+        self.criterion = nn.CrossEntropyLoss(weight=class_weights)
         
         # Verify parameters require grad
         for param in self.model.parameters():
             param.requires_grad = True
         
         self.model.eval()
-        print(f"Model loaded with {sum(p.numel() for p in self.model.parameters()):,} parameters")
+        print(f"Model {self.args.model_name} loaded with {sum(p.numel() for p in self.model.parameters()):,} parameters")
 
-    def visualize_misclassified(self, num_samples=5, save_dir='misclassified_samples'):
+    def visualize_misclassified(self, num_samples=1, save_dir='misclassified_samples'):
         """Visualize misclassified samples from the test set"""
         Path(save_dir).mkdir(parents=True, exist_ok=True)
         
@@ -76,7 +80,7 @@ class ModelVisualizer:
                 
                 plt.subplot(1, num_samples, i+1)
                 plt.imshow(img)
-                plt.title(f'True: {SURFACE_CLASSES[true]}\nPred: {SURFACE_CLASSES[pred]}')
+                plt.title(f'True: {SURFACE_CLASSES[true]} Pred: {SURFACE_CLASSES[pred]}')
                 plt.axis('off')
             
             plt.tight_layout()
@@ -98,14 +102,14 @@ class ModelVisualizer:
                 
                 plt.subplot(1, num_samples, i+1)
                 plt.imshow(img)
-                plt.title(f'True: concrete\nPred: asphalt')
+                plt.title(f'True: concrete; Pred: asphalt')
                 plt.axis('off')
             
             plt.tight_layout()
             plt.savefig(f'{save_dir}/concrete_asphalt_confusion_{self.args.model_name}.png')
             plt.close()
 
-    def visualize_gradcam(self, num_samples=3, save_dir='gradcam_results'):
+    def visualize_gradcam(self, num_samples=1, save_dir='gradcam_results', fontsize=15):
         """Visualize Grad-CAM for correctly and incorrectly classified samples"""
         
         Path(save_dir).mkdir(parents=True, exist_ok=True)
@@ -118,7 +122,7 @@ class ModelVisualizer:
         )
         
         # visualize concrete and sett samples specifically
-        for target_class in ['concrete', 'sett']:
+        for target_class in ['asphalt', 'concrete', 'paving_stones', 'sett', 'unpaved']:
             class_idx = SURFACE_CLASSES.index(target_class)
             samples_collected = 0
             
@@ -165,13 +169,13 @@ class ModelVisualizer:
                     visualization = show_cam_on_image(img_np, grayscale_cam[0], use_rgb=True)
                     
                     # Plot results
-                    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+                    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
                     ax1.imshow(img_np)
-                    ax1.set_title(f'Original\nTrue: {SURFACE_CLASSES[true_label]}\nPred: {SURFACE_CLASSES[pred_label]}')
+                    ax1.set_title(f'True: {SURFACE_CLASSES[true_label]}\nPred: {SURFACE_CLASSES[pred_label]}', fontsize=fontsize)
                     ax1.axis('off')
                     
                     ax2.imshow(visualization)
-                    ax2.set_title(f'Grad-CAM (Focus: {SURFACE_CLASSES[pred_label]})')
+                    ax2.set_title(f'{self.args.model_name}\n Focus: {SURFACE_CLASSES[pred_label]}', fontsize=fontsize)
                     ax2.axis('off')
                     
                     plt.tight_layout()
@@ -202,8 +206,59 @@ class ModelVisualizer:
 
     def test(self, confusion_matrix=True, visualization=True, run_gradcam=True):
         """Run tests and visualizations"""
+        self.model.eval()
+        total_loss, correct, total = 0, 0, 0
+
+        class_correct = [0] * 5
+        class_total = [0] * 5
+
+        all_targets = []
+        all_preds = []
+
+        with torch.no_grad():
+            for data, target in self.test_loader:
+                data, target = data.to(self.device), target.to(self.device)
+                output = self.model(data)
+                loss = self.criterion(output, target)
+                total_loss += loss.item()
+
+                _, pred = output.max(1)
+                correct += pred.eq(target).sum().item()
+                total += target.size(0)
+
+                # Collect for confusion matrix
+                all_targets.extend(target.cpu().numpy())
+                all_preds.extend(pred.cpu().numpy())
+
+                for i in range(len(target)):
+                    label = target[i].item()
+                    class_total[label] += 1
+                    if pred[i].item() == label:
+                        class_correct[label] += 1
+
+        acc = 100. * correct / total
+        print(f"Test Loss: {total_loss:.4f}, Accuracy: {acc:.2f}%")
+
+        for i, cls in enumerate(SURFACE_CLASSES):
+            if class_total[i] > 0:
+                cls_acc = 100. * class_correct[i] / class_total[i]
+                print(f"  Class [{cls}] Accuracy: {cls_acc:.2f}% ({class_correct[i]}/{class_total[i]})")
+            else:
+                self.logger.warning(f"  Class [{cls}] has no samples in test set.")
+        
+        if confusion_matrix:
+            self.confusion_matrix(all_targets, all_preds)
         if visualization:
             self.visualize_misclassified()
         if run_gradcam:
             self.visualize_gradcam()
+        return total_loss, acc
+    
+    def confusion_matrix(self, all_targets, all_preds):
+        # Log confusion matrix and classification report
+        cm = confusion_matrix(all_targets, all_preds)
+        print(f"\nConfusion Matrix:\n{cm}")
+
+        report = classification_report(all_targets, all_preds, target_names=SURFACE_CLASSES)
+        print(f"\nClassification Report:\n{report}")
 

@@ -1,0 +1,31 @@
+running test.py
+Using Cuda: True
+Model efficientnet_b4 loaded with 17,557,581 parameters
+Test Loss: 10.8179, Accuracy: 94.58%
+  Class [asphalt] Accuracy: 95.85% (716/747)
+  Class [concrete] Accuracy: 82.47% (160/194)
+  Class [paving_stones] Accuracy: 97.06% (396/408)
+  Class [sett] Accuracy: 96.34% (263/273)
+  Class [unpaved] Accuracy: 94.09% (191/203)
+
+Confusion Matrix:
+[[716  21   1   1   8]
+ [ 29 160   4   0   1]
+ [  1   2 396   9   0]
+ [  1   0   7 263   2]
+ [  8   3   0   1 191]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.95       747
+     concrete       0.86      0.82      0.84       194
+paving_stones       0.97      0.97      0.97       408
+         sett       0.96      0.96      0.96       273
+      unpaved       0.95      0.94      0.94       203
+
+     accuracy                           0.95      1825
+    macro avg       0.94      0.93      0.93      1825
+ weighted avg       0.95      0.95      0.95      1825
+
+done

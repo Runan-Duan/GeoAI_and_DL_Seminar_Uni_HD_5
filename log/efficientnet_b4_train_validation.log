@@ -1,0 +1,4245 @@
+2025-05-10 15:44:04,082 - INFO - Train Set Class Distribution:
+surface_type
+asphalt          2390
+paving_stones    1303
+sett              872
+unpaved           650
+concrete          622
+Name: count, dtype: int64
+2025-05-10 15:44:04,083 - INFO - Validation Set Class Distribution:
+surface_type
+asphalt          597
+paving_stones    326
+sett             218
+unpaved          163
+concrete         156
+Name: count, dtype: int64
+2025-05-10 15:44:04,083 - INFO - Test Set Class Distribution:
+surface_type
+asphalt          747
+paving_stones    408
+sett             273
+unpaved          203
+concrete         194
+Name: count, dtype: int64
+2025-05-10 15:46:04,447 - INFO - [Epoch 1] Train Loss: 328.0348, Accuracy: 66.11%
+2025-05-10 15:46:27,942 - INFO - Validation Loss: 36.1009, Accuracy: 78.70%
+2025-05-10 15:46:27,943 - INFO -   Class [asphalt] Accuracy: 60.80% (363/597)
+2025-05-10 15:46:27,943 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 15:46:27,943 - INFO -   Class [paving_stones] Accuracy: 92.33% (301/326)
+2025-05-10 15:46:27,943 - INFO -   Class [sett] Accuracy: 88.53% (193/218)
+2025-05-10 15:46:27,943 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 15:46:27,948 - INFO - 
+Confusion Matrix:
+[[363 161  13   5  55]
+ [  7 136   0   0  13]
+ [  1   8 301  12   4]
+ [  1   2  21 193   1]
+ [  1   6   0   0 156]]
+2025-05-10 15:46:27,956 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.61      0.75       597
+     concrete       0.43      0.87      0.58       156
+paving_stones       0.90      0.92      0.91       326
+         sett       0.92      0.89      0.90       218
+      unpaved       0.68      0.96      0.80       163
+
+     accuracy                           0.79      1460
+    macro avg       0.78      0.85      0.79      1460
+ weighted avg       0.86      0.79      0.79      1460
+
+2025-05-10 15:46:28,747 - INFO - New best model saved with accuracy: 78.70%
+2025-05-10 15:48:30,486 - INFO - [Epoch 2] Train Loss: 132.9208, Accuracy: 85.20%
+2025-05-10 15:48:53,238 - INFO - Validation Loss: 23.2384, Accuracy: 89.45%
+2025-05-10 15:48:53,238 - INFO -   Class [asphalt] Accuracy: 85.26% (509/597)
+2025-05-10 15:48:53,238 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 15:48:53,238 - INFO -   Class [paving_stones] Accuracy: 94.79% (309/326)
+2025-05-10 15:48:53,238 - INFO -   Class [sett] Accuracy: 90.83% (198/218)
+2025-05-10 15:48:53,239 - INFO -   Class [unpaved] Accuracy: 96.93% (158/163)
+2025-05-10 15:48:53,241 - INFO - 
+Confusion Matrix:
+[[509  51   9   3  25]
+ [ 13 132   0   0  11]
+ [  2   2 309  11   2]
+ [  1   0  18 198   1]
+ [  3   2   0   0 158]]
+2025-05-10 15:48:53,248 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.85      0.90       597
+     concrete       0.71      0.85      0.77       156
+paving_stones       0.92      0.95      0.93       326
+         sett       0.93      0.91      0.92       218
+      unpaved       0.80      0.97      0.88       163
+
+     accuracy                           0.89      1460
+    macro avg       0.87      0.90      0.88      1460
+ weighted avg       0.90      0.89      0.90      1460
+
+2025-05-10 15:48:54,051 - INFO - New best model saved with accuracy: 89.45%
+2025-05-10 15:50:55,704 - INFO - [Epoch 3] Train Loss: 91.6583, Accuracy: 90.77%
+2025-05-10 15:51:18,693 - INFO - Validation Loss: 21.5774, Accuracy: 90.96%
+2025-05-10 15:51:18,694 - INFO -   Class [asphalt] Accuracy: 86.93% (519/597)
+2025-05-10 15:51:18,694 - INFO -   Class [concrete] Accuracy: 89.74% (140/156)
+2025-05-10 15:51:18,694 - INFO -   Class [paving_stones] Accuracy: 95.71% (312/326)
+2025-05-10 15:51:18,694 - INFO -   Class [sett] Accuracy: 93.58% (204/218)
+2025-05-10 15:51:18,694 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 15:51:18,696 - INFO - 
+Confusion Matrix:
+[[519  52   9   3  14]
+ [  8 140   0   0   8]
+ [  1   3 312   9   1]
+ [  0   1  13 204   0]
+ [  8   2   0   0 153]]
+2025-05-10 15:51:18,703 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.87      0.92       597
+     concrete       0.71      0.90      0.79       156
+paving_stones       0.93      0.96      0.95       326
+         sett       0.94      0.94      0.94       218
+      unpaved       0.87      0.94      0.90       163
+
+     accuracy                           0.91      1460
+    macro avg       0.88      0.92      0.90      1460
+ weighted avg       0.92      0.91      0.91      1460
+
+2025-05-10 15:51:19,497 - INFO - New best model saved with accuracy: 90.96%
+2025-05-10 15:53:20,305 - INFO - [Epoch 4] Train Loss: 67.3974, Accuracy: 93.44%
+2025-05-10 15:53:46,105 - INFO - Validation Loss: 21.8574, Accuracy: 91.51%
+2025-05-10 15:53:46,105 - INFO -   Class [asphalt] Accuracy: 87.27% (521/597)
+2025-05-10 15:53:46,106 - INFO -   Class [concrete] Accuracy: 89.10% (139/156)
+2025-05-10 15:53:46,106 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 15:53:46,106 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 15:53:46,106 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 15:53:46,108 - INFO - 
+Confusion Matrix:
+[[521  56   7   2  11]
+ [  8 139   0   0   9]
+ [  1   3 316   5   1]
+ [  0   1  11 206   0]
+ [  7   2   0   0 154]]
+2025-05-10 15:53:46,115 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.87      0.92       597
+     concrete       0.69      0.89      0.78       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.97      0.94      0.96       218
+      unpaved       0.88      0.94      0.91       163
+
+     accuracy                           0.92      1460
+    macro avg       0.89      0.92      0.90      1460
+ weighted avg       0.92      0.92      0.92      1460
+
+2025-05-10 15:53:46,918 - INFO - New best model saved with accuracy: 91.51%
+2025-05-10 15:55:48,169 - INFO - [Epoch 5] Train Loss: 55.0650, Accuracy: 95.19%
+2025-05-10 15:56:11,138 - INFO - Validation Loss: 23.3533, Accuracy: 91.78%
+2025-05-10 15:56:11,138 - INFO -   Class [asphalt] Accuracy: 89.11% (532/597)
+2025-05-10 15:56:11,138 - INFO -   Class [concrete] Accuracy: 88.46% (138/156)
+2025-05-10 15:56:11,138 - INFO -   Class [paving_stones] Accuracy: 93.87% (306/326)
+2025-05-10 15:56:11,138 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 15:56:11,138 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 15:56:11,141 - INFO - 
+Confusion Matrix:
+[[532  49   4   0  12]
+ [  8 138   0   0  10]
+ [  2   2 306  14   2]
+ [  0   1   7 210   0]
+ [  8   1   0   0 154]]
+2025-05-10 15:56:11,148 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.89      0.93       597
+     concrete       0.72      0.88      0.80       156
+paving_stones       0.97      0.94      0.95       326
+         sett       0.94      0.96      0.95       218
+      unpaved       0.87      0.94      0.90       163
+
+     accuracy                           0.92      1460
+    macro avg       0.89      0.92      0.91      1460
+ weighted avg       0.92      0.92      0.92      1460
+
+2025-05-10 15:56:11,986 - INFO - New best model saved with accuracy: 91.78%
+2025-05-10 15:58:10,614 - INFO - [Epoch 6] Train Loss: 42.4437, Accuracy: 96.08%
+2025-05-10 15:58:36,655 - INFO - Validation Loss: 30.1214, Accuracy: 92.12%
+2025-05-10 15:58:36,656 - INFO -   Class [asphalt] Accuracy: 90.12% (538/597)
+2025-05-10 15:58:36,656 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 15:58:36,656 - INFO -   Class [paving_stones] Accuracy: 97.85% (319/326)
+2025-05-10 15:58:36,656 - INFO -   Class [sett] Accuracy: 90.37% (197/218)
+2025-05-10 15:58:36,656 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 15:58:36,658 - INFO - 
+Confusion Matrix:
+[[538  42   5   2  10]
+ [ 10 136   1   0   9]
+ [  1   1 319   3   2]
+ [  0   0  21 197   0]
+ [  7   1   0   0 155]]
+2025-05-10 15:58:36,665 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.90      0.93       597
+     concrete       0.76      0.87      0.81       156
+paving_stones       0.92      0.98      0.95       326
+         sett       0.98      0.90      0.94       218
+      unpaved       0.88      0.95      0.91       163
+
+     accuracy                           0.92      1460
+    macro avg       0.90      0.92      0.91      1460
+ weighted avg       0.93      0.92      0.92      1460
+
+2025-05-10 15:58:37,461 - INFO - New best model saved with accuracy: 92.12%
+2025-05-10 16:00:39,016 - INFO - [Epoch 7] Train Loss: 35.9323, Accuracy: 96.74%
+2025-05-10 16:01:02,104 - INFO - Validation Loss: 30.5561, Accuracy: 93.42%
+2025-05-10 16:01:02,104 - INFO -   Class [asphalt] Accuracy: 94.64% (565/597)
+2025-05-10 16:01:02,104 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 16:01:02,104 - INFO -   Class [paving_stones] Accuracy: 95.09% (310/326)
+2025-05-10 16:01:02,104 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 16:01:02,104 - INFO -   Class [unpaved] Accuracy: 89.57% (146/163)
+2025-05-10 16:01:02,107 - INFO - 
+Confusion Matrix:
+[[565  24   3   2   3]
+ [ 15 133   0   0   8]
+ [  2   3 310  10   1]
+ [  0   0   8 210   0]
+ [ 15   2   0   0 146]]
+2025-05-10 16:01:02,114 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.82      0.85      0.84       156
+paving_stones       0.97      0.95      0.96       326
+         sett       0.95      0.96      0.95       218
+      unpaved       0.92      0.90      0.91       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.92      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 16:01:02,930 - INFO - New best model saved with accuracy: 93.42%
+2025-05-10 16:03:01,481 - INFO - [Epoch 8] Train Loss: 25.7521, Accuracy: 97.55%
+2025-05-10 16:03:24,745 - INFO - Validation Loss: 33.5720, Accuracy: 93.84%
+2025-05-10 16:03:24,745 - INFO -   Class [asphalt] Accuracy: 94.81% (566/597)
+2025-05-10 16:03:24,745 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 16:03:24,745 - INFO -   Class [paving_stones] Accuracy: 95.40% (311/326)
+2025-05-10 16:03:24,745 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 16:03:24,745 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 16:03:24,747 - INFO - 
+Confusion Matrix:
+[[566  15   3   3  10]
+ [ 16 132   0   0   8]
+ [  1   3 311   9   2]
+ [  0   0   8 210   0]
+ [ 11   0   0   1 151]]
+2025-05-10 16:03:24,755 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.97      0.95      0.96       326
+         sett       0.94      0.96      0.95       218
+      unpaved       0.88      0.93      0.90       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:03:25,568 - INFO - New best model saved with accuracy: 93.84%
+2025-05-10 16:05:23,681 - INFO - [Epoch 9] Train Loss: 18.4686, Accuracy: 98.42%
+2025-05-10 16:05:49,650 - INFO - Validation Loss: 30.9455, Accuracy: 91.58%
+2025-05-10 16:05:49,650 - INFO -   Class [asphalt] Accuracy: 88.78% (530/597)
+2025-05-10 16:05:49,650 - INFO -   Class [concrete] Accuracy: 88.46% (138/156)
+2025-05-10 16:05:49,650 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 16:05:49,650 - INFO -   Class [sett] Accuracy: 93.58% (204/218)
+2025-05-10 16:05:49,650 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 16:05:49,653 - INFO - 
+Confusion Matrix:
+[[530  55   4   1   7]
+ [ 10 138   0   0   8]
+ [  1   3 315   5   2]
+ [  0   0  13 204   1]
+ [ 11   2   0   0 150]]
+2025-05-10 16:05:49,660 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.89      0.92       597
+     concrete       0.70      0.88      0.78       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.97      0.94      0.95       218
+      unpaved       0.89      0.92      0.91       163
+
+     accuracy                           0.92      1460
+    macro avg       0.89      0.92      0.90      1460
+ weighted avg       0.92      0.92      0.92      1460
+
+2025-05-10 16:07:50,195 - INFO - [Epoch 10] Train Loss: 15.0173, Accuracy: 98.58%
+2025-05-10 16:08:13,373 - INFO - Validation Loss: 37.8651, Accuracy: 93.22%
+2025-05-10 16:08:13,373 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 16:08:13,373 - INFO -   Class [concrete] Accuracy: 82.69% (129/156)
+2025-05-10 16:08:13,373 - INFO -   Class [paving_stones] Accuracy: 94.79% (309/326)
+2025-05-10 16:08:13,373 - INFO -   Class [sett] Accuracy: 93.12% (203/218)
+2025-05-10 16:08:13,373 - INFO -   Class [unpaved] Accuracy: 90.80% (148/163)
+2025-05-10 16:08:13,375 - INFO - 
+Confusion Matrix:
+[[572  15   4   2   4]
+ [ 20 129   1   0   6]
+ [  2   2 309  11   2]
+ [  0   0  15 203   0]
+ [ 15   0   0   0 148]]
+2025-05-10 16:08:13,382 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.96      0.95       597
+     concrete       0.88      0.83      0.85       156
+paving_stones       0.94      0.95      0.94       326
+         sett       0.94      0.93      0.94       218
+      unpaved       0.93      0.91      0.92       163
+
+     accuracy                           0.93      1460
+    macro avg       0.93      0.91      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 16:10:14,442 - INFO - [Epoch 11] Train Loss: 15.4721, Accuracy: 98.80%
+2025-05-10 16:10:37,699 - INFO - Validation Loss: 37.1727, Accuracy: 93.70%
+2025-05-10 16:10:37,700 - INFO -   Class [asphalt] Accuracy: 93.97% (561/597)
+2025-05-10 16:10:37,700 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 16:10:37,700 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 16:10:37,700 - INFO -   Class [sett] Accuracy: 91.74% (200/218)
+2025-05-10 16:10:37,700 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 16:10:37,702 - INFO - 
+Confusion Matrix:
+[[561  18   5   2  11]
+ [ 11 135   0   0  10]
+ [  0   3 317   4   2]
+ [  0   0  18 200   0]
+ [  7   1   0   0 155]]
+2025-05-10 16:10:37,709 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.94      0.95       597
+     concrete       0.86      0.87      0.86       156
+paving_stones       0.93      0.97      0.95       326
+         sett       0.97      0.92      0.94       218
+      unpaved       0.87      0.95      0.91       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:12:38,746 - INFO - [Epoch 12] Train Loss: 12.8381, Accuracy: 98.85%
+2025-05-10 16:13:05,041 - INFO - Validation Loss: 32.0413, Accuracy: 92.95%
+2025-05-10 16:13:05,041 - INFO -   Class [asphalt] Accuracy: 91.12% (544/597)
+2025-05-10 16:13:05,041 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 16:13:05,041 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 16:13:05,041 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 16:13:05,042 - INFO -   Class [unpaved] Accuracy: 96.32% (157/163)
+2025-05-10 16:13:05,044 - INFO - 
+Confusion Matrix:
+[[544  36   5   3   9]
+ [ 10 136   1   0   9]
+ [  1   1 314   8   2]
+ [  0   0  12 206   0]
+ [  5   1   0   0 157]]
+2025-05-10 16:13:05,051 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.91      0.94       597
+     concrete       0.78      0.87      0.82       156
+paving_stones       0.95      0.96      0.95       326
+         sett       0.95      0.94      0.95       218
+      unpaved       0.89      0.96      0.92       163
+
+     accuracy                           0.93      1460
+    macro avg       0.91      0.93      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 16:15:05,706 - INFO - [Epoch 13] Train Loss: 8.5360, Accuracy: 99.09%
+2025-05-10 16:15:28,757 - INFO - Validation Loss: 38.8465, Accuracy: 94.18%
+2025-05-10 16:15:28,757 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 16:15:28,757 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 16:15:28,757 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 16:15:28,758 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 16:15:28,758 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 16:15:28,760 - INFO - 
+Confusion Matrix:
+[[570  15   3   3   6]
+ [ 15 135   0   0   6]
+ [  2   2 313   7   2]
+ [  0   0  11 207   0]
+ [  9   3   0   1 150]]
+2025-05-10 16:15:28,767 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.87      0.87      0.87       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.91      0.92      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:15:29,574 - INFO - New best model saved with accuracy: 94.18%
+2025-05-10 16:17:30,815 - INFO - [Epoch 14] Train Loss: 10.8269, Accuracy: 99.01%
+2025-05-10 16:17:56,887 - INFO - Validation Loss: 33.4862, Accuracy: 93.97%
+2025-05-10 16:17:56,888 - INFO -   Class [asphalt] Accuracy: 93.97% (561/597)
+2025-05-10 16:17:56,888 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 16:17:56,888 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 16:17:56,888 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 16:17:56,888 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 16:17:56,890 - INFO - 
+Confusion Matrix:
+[[561  24   4   2   6]
+ [ 17 135   0   0   4]
+ [  0   2 314   8   2]
+ [  0   0   9 209   0]
+ [  8   2   0   0 153]]
+2025-05-10 16:17:56,897 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.94      0.95       597
+     concrete       0.83      0.87      0.85       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.96      0.96       218
+      unpaved       0.93      0.94      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:19:57,742 - INFO - [Epoch 15] Train Loss: 9.5267, Accuracy: 99.35%
+2025-05-10 16:20:20,775 - INFO - Validation Loss: 47.4036, Accuracy: 93.49%
+2025-05-10 16:20:20,775 - INFO -   Class [asphalt] Accuracy: 95.14% (568/597)
+2025-05-10 16:20:20,775 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 16:20:20,775 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 16:20:20,775 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 16:20:20,775 - INFO -   Class [unpaved] Accuracy: 90.18% (147/163)
+2025-05-10 16:20:20,777 - INFO - 
+Confusion Matrix:
+[[568  19   3   3   4]
+ [ 21 132   0   0   3]
+ [  1   2 313   8   2]
+ [  0   0  13 205   0]
+ [ 14   2   0   0 147]]
+2025-05-10 16:20:20,784 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.95      0.95       597
+     concrete       0.85      0.85      0.85       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.95      0.94      0.94       218
+      unpaved       0.94      0.90      0.92       163
+
+     accuracy                           0.93      1460
+    macro avg       0.93      0.92      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 16:22:19,005 - INFO - [Epoch 16] Train Loss: 7.0807, Accuracy: 99.30%
+2025-05-10 16:22:41,903 - INFO - Validation Loss: 44.3577, Accuracy: 93.90%
+2025-05-10 16:22:41,903 - INFO -   Class [asphalt] Accuracy: 94.14% (562/597)
+2025-05-10 16:22:41,903 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 16:22:41,903 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 16:22:41,903 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 16:22:41,903 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 16:22:41,905 - INFO - 
+Confusion Matrix:
+[[562  20   4   3   8]
+ [ 17 133   0   0   6]
+ [  1   2 315   6   2]
+ [  0   0   9 209   0]
+ [ 10   1   0   0 152]]
+2025-05-10 16:22:41,913 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.94      0.95       597
+     concrete       0.85      0.85      0.85       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.96      0.96      0.96       218
+      unpaved       0.90      0.93      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:24:42,998 - INFO - [Epoch 17] Train Loss: 6.8386, Accuracy: 99.45%
+2025-05-10 16:25:06,403 - INFO - Validation Loss: 43.5252, Accuracy: 92.12%
+2025-05-10 16:25:06,403 - INFO -   Class [asphalt] Accuracy: 90.12% (538/597)
+2025-05-10 16:25:06,403 - INFO -   Class [concrete] Accuracy: 88.46% (138/156)
+2025-05-10 16:25:06,403 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 16:25:06,403 - INFO -   Class [sett] Accuracy: 93.58% (204/218)
+2025-05-10 16:25:06,403 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 16:25:06,405 - INFO - 
+Confusion Matrix:
+[[538  43   4   4   8]
+ [ 12 138   0   0   6]
+ [  2   3 313   6   2]
+ [  0   0  14 204   0]
+ [  9   2   0   0 152]]
+2025-05-10 16:25:06,412 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.90      0.93       597
+     concrete       0.74      0.88      0.81       156
+paving_stones       0.95      0.96      0.95       326
+         sett       0.95      0.94      0.94       218
+      unpaved       0.90      0.93      0.92       163
+
+     accuracy                           0.92      1460
+    macro avg       0.90      0.92      0.91      1460
+ weighted avg       0.93      0.92      0.92      1460
+
+2025-05-10 16:27:07,271 - INFO - [Epoch 18] Train Loss: 7.2600, Accuracy: 99.31%
+2025-05-10 16:27:30,266 - INFO - Validation Loss: 47.6707, Accuracy: 93.90%
+2025-05-10 16:27:30,266 - INFO -   Class [asphalt] Accuracy: 94.97% (567/597)
+2025-05-10 16:27:30,266 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 16:27:30,266 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 16:27:30,266 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 16:27:30,266 - INFO -   Class [unpaved] Accuracy: 90.18% (147/163)
+2025-05-10 16:27:30,268 - INFO - 
+Confusion Matrix:
+[[567  21   3   2   4]
+ [ 18 135   0   0   3]
+ [  2   3 313   6   2]
+ [  0   0   9 209   0]
+ [ 15   1   0   0 147]]
+2025-05-10 16:27:30,276 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.95      0.95       597
+     concrete       0.84      0.87      0.85       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.96      0.96      0.96       218
+      unpaved       0.94      0.90      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:29:31,230 - INFO - [Epoch 19] Train Loss: 6.3775, Accuracy: 99.50%
+2025-05-10 16:29:54,340 - INFO - Validation Loss: 42.8139, Accuracy: 93.36%
+2025-05-10 16:29:54,340 - INFO -   Class [asphalt] Accuracy: 92.13% (550/597)
+2025-05-10 16:29:54,340 - INFO -   Class [concrete] Accuracy: 88.46% (138/156)
+2025-05-10 16:29:54,340 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 16:29:54,340 - INFO -   Class [sett] Accuracy: 93.58% (204/218)
+2025-05-10 16:29:54,340 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 16:29:54,343 - INFO - 
+Confusion Matrix:
+[[550  34   4   2   7]
+ [ 13 138   0   0   5]
+ [  2   3 315   4   2]
+ [  0   0  14 204   0]
+ [  4   3   0   0 156]]
+2025-05-10 16:29:54,350 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.92      0.94       597
+     concrete       0.78      0.88      0.83       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.97      0.94      0.95       218
+      unpaved       0.92      0.96      0.94       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.93      0.93      1460
+
+2025-05-10 16:31:55,171 - INFO - [Epoch 20] Train Loss: 4.2221, Accuracy: 99.67%
+2025-05-10 16:32:20,928 - INFO - Validation Loss: 50.3767, Accuracy: 93.49%
+2025-05-10 16:32:20,928 - INFO -   Class [asphalt] Accuracy: 93.13% (556/597)
+2025-05-10 16:32:20,928 - INFO -   Class [concrete] Accuracy: 89.10% (139/156)
+2025-05-10 16:32:20,928 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 16:32:20,928 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 16:32:20,928 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 16:32:20,931 - INFO - 
+Confusion Matrix:
+[[556  30   5   1   5]
+ [ 12 139   0   0   5]
+ [  1   2 313   8   2]
+ [  0   0  13 205   0]
+ [ 10   1   0   0 152]]
+2025-05-10 16:32:20,938 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.93      0.95       597
+     concrete       0.81      0.89      0.85       156
+paving_stones       0.95      0.96      0.95       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.93      0.94      1460
+
+2025-05-10 16:34:22,264 - INFO - [Epoch 21] Train Loss: 3.7126, Accuracy: 99.67%
+2025-05-10 16:34:45,234 - INFO - Validation Loss: 55.5175, Accuracy: 93.84%
+2025-05-10 16:34:45,234 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 16:34:45,234 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 16:34:45,234 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 16:34:45,234 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 16:34:45,234 - INFO -   Class [unpaved] Accuracy: 87.73% (143/163)
+2025-05-10 16:34:45,236 - INFO - 
+Confusion Matrix:
+[[575  17   2   1   2]
+ [ 19 134   0   0   3]
+ [  3   3 308  11   1]
+ [  0   0   8 210   0]
+ [ 18   2   0   0 143]]
+2025-05-10 16:34:45,244 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.93      0.96      0.95       597
+     concrete       0.86      0.86      0.86       156
+paving_stones       0.97      0.94      0.96       326
+         sett       0.95      0.96      0.95       218
+      unpaved       0.96      0.88      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:36:43,512 - INFO - [Epoch 22] Train Loss: 4.0180, Accuracy: 99.74%
+2025-05-10 16:37:09,470 - INFO - Validation Loss: 51.1790, Accuracy: 93.22%
+2025-05-10 16:37:09,471 - INFO -   Class [asphalt] Accuracy: 93.13% (556/597)
+2025-05-10 16:37:09,471 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 16:37:09,471 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 16:37:09,471 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 16:37:09,471 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 16:37:09,473 - INFO - 
+Confusion Matrix:
+[[556  35   2   2   2]
+ [ 14 137   0   0   5]
+ [  3   3 313   6   1]
+ [  0   0  13 205   0]
+ [ 12   1   0   0 150]]
+2025-05-10 16:37:09,480 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.93      0.94       597
+     concrete       0.78      0.88      0.83       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.95      0.92      0.93       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 16:39:10,330 - INFO - [Epoch 23] Train Loss: 4.7581, Accuracy: 99.64%
+2025-05-10 16:39:33,236 - INFO - Validation Loss: 50.6090, Accuracy: 93.49%
+2025-05-10 16:39:33,236 - INFO -   Class [asphalt] Accuracy: 92.46% (552/597)
+2025-05-10 16:39:33,236 - INFO -   Class [concrete] Accuracy: 88.46% (138/156)
+2025-05-10 16:39:33,236 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 16:39:33,236 - INFO -   Class [sett] Accuracy: 93.58% (204/218)
+2025-05-10 16:39:33,236 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 16:39:33,238 - INFO - 
+Confusion Matrix:
+[[552  30   4   2   9]
+ [ 11 138   0   0   7]
+ [  0   3 316   6   1]
+ [  0   0  14 204   0]
+ [  8   0   0   0 155]]
+2025-05-10 16:39:33,246 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.92      0.95       597
+     concrete       0.81      0.88      0.84       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.90      0.95      0.93       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.93      0.94      1460
+
+2025-05-10 16:41:33,908 - INFO - [Epoch 24] Train Loss: 3.6528, Accuracy: 99.67%
+2025-05-10 16:41:56,986 - INFO - Validation Loss: 54.2036, Accuracy: 93.84%
+2025-05-10 16:41:56,987 - INFO -   Class [asphalt] Accuracy: 95.14% (568/597)
+2025-05-10 16:41:56,987 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 16:41:56,987 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 16:41:56,987 - INFO -   Class [sett] Accuracy: 96.79% (211/218)
+2025-05-10 16:41:56,987 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 16:41:56,990 - INFO - 
+Confusion Matrix:
+[[568  16   5   3   5]
+ [ 16 134   1   0   5]
+ [  0   2 308  15   1]
+ [  0   0   7 211   0]
+ [ 13   1   0   0 149]]
+2025-05-10 16:41:56,997 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.88      0.86      0.87       156
+paving_stones       0.96      0.94      0.95       326
+         sett       0.92      0.97      0.94       218
+      unpaved       0.93      0.91      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:43:58,220 - INFO - [Epoch 25] Train Loss: 3.9335, Accuracy: 99.59%
+2025-05-10 16:44:24,059 - INFO - Validation Loss: 57.8993, Accuracy: 94.38%
+2025-05-10 16:44:24,059 - INFO -   Class [asphalt] Accuracy: 96.48% (576/597)
+2025-05-10 16:44:24,059 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 16:44:24,059 - INFO -   Class [paving_stones] Accuracy: 95.09% (310/326)
+2025-05-10 16:44:24,059 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 16:44:24,059 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 16:44:24,061 - INFO - 
+Confusion Matrix:
+[[576   8   3   2   8]
+ [ 17 132   0   0   7]
+ [  2   3 310  10   1]
+ [  0   0  10 208   0]
+ [ 10   1   0   0 152]]
+2025-05-10 16:44:24,068 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.92      0.85      0.88       156
+paving_stones       0.96      0.95      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.90      0.93      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:44:24,871 - INFO - New best model saved with accuracy: 94.38%
+2025-05-10 16:46:25,970 - INFO - [Epoch 26] Train Loss: 3.2344, Accuracy: 99.71%
+2025-05-10 16:46:48,920 - INFO - Validation Loss: 50.4322, Accuracy: 93.84%
+2025-05-10 16:46:48,920 - INFO -   Class [asphalt] Accuracy: 94.14% (562/597)
+2025-05-10 16:46:48,920 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 16:46:48,921 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 16:46:48,921 - INFO -   Class [sett] Accuracy: 96.79% (211/218)
+2025-05-10 16:46:48,921 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 16:46:48,923 - INFO - 
+Confusion Matrix:
+[[562  20   5   4   6]
+ [ 13 135   0   0   8]
+ [  1   3 308  13   1]
+ [  0   0   7 211   0]
+ [  7   2   0   0 154]]
+2025-05-10 16:46:48,930 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.94      0.95       597
+     concrete       0.84      0.87      0.85       156
+paving_stones       0.96      0.94      0.95       326
+         sett       0.93      0.97      0.95       218
+      unpaved       0.91      0.94      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:48:49,454 - INFO - [Epoch 27] Train Loss: 3.9074, Accuracy: 99.62%
+2025-05-10 16:49:14,052 - INFO - Validation Loss: 53.6916, Accuracy: 93.90%
+2025-05-10 16:49:14,052 - INFO -   Class [asphalt] Accuracy: 95.14% (568/597)
+2025-05-10 16:49:14,052 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 16:49:14,052 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 16:49:14,052 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 16:49:14,052 - INFO -   Class [unpaved] Accuracy: 90.80% (148/163)
+2025-05-10 16:49:14,054 - INFO - 
+Confusion Matrix:
+[[568  17   4   2   6]
+ [ 15 137   0   0   4]
+ [  2   2 313   9   0]
+ [  0   1  12 205   0]
+ [ 13   2   0   0 148]]
+2025-05-10 16:49:14,061 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.86      0.88      0.87       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.95      0.94      0.94       218
+      unpaved       0.94      0.91      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:51:11,348 - INFO - [Epoch 28] Train Loss: 2.9685, Accuracy: 99.78%
+2025-05-10 16:51:37,199 - INFO - Validation Loss: 51.5870, Accuracy: 93.22%
+2025-05-10 16:51:37,200 - INFO -   Class [asphalt] Accuracy: 93.30% (557/597)
+2025-05-10 16:51:37,200 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 16:51:37,200 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 16:51:37,200 - INFO -   Class [sett] Accuracy: 93.12% (203/218)
+2025-05-10 16:51:37,200 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 16:51:37,203 - INFO - 
+Confusion Matrix:
+[[557  17   9   2  12]
+ [ 13 133   2   0   8]
+ [  0   2 314   8   2]
+ [  0   0  15 203   0]
+ [  6   3   0   0 154]]
+2025-05-10 16:51:37,212 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.93      0.95       597
+     concrete       0.86      0.85      0.86       156
+paving_stones       0.92      0.96      0.94       326
+         sett       0.95      0.93      0.94       218
+      unpaved       0.88      0.94      0.91       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.92      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 16:53:38,226 - INFO - [Epoch 29] Train Loss: 5.7304, Accuracy: 99.59%
+2025-05-10 16:54:01,222 - INFO - Validation Loss: 56.5741, Accuracy: 93.56%
+2025-05-10 16:54:01,223 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 16:54:01,223 - INFO -   Class [concrete] Accuracy: 80.13% (125/156)
+2025-05-10 16:54:01,223 - INFO -   Class [paving_stones] Accuracy: 94.17% (307/326)
+2025-05-10 16:54:01,223 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 16:54:01,223 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 16:54:01,225 - INFO - 
+Confusion Matrix:
+[[572  10   3   5   7]
+ [ 25 125   1   0   5]
+ [  1   3 307  13   2]
+ [  0   0   8 210   0]
+ [  8   2   0   1 152]]
+2025-05-10 16:54:01,232 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.96      0.95       597
+     concrete       0.89      0.80      0.84       156
+paving_stones       0.96      0.94      0.95       326
+         sett       0.92      0.96      0.94       218
+      unpaved       0.92      0.93      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:55:59,764 - INFO - [Epoch 30] Train Loss: 1.5491, Accuracy: 99.78%
+2025-05-10 16:56:25,619 - INFO - Validation Loss: 55.0029, Accuracy: 94.04%
+2025-05-10 16:56:25,619 - INFO -   Class [asphalt] Accuracy: 94.97% (567/597)
+2025-05-10 16:56:25,619 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 16:56:25,619 - INFO -   Class [paving_stones] Accuracy: 95.09% (310/326)
+2025-05-10 16:56:25,619 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 16:56:25,619 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 16:56:25,621 - INFO - 
+Confusion Matrix:
+[[567  15   5   3   7]
+ [ 13 135   0   0   8]
+ [  1   2 310  12   1]
+ [  0   0   9 209   0]
+ [  9   2   0   0 152]]
+2025-05-10 16:56:25,628 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.88      0.87      0.87       156
+paving_stones       0.96      0.95      0.95       326
+         sett       0.93      0.96      0.95       218
+      unpaved       0.90      0.93      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 16:58:26,284 - INFO - [Epoch 31] Train Loss: 3.1451, Accuracy: 99.78%
+2025-05-10 16:58:49,220 - INFO - Validation Loss: 65.3715, Accuracy: 93.29%
+2025-05-10 16:58:49,220 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 16:58:49,220 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 16:58:49,220 - INFO -   Class [paving_stones] Accuracy: 95.40% (311/326)
+2025-05-10 16:58:49,220 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 16:58:49,220 - INFO -   Class [unpaved] Accuracy: 85.28% (139/163)
+2025-05-10 16:58:49,223 - INFO - 
+Confusion Matrix:
+[[571  17   3   3   3]
+ [ 20 133   0   0   3]
+ [  3   3 311   9   0]
+ [  0   0  10 208   0]
+ [ 18   5   0   1 139]]
+2025-05-10 16:58:49,230 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.93      0.96      0.94       597
+     concrete       0.84      0.85      0.85       156
+paving_stones       0.96      0.95      0.96       326
+         sett       0.94      0.95      0.95       218
+      unpaved       0.96      0.85      0.90       163
+
+     accuracy                           0.93      1460
+    macro avg       0.93      0.91      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 17:00:48,542 - INFO - [Epoch 32] Train Loss: 3.7590, Accuracy: 99.69%
+2025-05-10 17:01:11,671 - INFO - Validation Loss: 57.2330, Accuracy: 93.77%
+2025-05-10 17:01:11,671 - INFO -   Class [asphalt] Accuracy: 94.97% (567/597)
+2025-05-10 17:01:11,671 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 17:01:11,671 - INFO -   Class [paving_stones] Accuracy: 94.79% (309/326)
+2025-05-10 17:01:11,671 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 17:01:11,671 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 17:01:11,673 - INFO - 
+Confusion Matrix:
+[[567  15   7   3   5]
+ [ 15 134   0   0   7]
+ [  0   3 309  12   2]
+ [  0   0  12 206   0]
+ [  8   2   0   0 153]]
+2025-05-10 17:01:11,680 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.87      0.86      0.86       156
+paving_stones       0.94      0.95      0.94       326
+         sett       0.93      0.94      0.94       218
+      unpaved       0.92      0.94      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:03:09,902 - INFO - [Epoch 33] Train Loss: 1.9487, Accuracy: 99.85%
+2025-05-10 17:03:33,109 - INFO - Validation Loss: 59.1694, Accuracy: 93.22%
+2025-05-10 17:03:33,110 - INFO -   Class [asphalt] Accuracy: 94.81% (566/597)
+2025-05-10 17:03:33,110 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 17:03:33,110 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 17:03:33,110 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 17:03:33,110 - INFO -   Class [unpaved] Accuracy: 88.96% (145/163)
+2025-05-10 17:03:33,112 - INFO - 
+Confusion Matrix:
+[[566  21   3   3   4]
+ [ 15 137   0   0   4]
+ [  3   4 308  10   1]
+ [  0   0  13 205   0]
+ [ 15   3   0   0 145]]
+2025-05-10 17:03:33,119 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.95      0.95       597
+     concrete       0.83      0.88      0.85       156
+paving_stones       0.95      0.94      0.95       326
+         sett       0.94      0.94      0.94       218
+      unpaved       0.94      0.89      0.91       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.92      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 17:05:29,405 - INFO - [Epoch 34] Train Loss: 2.5736, Accuracy: 99.74%
+2025-05-10 17:05:52,416 - INFO - Validation Loss: 66.1197, Accuracy: 93.63%
+2025-05-10 17:05:52,416 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 17:05:52,417 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 17:05:52,417 - INFO -   Class [paving_stones] Accuracy: 95.09% (310/326)
+2025-05-10 17:05:52,417 - INFO -   Class [sett] Accuracy: 93.58% (204/218)
+2025-05-10 17:05:52,417 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 17:05:52,419 - INFO - 
+Confusion Matrix:
+[[572  17   4   1   3]
+ [ 18 132   0   0   6]
+ [  2   3 310   9   2]
+ [  0   0  14 204   0]
+ [ 11   2   0   1 149]]
+2025-05-10 17:05:52,426 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.95       597
+     concrete       0.86      0.85      0.85       156
+paving_stones       0.95      0.95      0.95       326
+         sett       0.95      0.94      0.94       218
+      unpaved       0.93      0.91      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:07:50,795 - INFO - [Epoch 35] Train Loss: 1.6745, Accuracy: 99.83%
+2025-05-10 17:08:13,852 - INFO - Validation Loss: 60.7258, Accuracy: 94.11%
+2025-05-10 17:08:13,852 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 17:08:13,852 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 17:08:13,853 - INFO -   Class [paving_stones] Accuracy: 95.71% (312/326)
+2025-05-10 17:08:13,853 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 17:08:13,853 - INFO -   Class [unpaved] Accuracy: 90.80% (148/163)
+2025-05-10 17:08:13,855 - INFO - 
+Confusion Matrix:
+[[573  17   4   1   2]
+ [ 15 136   1   0   4]
+ [  3   2 312   8   1]
+ [  0   0  13 205   0]
+ [ 10   5   0   0 148]]
+2025-05-10 17:08:13,862 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.85      0.87      0.86       156
+paving_stones       0.95      0.96      0.95       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.95      0.91      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:10:14,570 - INFO - [Epoch 36] Train Loss: 1.9010, Accuracy: 99.85%
+2025-05-10 17:10:40,498 - INFO - Validation Loss: 56.7331, Accuracy: 93.42%
+2025-05-10 17:10:40,499 - INFO -   Class [asphalt] Accuracy: 93.97% (561/597)
+2025-05-10 17:10:40,499 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 17:10:40,499 - INFO -   Class [paving_stones] Accuracy: 94.79% (309/326)
+2025-05-10 17:10:40,499 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 17:10:40,499 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 17:10:40,501 - INFO - 
+Confusion Matrix:
+[[561  26   3   1   6]
+ [ 12 137   1   0   6]
+ [  2   5 309   9   1]
+ [  0   0  11 205   2]
+ [  8   3   0   0 152]]
+2025-05-10 17:10:40,508 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.94      0.95       597
+     concrete       0.80      0.88      0.84       156
+paving_stones       0.95      0.95      0.95       326
+         sett       0.95      0.94      0.95       218
+      unpaved       0.91      0.93      0.92       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.93      0.93      1460
+
+2025-05-10 17:12:41,448 - INFO - [Epoch 37] Train Loss: 2.1966, Accuracy: 99.86%
+2025-05-10 17:13:04,621 - INFO - Validation Loss: 66.6854, Accuracy: 93.90%
+2025-05-10 17:13:04,622 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 17:13:04,622 - INFO -   Class [concrete] Accuracy: 80.77% (126/156)
+2025-05-10 17:13:04,622 - INFO -   Class [paving_stones] Accuracy: 95.09% (310/326)
+2025-05-10 17:13:04,622 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 17:13:04,622 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 17:13:04,624 - INFO - 
+Confusion Matrix:
+[[575  13   3   2   4]
+ [ 23 126   1   0   6]
+ [  1   2 310  12   1]
+ [  0   0   9 209   0]
+ [ 11   1   0   0 151]]
+2025-05-10 17:13:04,631 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.96      0.95       597
+     concrete       0.89      0.81      0.85       156
+paving_stones       0.96      0.95      0.96       326
+         sett       0.94      0.96      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:15:06,081 - INFO - [Epoch 38] Train Loss: 2.1371, Accuracy: 99.79%
+2025-05-10 17:15:29,214 - INFO - Validation Loss: 71.3085, Accuracy: 94.59%
+2025-05-10 17:15:29,215 - INFO -   Class [asphalt] Accuracy: 96.65% (577/597)
+2025-05-10 17:15:29,215 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 17:15:29,215 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 17:15:29,215 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 17:15:29,215 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 17:15:29,217 - INFO - 
+Confusion Matrix:
+[[577  10   4   3   3]
+ [ 18 133   1   0   4]
+ [  1   2 316   5   2]
+ [  0   0  12 206   0]
+ [ 11   3   0   0 149]]
+2025-05-10 17:15:29,224 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.97      0.96       597
+     concrete       0.90      0.85      0.88       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.94      0.91      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 17:15:30,033 - INFO - New best model saved with accuracy: 94.59%
+2025-05-10 17:17:29,166 - INFO - [Epoch 39] Train Loss: 2.0942, Accuracy: 99.81%
+2025-05-10 17:17:55,056 - INFO - Validation Loss: 62.5275, Accuracy: 93.90%
+2025-05-10 17:17:55,056 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 17:17:55,056 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 17:17:55,056 - INFO -   Class [paving_stones] Accuracy: 95.09% (310/326)
+2025-05-10 17:17:55,056 - INFO -   Class [sett] Accuracy: 97.71% (213/218)
+2025-05-10 17:17:55,056 - INFO -   Class [unpaved] Accuracy: 85.89% (140/163)
+2025-05-10 17:17:55,058 - INFO - 
+Confusion Matrix:
+[[571  18   3   3   2]
+ [ 14 137   0   0   5]
+ [  2   4 310   9   1]
+ [  0   0   5 213   0]
+ [ 17   4   0   2 140]]
+2025-05-10 17:17:55,066 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.95       597
+     concrete       0.84      0.88      0.86       156
+paving_stones       0.97      0.95      0.96       326
+         sett       0.94      0.98      0.96       218
+      unpaved       0.95      0.86      0.90       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:19:56,087 - INFO - [Epoch 40] Train Loss: 1.7522, Accuracy: 99.88%
+2025-05-10 17:20:19,161 - INFO - Validation Loss: 60.0880, Accuracy: 94.04%
+2025-05-10 17:20:19,161 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 17:20:19,161 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 17:20:19,161 - INFO -   Class [paving_stones] Accuracy: 94.79% (309/326)
+2025-05-10 17:20:19,161 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 17:20:19,161 - INFO -   Class [unpaved] Accuracy: 90.18% (147/163)
+2025-05-10 17:20:19,163 - INFO - 
+Confusion Matrix:
+[[573  18   3   1   2]
+ [ 14 136   0   0   6]
+ [  2   5 309   9   1]
+ [  0   0  10 208   0]
+ [ 13   3   0   0 147]]
+2025-05-10 17:20:19,170 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.84      0.87      0.86       156
+paving_stones       0.96      0.95      0.95       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.94      0.90      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:22:17,404 - INFO - [Epoch 41] Train Loss: 2.8137, Accuracy: 99.73%
+2025-05-10 17:22:43,281 - INFO - Validation Loss: 64.5084, Accuracy: 93.56%
+2025-05-10 17:22:43,281 - INFO -   Class [asphalt] Accuracy: 94.47% (564/597)
+2025-05-10 17:22:43,281 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 17:22:43,281 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 17:22:43,282 - INFO -   Class [sett] Accuracy: 92.20% (201/218)
+2025-05-10 17:22:43,282 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 17:22:43,284 - INFO - 
+Confusion Matrix:
+[[564  17   4   4   8]
+ [ 16 132   2   0   6]
+ [  2   3 314   5   2]
+ [  0   0  17 201   0]
+ [  7   1   0   0 155]]
+2025-05-10 17:22:43,291 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.94      0.95       597
+     concrete       0.86      0.85      0.85       156
+paving_stones       0.93      0.96      0.95       326
+         sett       0.96      0.92      0.94       218
+      unpaved       0.91      0.95      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:24:44,193 - INFO - [Epoch 42] Train Loss: 3.7869, Accuracy: 99.69%
+2025-05-10 17:25:07,235 - INFO - Validation Loss: 80.0037, Accuracy: 93.77%
+2025-05-10 17:25:07,235 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 17:25:07,235 - INFO -   Class [concrete] Accuracy: 79.49% (124/156)
+2025-05-10 17:25:07,235 - INFO -   Class [paving_stones] Accuracy: 97.55% (318/326)
+2025-05-10 17:25:07,235 - INFO -   Class [sett] Accuracy: 93.12% (203/218)
+2025-05-10 17:25:07,236 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 17:25:07,238 - INFO - 
+Confusion Matrix:
+[[570  11   5   3   8]
+ [ 22 124   2   0   8]
+ [  0   1 318   5   2]
+ [  0   0  15 203   0]
+ [  9   0   0   0 154]]
+2025-05-10 17:25:07,245 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.91      0.79      0.85       156
+paving_stones       0.94      0.98      0.95       326
+         sett       0.96      0.93      0.95       218
+      unpaved       0.90      0.94      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:27:08,146 - INFO - [Epoch 43] Train Loss: 1.3451, Accuracy: 99.86%
+2025-05-10 17:27:31,213 - INFO - Validation Loss: 61.0487, Accuracy: 93.97%
+2025-05-10 17:27:31,214 - INFO -   Class [asphalt] Accuracy: 93.97% (561/597)
+2025-05-10 17:27:31,214 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 17:27:31,214 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 17:27:31,214 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 17:27:31,214 - INFO -   Class [unpaved] Accuracy: 96.32% (157/163)
+2025-05-10 17:27:31,216 - INFO - 
+Confusion Matrix:
+[[561  19   3   2  12]
+ [ 11 133   1   0  11]
+ [  0   3 315   6   2]
+ [  0   0  11 206   1]
+ [  5   1   0   0 157]]
+2025-05-10 17:27:31,223 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.94      0.96       597
+     concrete       0.85      0.85      0.85       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.86      0.96      0.91       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:29:29,685 - INFO - [Epoch 44] Train Loss: 1.6740, Accuracy: 99.90%
+2025-05-10 17:29:55,480 - INFO - Validation Loss: 68.0038, Accuracy: 94.73%
+2025-05-10 17:29:55,480 - INFO -   Class [asphalt] Accuracy: 97.15% (580/597)
+2025-05-10 17:29:55,480 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 17:29:55,480 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 17:29:55,480 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 17:29:55,480 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 17:29:55,482 - INFO - 
+Confusion Matrix:
+[[580  10   1   2   4]
+ [ 17 132   1   0   6]
+ [  1   3 313   7   2]
+ [  1   0  11 206   0]
+ [ 11   0   0   0 152]]
+2025-05-10 17:29:55,489 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.97      0.96       597
+     concrete       0.91      0.85      0.88       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 17:29:56,299 - INFO - New best model saved with accuracy: 94.73%
+2025-05-10 17:31:57,007 - INFO - [Epoch 45] Train Loss: 1.7575, Accuracy: 99.83%
+2025-05-10 17:32:20,036 - INFO - Validation Loss: 63.1205, Accuracy: 93.49%
+2025-05-10 17:32:20,036 - INFO -   Class [asphalt] Accuracy: 93.63% (559/597)
+2025-05-10 17:32:20,036 - INFO -   Class [concrete] Accuracy: 88.46% (138/156)
+2025-05-10 17:32:20,036 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 17:32:20,036 - INFO -   Class [sett] Accuracy: 96.79% (211/218)
+2025-05-10 17:32:20,036 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 17:32:20,038 - INFO - 
+Confusion Matrix:
+[[559  29   3   2   4]
+ [ 11 138   1   0   6]
+ [  1   3 308  13   1]
+ [  0   0   7 211   0]
+ [ 10   4   0   0 149]]
+2025-05-10 17:32:20,045 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.94      0.95       597
+     concrete       0.79      0.88      0.84       156
+paving_stones       0.97      0.94      0.96       326
+         sett       0.93      0.97      0.95       218
+      unpaved       0.93      0.91      0.92       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.93      0.94      1460
+
+2025-05-10 17:34:20,017 - INFO - [Epoch 46] Train Loss: 1.8649, Accuracy: 99.79%
+2025-05-10 17:34:43,020 - INFO - Validation Loss: 72.6080, Accuracy: 93.63%
+2025-05-10 17:34:43,020 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 17:34:43,020 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 17:34:43,020 - INFO -   Class [paving_stones] Accuracy: 95.40% (311/326)
+2025-05-10 17:34:43,020 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 17:34:43,020 - INFO -   Class [unpaved] Accuracy: 89.57% (146/163)
+2025-05-10 17:34:43,022 - INFO - 
+Confusion Matrix:
+[[570  16   4   3   4]
+ [ 16 134   1   0   5]
+ [  1   4 311   9   1]
+ [  0   0  12 206   0]
+ [ 11   6   0   0 146]]
+2025-05-10 17:34:43,029 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.84      0.86      0.85       156
+paving_stones       0.95      0.95      0.95       326
+         sett       0.94      0.94      0.94       218
+      unpaved       0.94      0.90      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.92      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:36:42,792 - INFO - [Epoch 47] Train Loss: 2.4125, Accuracy: 99.85%
+2025-05-10 17:37:08,896 - INFO - Validation Loss: 68.0011, Accuracy: 93.49%
+2025-05-10 17:37:08,896 - INFO -   Class [asphalt] Accuracy: 92.96% (555/597)
+2025-05-10 17:37:08,897 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 17:37:08,897 - INFO -   Class [paving_stones] Accuracy: 95.09% (310/326)
+2025-05-10 17:37:08,897 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 17:37:08,897 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 17:37:08,899 - INFO - 
+Confusion Matrix:
+[[555  27   4   3   8]
+ [ 12 136   1   0   7]
+ [  1   1 310  12   2]
+ [  0   0   8 210   0]
+ [  6   3   0   0 154]]
+2025-05-10 17:37:08,906 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.93      0.95       597
+     concrete       0.81      0.87      0.84       156
+paving_stones       0.96      0.95      0.96       326
+         sett       0.93      0.96      0.95       218
+      unpaved       0.90      0.94      0.92       163
+
+     accuracy                           0.93      1460
+    macro avg       0.91      0.93      0.92      1460
+ weighted avg       0.94      0.93      0.94      1460
+
+2025-05-10 17:39:07,750 - INFO - [Epoch 48] Train Loss: 0.3447, Accuracy: 99.95%
+2025-05-10 17:39:30,976 - INFO - Validation Loss: 77.2409, Accuracy: 93.97%
+2025-05-10 17:39:30,976 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 17:39:30,976 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 17:39:30,976 - INFO -   Class [paving_stones] Accuracy: 95.40% (311/326)
+2025-05-10 17:39:30,976 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 17:39:30,976 - INFO -   Class [unpaved] Accuracy: 90.18% (147/163)
+2025-05-10 17:39:30,978 - INFO - 
+Confusion Matrix:
+[[573  15   4   2   3]
+ [ 14 136   1   0   5]
+ [  1   1 311  13   0]
+ [  0   0  13 205   0]
+ [ 12   4   0   0 147]]
+2025-05-10 17:39:30,985 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.87      0.87       156
+paving_stones       0.95      0.95      0.95       326
+         sett       0.93      0.94      0.94       218
+      unpaved       0.95      0.90      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:41:32,629 - INFO - [Epoch 49] Train Loss: 2.7662, Accuracy: 99.86%
+2025-05-10 17:41:58,899 - INFO - Validation Loss: 73.5662, Accuracy: 93.63%
+2025-05-10 17:41:58,899 - INFO -   Class [asphalt] Accuracy: 95.31% (569/597)
+2025-05-10 17:41:58,899 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 17:41:58,899 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 17:41:58,899 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 17:41:58,899 - INFO -   Class [unpaved] Accuracy: 90.80% (148/163)
+2025-05-10 17:41:58,901 - INFO - 
+Confusion Matrix:
+[[569  19   3   2   4]
+ [ 14 137   0   0   5]
+ [  1   6 308  10   1]
+ [  0   0  13 205   0]
+ [ 11   4   0   0 148]]
+2025-05-10 17:41:58,908 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.95       597
+     concrete       0.83      0.88      0.85       156
+paving_stones       0.95      0.94      0.95       326
+         sett       0.94      0.94      0.94       218
+      unpaved       0.94      0.91      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.92      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:43:54,634 - INFO - [Epoch 50] Train Loss: 1.3267, Accuracy: 99.91%
+2025-05-10 17:44:19,087 - INFO - Validation Loss: 79.3084, Accuracy: 93.42%
+2025-05-10 17:44:19,088 - INFO -   Class [asphalt] Accuracy: 95.14% (568/597)
+2025-05-10 17:44:19,088 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 17:44:19,088 - INFO -   Class [paving_stones] Accuracy: 94.79% (309/326)
+2025-05-10 17:44:19,088 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 17:44:19,088 - INFO -   Class [unpaved] Accuracy: 90.80% (148/163)
+2025-05-10 17:44:19,090 - INFO - 
+Confusion Matrix:
+[[568  19   3   2   5]
+ [ 18 132   0   0   6]
+ [  2   5 309   9   1]
+ [  0   0  11 207   0]
+ [ 13   2   0   0 148]]
+2025-05-10 17:44:19,097 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.84      0.85      0.84       156
+paving_stones       0.96      0.95      0.95       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.93      0.91      0.92       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.92      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 17:46:20,240 - INFO - [Epoch 51] Train Loss: 2.1191, Accuracy: 99.85%
+2025-05-10 17:46:43,169 - INFO - Validation Loss: 96.1755, Accuracy: 93.56%
+2025-05-10 17:46:43,169 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 17:46:43,169 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 17:46:43,169 - INFO -   Class [paving_stones] Accuracy: 93.25% (304/326)
+2025-05-10 17:46:43,169 - INFO -   Class [sett] Accuracy: 96.79% (211/218)
+2025-05-10 17:46:43,169 - INFO -   Class [unpaved] Accuracy: 88.34% (144/163)
+2025-05-10 17:46:43,171 - INFO - 
+Confusion Matrix:
+[[575  16   2   2   2]
+ [ 18 132   0   0   6]
+ [  2   4 304  15   1]
+ [  0   0   7 211   0]
+ [ 16   2   1   0 144]]
+2025-05-10 17:46:43,179 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.96      0.95       597
+     concrete       0.86      0.85      0.85       156
+paving_stones       0.97      0.93      0.95       326
+         sett       0.93      0.97      0.95       218
+      unpaved       0.94      0.88      0.91       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:48:42,392 - INFO - [Epoch 52] Train Loss: 1.4809, Accuracy: 99.86%
+2025-05-10 17:49:08,301 - INFO - Validation Loss: 81.6174, Accuracy: 93.90%
+2025-05-10 17:49:08,301 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 17:49:08,301 - INFO -   Class [concrete] Accuracy: 83.33% (130/156)
+2025-05-10 17:49:08,301 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 17:49:08,301 - INFO -   Class [sett] Accuracy: 97.71% (213/218)
+2025-05-10 17:49:08,301 - INFO -   Class [unpaved] Accuracy: 89.57% (146/163)
+2025-05-10 17:49:08,303 - INFO - 
+Confusion Matrix:
+[[574  13   4   2   4]
+ [ 21 130   0   0   5]
+ [  1   4 308  12   1]
+ [  0   0   5 213   0]
+ [ 16   1   0   0 146]]
+2025-05-10 17:49:08,311 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.96      0.95       597
+     concrete       0.88      0.83      0.86       156
+paving_stones       0.97      0.94      0.96       326
+         sett       0.94      0.98      0.96       218
+      unpaved       0.94      0.90      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:51:06,793 - INFO - [Epoch 53] Train Loss: 5.2070, Accuracy: 99.78%
+2025-05-10 17:51:29,856 - INFO - Validation Loss: 63.2839, Accuracy: 93.56%
+2025-05-10 17:51:29,856 - INFO -   Class [asphalt] Accuracy: 94.64% (565/597)
+2025-05-10 17:51:29,856 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 17:51:29,856 - INFO -   Class [paving_stones] Accuracy: 94.79% (309/326)
+2025-05-10 17:51:29,857 - INFO -   Class [sett] Accuracy: 92.20% (201/218)
+2025-05-10 17:51:29,857 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 17:51:29,859 - INFO - 
+Confusion Matrix:
+[[565  18   3   1  10]
+ [ 12 135   0   0   9]
+ [  0   6 309   9   2]
+ [  0   0  17 201   0]
+ [  6   1   0   0 156]]
+2025-05-10 17:51:29,866 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.95      0.96       597
+     concrete       0.84      0.87      0.85       156
+paving_stones       0.94      0.95      0.94       326
+         sett       0.95      0.92      0.94       218
+      unpaved       0.88      0.96      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:53:29,027 - INFO - [Epoch 54] Train Loss: 0.7648, Accuracy: 99.91%
+2025-05-10 17:53:51,996 - INFO - Validation Loss: 68.5330, Accuracy: 94.25%
+2025-05-10 17:53:51,997 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 17:53:51,997 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 17:53:51,997 - INFO -   Class [paving_stones] Accuracy: 92.94% (303/326)
+2025-05-10 17:53:51,997 - INFO -   Class [sett] Accuracy: 97.25% (212/218)
+2025-05-10 17:53:51,997 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 17:53:51,999 - INFO - 
+Confusion Matrix:
+[[572  15   3   2   5]
+ [ 14 134   1   0   7]
+ [  0   3 303  18   2]
+ [  0   0   6 212   0]
+ [  7   1   0   0 155]]
+2025-05-10 17:53:52,007 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.88      0.86      0.87       156
+paving_stones       0.97      0.93      0.95       326
+         sett       0.91      0.97      0.94       218
+      unpaved       0.92      0.95      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:55:52,862 - INFO - [Epoch 55] Train Loss: 1.6790, Accuracy: 99.88%
+2025-05-10 17:56:18,838 - INFO - Validation Loss: 62.7637, Accuracy: 93.84%
+2025-05-10 17:56:18,839 - INFO -   Class [asphalt] Accuracy: 94.30% (563/597)
+2025-05-10 17:56:18,839 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 17:56:18,839 - INFO -   Class [paving_stones] Accuracy: 95.09% (310/326)
+2025-05-10 17:56:18,839 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 17:56:18,839 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 17:56:18,841 - INFO - 
+Confusion Matrix:
+[[563  21   2   2   9]
+ [ 13 135   1   0   7]
+ [  1   1 310  12   2]
+ [  0   0  12 206   0]
+ [  6   1   0   0 156]]
+2025-05-10 17:56:18,848 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.94      0.95       597
+     concrete       0.85      0.87      0.86       156
+paving_stones       0.95      0.95      0.95       326
+         sett       0.94      0.94      0.94       218
+      unpaved       0.90      0.96      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 17:58:19,808 - INFO - [Epoch 56] Train Loss: 0.7561, Accuracy: 99.86%
+2025-05-10 17:58:42,875 - INFO - Validation Loss: 80.4067, Accuracy: 93.77%
+2025-05-10 17:58:42,875 - INFO -   Class [asphalt] Accuracy: 96.98% (579/597)
+2025-05-10 17:58:42,875 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 17:58:42,875 - INFO -   Class [paving_stones] Accuracy: 95.71% (312/326)
+2025-05-10 17:58:42,875 - INFO -   Class [sett] Accuracy: 93.58% (204/218)
+2025-05-10 17:58:42,875 - INFO -   Class [unpaved] Accuracy: 85.28% (139/163)
+2025-05-10 17:58:42,878 - INFO - 
+Confusion Matrix:
+[[579  14   3   0   1]
+ [ 18 135   0   0   3]
+ [  3   6 312   5   0]
+ [  0   0  14 204   0]
+ [ 19   5   0   0 139]]
+2025-05-10 17:58:42,885 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.94      0.97      0.95       597
+     concrete       0.84      0.87      0.85       156
+paving_stones       0.95      0.96      0.95       326
+         sett       0.98      0.94      0.96       218
+      unpaved       0.97      0.85      0.91       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.92      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:00:43,920 - INFO - [Epoch 57] Train Loss: 1.5238, Accuracy: 99.91%
+2025-05-10 18:01:07,307 - INFO - Validation Loss: 69.4808, Accuracy: 94.32%
+2025-05-10 18:01:07,307 - INFO -   Class [asphalt] Accuracy: 96.98% (579/597)
+2025-05-10 18:01:07,307 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 18:01:07,307 - INFO -   Class [paving_stones] Accuracy: 93.56% (305/326)
+2025-05-10 18:01:07,307 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 18:01:07,307 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 18:01:07,309 - INFO - 
+Confusion Matrix:
+[[579  12   3   1   2]
+ [ 15 136   0   0   5]
+ [  2   3 305  14   2]
+ [  0   0   8 208   2]
+ [ 10   4   0   0 149]]
+2025-05-10 18:01:07,316 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.97      0.96       597
+     concrete       0.88      0.87      0.87       156
+paving_stones       0.97      0.94      0.95       326
+         sett       0.93      0.95      0.94       218
+      unpaved       0.93      0.91      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:03:08,332 - INFO - [Epoch 58] Train Loss: 0.9004, Accuracy: 99.93%
+2025-05-10 18:03:34,659 - INFO - Validation Loss: 79.3517, Accuracy: 93.42%
+2025-05-10 18:03:34,659 - INFO -   Class [asphalt] Accuracy: 93.47% (558/597)
+2025-05-10 18:03:34,659 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 18:03:34,659 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 18:03:34,659 - INFO -   Class [sett] Accuracy: 96.79% (211/218)
+2025-05-10 18:03:34,659 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 18:03:34,662 - INFO - 
+Confusion Matrix:
+[[558  20   5   4  10]
+ [ 13 134   1   0   8]
+ [  1   1 308  14   2]
+ [  0   0   7 211   0]
+ [ 10   0   0   0 153]]
+2025-05-10 18:03:34,669 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.93      0.95       597
+     concrete       0.86      0.86      0.86       156
+paving_stones       0.96      0.94      0.95       326
+         sett       0.92      0.97      0.94       218
+      unpaved       0.88      0.94      0.91       163
+
+     accuracy                           0.93      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.93      0.93      0.93      1460
+
+2025-05-10 18:05:35,445 - INFO - [Epoch 59] Train Loss: 1.5674, Accuracy: 99.91%
+2025-05-10 18:05:58,537 - INFO - Validation Loss: 68.3846, Accuracy: 94.25%
+2025-05-10 18:05:58,538 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 18:05:58,538 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 18:05:58,538 - INFO -   Class [paving_stones] Accuracy: 95.71% (312/326)
+2025-05-10 18:05:58,538 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 18:05:58,538 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 18:05:58,540 - INFO - 
+Confusion Matrix:
+[[573  13   3   2   6]
+ [ 17 132   0   0   7]
+ [  2   1 312   9   2]
+ [  0   0   8 210   0]
+ [ 12   2   0   0 149]]
+2025-05-10 18:05:58,547 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.95       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.97      0.96      0.96       326
+         sett       0.95      0.96      0.96       218
+      unpaved       0.91      0.91      0.91       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:07:59,161 - INFO - [Epoch 60] Train Loss: 0.8485, Accuracy: 99.91%
+2025-05-10 18:08:25,039 - INFO - Validation Loss: 66.9531, Accuracy: 94.79%
+2025-05-10 18:08:25,039 - INFO -   Class [asphalt] Accuracy: 95.14% (568/597)
+2025-05-10 18:08:25,039 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 18:08:25,039 - INFO -   Class [paving_stones] Accuracy: 97.55% (318/326)
+2025-05-10 18:08:25,039 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 18:08:25,039 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 18:08:25,042 - INFO - 
+Confusion Matrix:
+[[568  15   3   3   8]
+ [ 15 134   0   0   7]
+ [  1   1 318   4   2]
+ [  0   0  10 208   0]
+ [  6   1   0   0 156]]
+2025-05-10 18:08:25,048 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.89      0.86      0.87       156
+paving_stones       0.96      0.98      0.97       326
+         sett       0.97      0.95      0.96       218
+      unpaved       0.90      0.96      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:08:25,864 - INFO - New best model saved with accuracy: 94.79%
+2025-05-10 18:10:27,114 - INFO - [Epoch 61] Train Loss: 1.4080, Accuracy: 99.95%
+2025-05-10 18:10:50,116 - INFO - Validation Loss: 60.8392, Accuracy: 94.73%
+2025-05-10 18:10:50,117 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 18:10:50,117 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 18:10:50,117 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 18:10:50,117 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 18:10:50,117 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 18:10:50,119 - INFO - 
+Confusion Matrix:
+[[571  17   3   2   4]
+ [ 14 137   0   0   5]
+ [  1   1 317   5   2]
+ [  0   0  10 208   0]
+ [ 11   2   0   0 150]]
+2025-05-10 18:10:50,126 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.87      0.88      0.88       156
+paving_stones       0.96      0.97      0.97       326
+         sett       0.97      0.95      0.96       218
+      unpaved       0.93      0.92      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:12:51,047 - INFO - [Epoch 62] Train Loss: 0.5590, Accuracy: 99.95%
+2025-05-10 18:13:14,081 - INFO - Validation Loss: 60.3928, Accuracy: 93.70%
+2025-05-10 18:13:14,081 - INFO -   Class [asphalt] Accuracy: 95.14% (568/597)
+2025-05-10 18:13:14,081 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 18:13:14,081 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 18:13:14,081 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 18:13:14,081 - INFO -   Class [unpaved] Accuracy: 85.89% (140/163)
+2025-05-10 18:13:14,084 - INFO - 
+Confusion Matrix:
+[[568  22   3   3   1]
+ [ 14 137   0   0   5]
+ [  1   2 313   9   1]
+ [  0   0   8 210   0]
+ [ 18   5   0   0 140]]
+2025-05-10 18:13:14,091 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.83      0.88      0.85       156
+paving_stones       0.97      0.96      0.96       326
+         sett       0.95      0.96      0.95       218
+      unpaved       0.95      0.86      0.90       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.92      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:15:15,192 - INFO - [Epoch 63] Train Loss: 1.9000, Accuracy: 99.90%
+2025-05-10 18:15:38,784 - INFO - Validation Loss: 53.9091, Accuracy: 93.56%
+2025-05-10 18:15:38,784 - INFO -   Class [asphalt] Accuracy: 93.13% (556/597)
+2025-05-10 18:15:38,784 - INFO -   Class [concrete] Accuracy: 90.38% (141/156)
+2025-05-10 18:15:38,784 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 18:15:38,784 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 18:15:38,784 - INFO -   Class [unpaved] Accuracy: 90.18% (147/163)
+2025-05-10 18:15:38,787 - INFO - 
+Confusion Matrix:
+[[556  32   3   3   3]
+ [ 11 141   0   0   4]
+ [  0   3 314   7   2]
+ [  0   0  10 208   0]
+ [ 11   5   0   0 147]]
+2025-05-10 18:15:38,794 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.93      0.95       597
+     concrete       0.78      0.90      0.84       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.94      0.90      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.92      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:17:40,730 - INFO - [Epoch 64] Train Loss: 0.8174, Accuracy: 99.95%
+2025-05-10 18:18:03,782 - INFO - Validation Loss: 52.9404, Accuracy: 94.52%
+2025-05-10 18:18:03,782 - INFO -   Class [asphalt] Accuracy: 94.30% (563/597)
+2025-05-10 18:18:03,782 - INFO -   Class [concrete] Accuracy: 89.10% (139/156)
+2025-05-10 18:18:03,782 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 18:18:03,782 - INFO -   Class [sett] Accuracy: 96.79% (211/218)
+2025-05-10 18:18:03,782 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 18:18:03,784 - INFO - 
+Confusion Matrix:
+[[563  20   5   2   7]
+ [ 13 139   0   0   4]
+ [  0   3 313   9   1]
+ [  0   0   7 211   0]
+ [  6   3   0   0 154]]
+2025-05-10 18:18:03,791 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.94      0.96       597
+     concrete       0.84      0.89      0.87       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.97      0.96       218
+      unpaved       0.93      0.94      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.93      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:20:05,273 - INFO - [Epoch 65] Train Loss: 0.2100, Accuracy: 99.97%
+2025-05-10 18:20:31,134 - INFO - Validation Loss: 59.3598, Accuracy: 94.86%
+2025-05-10 18:20:31,134 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 18:20:31,134 - INFO -   Class [concrete] Accuracy: 88.46% (138/156)
+2025-05-10 18:20:31,134 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 18:20:31,134 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 18:20:31,134 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 18:20:31,137 - INFO - 
+Confusion Matrix:
+[[571  15   3   3   5]
+ [ 14 138   0   0   4]
+ [  1   1 315   8   1]
+ [  0   0   8 210   0]
+ [ 10   2   0   0 151]]
+2025-05-10 18:20:31,144 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.88      0.88      0.88       156
+paving_stones       0.97      0.97      0.97       326
+         sett       0.95      0.96      0.96       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:20:31,930 - INFO - New best model saved with accuracy: 94.86%
+2025-05-10 18:22:27,493 - INFO - [Epoch 66] Train Loss: 0.9297, Accuracy: 99.95%
+2025-05-10 18:22:52,888 - INFO - Validation Loss: 55.9722, Accuracy: 92.33%
+2025-05-10 18:22:52,888 - INFO -   Class [asphalt] Accuracy: 88.78% (530/597)
+2025-05-10 18:22:52,888 - INFO -   Class [concrete] Accuracy: 91.03% (142/156)
+2025-05-10 18:22:52,888 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 18:22:52,888 - INFO -   Class [sett] Accuracy: 97.71% (213/218)
+2025-05-10 18:22:52,888 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 18:22:52,891 - INFO - 
+Confusion Matrix:
+[[530  49   7   5   6]
+ [  9 142   0   0   5]
+ [  0   3 308  14   1]
+ [  0   0   5 213   0]
+ [  3   5   0   0 155]]
+2025-05-10 18:22:52,898 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.98      0.89      0.93       597
+     concrete       0.71      0.91      0.80       156
+paving_stones       0.96      0.94      0.95       326
+         sett       0.92      0.98      0.95       218
+      unpaved       0.93      0.95      0.94       163
+
+     accuracy                           0.92      1460
+    macro avg       0.90      0.93      0.91      1460
+ weighted avg       0.93      0.92      0.93      1460
+
+2025-05-10 18:24:53,540 - INFO - [Epoch 67] Train Loss: 1.0674, Accuracy: 99.88%
+2025-05-10 18:25:16,618 - INFO - Validation Loss: 74.0571, Accuracy: 94.52%
+2025-05-10 18:25:16,618 - INFO -   Class [asphalt] Accuracy: 96.98% (579/597)
+2025-05-10 18:25:16,618 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 18:25:16,618 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 18:25:16,618 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 18:25:16,619 - INFO -   Class [unpaved] Accuracy: 89.57% (146/163)
+2025-05-10 18:25:16,621 - INFO - 
+Confusion Matrix:
+[[579  13   3   0   2]
+ [ 18 133   0   0   5]
+ [  2   2 316   5   1]
+ [  0   0  12 206   0]
+ [ 13   4   0   0 146]]
+2025-05-10 18:25:16,628 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.97      0.96       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.98      0.94      0.96       218
+      unpaved       0.95      0.90      0.92       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.94      1460
+
+2025-05-10 18:27:16,967 - INFO - [Epoch 68] Train Loss: 0.5639, Accuracy: 99.97%
+2025-05-10 18:27:42,977 - INFO - Validation Loss: 62.0159, Accuracy: 94.18%
+2025-05-10 18:27:42,977 - INFO -   Class [asphalt] Accuracy: 94.64% (565/597)
+2025-05-10 18:27:42,977 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 18:27:42,977 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 18:27:42,977 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 18:27:42,977 - INFO -   Class [unpaved] Accuracy: 96.32% (157/163)
+2025-05-10 18:27:42,980 - INFO - 
+Confusion Matrix:
+[[565  20   3   1   8]
+ [ 18 132   0   0   6]
+ [  1   1 315   8   1]
+ [  0   0  12 206   0]
+ [  4   2   0   0 157]]
+2025-05-10 18:27:42,987 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.95       597
+     concrete       0.85      0.85      0.85       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.91      0.96      0.94       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:29:44,134 - INFO - [Epoch 69] Train Loss: 1.9531, Accuracy: 99.88%
+2025-05-10 18:30:07,072 - INFO - Validation Loss: 64.0271, Accuracy: 94.38%
+2025-05-10 18:30:07,072 - INFO -   Class [asphalt] Accuracy: 94.81% (566/597)
+2025-05-10 18:30:07,072 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 18:30:07,072 - INFO -   Class [paving_stones] Accuracy: 95.40% (311/326)
+2025-05-10 18:30:07,072 - INFO -   Class [sett] Accuracy: 96.79% (211/218)
+2025-05-10 18:30:07,072 - INFO -   Class [unpaved] Accuracy: 96.32% (157/163)
+2025-05-10 18:30:07,074 - INFO - 
+Confusion Matrix:
+[[566  15   4   3   9]
+ [ 15 133   0   0   8]
+ [  1   2 311  11   1]
+ [  0   0   7 211   0]
+ [  5   1   0   0 157]]
+2025-05-10 18:30:07,082 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.88      0.85      0.87       156
+paving_stones       0.97      0.95      0.96       326
+         sett       0.94      0.97      0.95       218
+      unpaved       0.90      0.96      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.94      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:32:08,064 - INFO - [Epoch 70] Train Loss: 0.4723, Accuracy: 99.97%
+2025-05-10 18:32:30,956 - INFO - Validation Loss: 60.3809, Accuracy: 94.25%
+2025-05-10 18:32:30,956 - INFO -   Class [asphalt] Accuracy: 94.81% (566/597)
+2025-05-10 18:32:30,956 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 18:32:30,956 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 18:32:30,956 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 18:32:30,956 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 18:32:30,958 - INFO - 
+Confusion Matrix:
+[[566  17   6   1   7]
+ [ 15 133   0   0   8]
+ [  1   1 316   7   1]
+ [  0   0  12 206   0]
+ [  6   2   0   0 155]]
+2025-05-10 18:32:30,965 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.87      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.91      0.95      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:34:30,431 - INFO - [Epoch 71] Train Loss: 0.4900, Accuracy: 99.93%
+2025-05-10 18:34:56,414 - INFO - Validation Loss: 63.2511, Accuracy: 94.66%
+2025-05-10 18:34:56,414 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 18:34:56,414 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 18:34:56,414 - INFO -   Class [paving_stones] Accuracy: 98.16% (320/326)
+2025-05-10 18:34:56,415 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 18:34:56,415 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 18:34:56,417 - INFO - 
+Confusion Matrix:
+[[570  14   6   1   6]
+ [ 18 132   0   0   6]
+ [  1   1 320   3   1]
+ [  0   0  12 206   0]
+ [  8   1   0   0 154]]
+2025-05-10 18:34:56,424 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.95      0.98      0.96       326
+         sett       0.98      0.94      0.96       218
+      unpaved       0.92      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:36:56,048 - INFO - [Epoch 72] Train Loss: 0.1144, Accuracy: 100.00%
+2025-05-10 18:37:19,168 - INFO - Validation Loss: 63.4433, Accuracy: 94.79%
+2025-05-10 18:37:19,168 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 18:37:19,168 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 18:37:19,168 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 18:37:19,168 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 18:37:19,168 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 18:37:19,170 - INFO - 
+Confusion Matrix:
+[[570  15   4   2   6]
+ [ 16 133   0   0   7]
+ [  1   1 317   6   1]
+ [  0   0   9 209   0]
+ [  7   1   0   0 155]]
+2025-05-10 18:37:19,177 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.96      0.97      0.97       326
+         sett       0.96      0.96      0.96       218
+      unpaved       0.92      0.95      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:39:16,826 - INFO - [Epoch 73] Train Loss: 0.8890, Accuracy: 99.91%
+2025-05-10 18:39:39,951 - INFO - Validation Loss: 71.4830, Accuracy: 94.32%
+2025-05-10 18:39:39,951 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 18:39:39,951 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 18:39:39,951 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 18:39:39,951 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 18:39:39,951 - INFO -   Class [unpaved] Accuracy: 90.80% (148/163)
+2025-05-10 18:39:39,954 - INFO - 
+Confusion Matrix:
+[[572  18   3   2   2]
+ [ 16 135   0   0   5]
+ [  2   1 313   9   1]
+ [  0   0   9 209   0]
+ [ 14   1   0   0 148]]
+2025-05-10 18:39:39,961 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.95       597
+     concrete       0.87      0.87      0.87       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.96      0.95       218
+      unpaved       0.95      0.91      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:41:41,596 - INFO - [Epoch 74] Train Loss: 0.3826, Accuracy: 99.93%
+2025-05-10 18:42:07,691 - INFO - Validation Loss: 71.9205, Accuracy: 94.18%
+2025-05-10 18:42:07,692 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 18:42:07,692 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 18:42:07,692 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 18:42:07,692 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 18:42:07,692 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 18:42:07,694 - INFO - 
+Confusion Matrix:
+[[570  18   3   2   4]
+ [ 17 133   0   0   6]
+ [  2   4 316   3   1]
+ [  0   0  12 206   0]
+ [ 12   1   0   0 150]]
+2025-05-10 18:42:07,701 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.85      0.85      0.85       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.98      0.94      0.96       218
+      unpaved       0.93      0.92      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:44:08,755 - INFO - [Epoch 75] Train Loss: 2.0319, Accuracy: 99.90%
+2025-05-10 18:44:31,725 - INFO - Validation Loss: 64.0284, Accuracy: 94.66%
+2025-05-10 18:44:31,725 - INFO -   Class [asphalt] Accuracy: 94.81% (566/597)
+2025-05-10 18:44:31,725 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 18:44:31,726 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 18:44:31,726 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 18:44:31,726 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 18:44:31,728 - INFO - 
+Confusion Matrix:
+[[566  17   4   4   6]
+ [ 13 135   1   0   7]
+ [  1   1 317   6   1]
+ [  0   0   8 210   0]
+ [  8   1   0   0 154]]
+2025-05-10 18:44:31,735 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.88      0.87      0.87       156
+paving_stones       0.96      0.97      0.97       326
+         sett       0.95      0.96      0.96       218
+      unpaved       0.92      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.93      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:46:33,078 - INFO - [Epoch 76] Train Loss: 1.7885, Accuracy: 99.90%
+2025-05-10 18:46:57,265 - INFO - Validation Loss: 65.0542, Accuracy: 94.38%
+2025-05-10 18:46:57,266 - INFO -   Class [asphalt] Accuracy: 94.97% (567/597)
+2025-05-10 18:46:57,266 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 18:46:57,266 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 18:46:57,266 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 18:46:57,266 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 18:46:57,268 - INFO - 
+Confusion Matrix:
+[[567  18   4   4   4]
+ [ 11 135   3   0   7]
+ [  1   0 317   7   1]
+ [  0   0   9 209   0]
+ [ 11   2   0   0 150]]
+2025-05-10 18:46:57,275 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.87      0.87      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.95      0.96      0.95       218
+      unpaved       0.93      0.92      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:48:58,691 - INFO - [Epoch 77] Train Loss: 0.2483, Accuracy: 99.97%
+2025-05-10 18:49:21,655 - INFO - Validation Loss: 67.9614, Accuracy: 94.59%
+2025-05-10 18:49:21,655 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 18:49:21,655 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 18:49:21,655 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 18:49:21,655 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 18:49:21,655 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 18:49:21,657 - INFO - 
+Confusion Matrix:
+[[574  13   3   2   5]
+ [ 16 131   1   0   8]
+ [  1   1 317   6   1]
+ [  0   0  11 207   0]
+ [ 10   1   0   0 152]]
+2025-05-10 18:49:21,665 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.90      0.84      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.92      0.93      0.92       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:51:22,045 - INFO - [Epoch 78] Train Loss: 1.6732, Accuracy: 99.91%
+2025-05-10 18:51:44,980 - INFO - Validation Loss: 59.9476, Accuracy: 94.66%
+2025-05-10 18:51:44,980 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 18:51:44,980 - INFO -   Class [concrete] Accuracy: 83.33% (130/156)
+2025-05-10 18:51:44,980 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 18:51:44,980 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 18:51:44,980 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 18:51:44,983 - INFO - 
+Confusion Matrix:
+[[572  10   3   4   8]
+ [ 17 130   1   0   8]
+ [  1   1 316   7   1]
+ [  0   0  10 208   0]
+ [  6   1   0   0 156]]
+2025-05-10 18:51:44,990 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.92      0.83      0.87       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.90      0.96      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:53:46,384 - INFO - [Epoch 79] Train Loss: 0.6236, Accuracy: 99.91%
+2025-05-10 18:54:12,336 - INFO - Validation Loss: 62.7798, Accuracy: 94.18%
+2025-05-10 18:54:12,336 - INFO -   Class [asphalt] Accuracy: 94.97% (567/597)
+2025-05-10 18:54:12,336 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 18:54:12,336 - INFO -   Class [paving_stones] Accuracy: 94.79% (309/326)
+2025-05-10 18:54:12,336 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 18:54:12,336 - INFO -   Class [unpaved] Accuracy: 96.32% (157/163)
+2025-05-10 18:54:12,339 - INFO - 
+Confusion Matrix:
+[[567  14   3   3  10]
+ [ 15 132   1   0   8]
+ [  1   2 309  13   1]
+ [  0   0   8 210   0]
+ [  5   1   0   0 157]]
+2025-05-10 18:54:12,346 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.96      0.95      0.96       326
+         sett       0.93      0.96      0.95       218
+      unpaved       0.89      0.96      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 18:56:12,982 - INFO - [Epoch 80] Train Loss: 0.8927, Accuracy: 99.91%
+2025-05-10 18:56:35,887 - INFO - Validation Loss: 62.3732, Accuracy: 94.86%
+2025-05-10 18:56:35,887 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 18:56:35,887 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 18:56:35,887 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 18:56:35,887 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 18:56:35,887 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 18:56:35,889 - INFO - 
+Confusion Matrix:
+[[574  13   3   2   5]
+ [ 15 132   1   0   8]
+ [  1   1 315   8   1]
+ [  0   0   8 210   0]
+ [  8   1   0   0 154]]
+2025-05-10 18:56:35,896 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.90      0.85      0.87       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.95      0.96      0.96       218
+      unpaved       0.92      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 18:58:36,798 - INFO - [Epoch 81] Train Loss: 1.0662, Accuracy: 99.95%
+2025-05-10 18:58:59,790 - INFO - Validation Loss: 63.8130, Accuracy: 94.32%
+2025-05-10 18:58:59,790 - INFO -   Class [asphalt] Accuracy: 93.97% (561/597)
+2025-05-10 18:58:59,790 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 18:58:59,790 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 18:58:59,790 - INFO -   Class [sett] Accuracy: 96.33% (210/218)
+2025-05-10 18:58:59,790 - INFO -   Class [unpaved] Accuracy: 97.55% (159/163)
+2025-05-10 18:58:59,793 - INFO - 
+Confusion Matrix:
+[[561  19   3   3  11]
+ [ 14 133   1   0   8]
+ [  1   1 314   9   1]
+ [  0   0   8 210   0]
+ [  3   1   0   0 159]]
+2025-05-10 18:58:59,800 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.94      0.95       597
+     concrete       0.86      0.85      0.86       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.96      0.95       218
+      unpaved       0.89      0.98      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.94      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:01:00,308 - INFO - [Epoch 82] Train Loss: 0.0993, Accuracy: 99.97%
+2025-05-10 19:01:26,384 - INFO - Validation Loss: 59.5028, Accuracy: 94.45%
+2025-05-10 19:01:26,384 - INFO -   Class [asphalt] Accuracy: 95.31% (569/597)
+2025-05-10 19:01:26,384 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 19:01:26,384 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:01:26,384 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 19:01:26,384 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 19:01:26,386 - INFO - 
+Confusion Matrix:
+[[569  19   3   2   4]
+ [ 15 136   1   0   4]
+ [  1   1 314   9   1]
+ [  0   0   9 209   0]
+ [  7   4   1   0 151]]
+2025-05-10 19:01:26,393 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.85      0.87      0.86       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.96      0.95       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:03:27,346 - INFO - [Epoch 83] Train Loss: 0.6764, Accuracy: 99.95%
+2025-05-10 19:03:50,463 - INFO - Validation Loss: 64.9835, Accuracy: 94.73%
+2025-05-10 19:03:50,463 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 19:03:50,463 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 19:03:50,463 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:03:50,463 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 19:03:50,463 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 19:03:50,465 - INFO - 
+Confusion Matrix:
+[[575  11   3   2   6]
+ [ 16 131   1   0   8]
+ [  1   2 314   8   1]
+ [  0   0  10 208   0]
+ [  6   2   0   0 155]]
+2025-05-10 19:03:50,473 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.90      0.84      0.87       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.91      0.95      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 19:05:51,995 - INFO - [Epoch 84] Train Loss: 1.1051, Accuracy: 99.97%
+2025-05-10 19:06:17,996 - INFO - Validation Loss: 59.1234, Accuracy: 94.45%
+2025-05-10 19:06:17,996 - INFO -   Class [asphalt] Accuracy: 94.97% (567/597)
+2025-05-10 19:06:17,996 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 19:06:17,996 - INFO -   Class [paving_stones] Accuracy: 95.71% (312/326)
+2025-05-10 19:06:17,996 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 19:06:17,996 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 19:06:17,998 - INFO - 
+Confusion Matrix:
+[[567  15   3   4   8]
+ [ 13 135   1   0   7]
+ [  1   3 312   9   1]
+ [  0   0   9 209   0]
+ [  5   2   0   0 156]]
+2025-05-10 19:06:18,006 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.95      0.96       597
+     concrete       0.87      0.87      0.87       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.94      0.96      0.95       218
+      unpaved       0.91      0.96      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.94      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:08:19,176 - INFO - [Epoch 85] Train Loss: 1.4713, Accuracy: 99.91%
+2025-05-10 19:08:42,229 - INFO - Validation Loss: 62.7497, Accuracy: 94.38%
+2025-05-10 19:08:42,229 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 19:08:42,229 - INFO -   Class [concrete] Accuracy: 82.69% (129/156)
+2025-05-10 19:08:42,229 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 19:08:42,229 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 19:08:42,229 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 19:08:42,231 - INFO - 
+Confusion Matrix:
+[[574  13   3   5   2]
+ [ 20 129   1   0   6]
+ [  1   1 313  10   1]
+ [  0   0   9 209   0]
+ [  7   2   1   0 153]]
+2025-05-10 19:08:42,238 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.89      0.83      0.86       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.93      0.96      0.95       218
+      unpaved       0.94      0.94      0.94       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:10:43,304 - INFO - [Epoch 86] Train Loss: 0.5246, Accuracy: 99.93%
+2025-05-10 19:11:06,446 - INFO - Validation Loss: 67.9932, Accuracy: 93.84%
+2025-05-10 19:11:06,446 - INFO -   Class [asphalt] Accuracy: 95.14% (568/597)
+2025-05-10 19:11:06,446 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 19:11:06,446 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:11:06,446 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 19:11:06,446 - INFO -   Class [unpaved] Accuracy: 89.57% (146/163)
+2025-05-10 19:11:06,449 - INFO - 
+Confusion Matrix:
+[[568  19   3   3   4]
+ [ 13 137   1   0   5]
+ [  1   2 314   8   1]
+ [  0   0  13 205   0]
+ [ 13   3   1   0 146]]
+2025-05-10 19:11:06,456 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.85      0.88      0.86       156
+paving_stones       0.95      0.96      0.95       326
+         sett       0.95      0.94      0.94       218
+      unpaved       0.94      0.90      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:13:07,514 - INFO - [Epoch 87] Train Loss: 0.3541, Accuracy: 99.95%
+2025-05-10 19:13:33,488 - INFO - Validation Loss: 62.2099, Accuracy: 94.73%
+2025-05-10 19:13:33,488 - INFO -   Class [asphalt] Accuracy: 96.65% (577/597)
+2025-05-10 19:13:33,488 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 19:13:33,488 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 19:13:33,488 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 19:13:33,488 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 19:13:33,490 - INFO - 
+Confusion Matrix:
+[[577  12   1   3   4]
+ [ 16 133   1   0   6]
+ [  1   2 313   9   1]
+ [  0   0   9 209   0]
+ [ 10   2   0   0 151]]
+2025-05-10 19:13:33,497 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.97      0.96       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.97      0.96      0.96       326
+         sett       0.95      0.96      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 19:15:34,217 - INFO - [Epoch 88] Train Loss: 1.0880, Accuracy: 99.93%
+2025-05-10 19:15:57,366 - INFO - Validation Loss: 62.0771, Accuracy: 94.93%
+2025-05-10 19:15:57,366 - INFO -   Class [asphalt] Accuracy: 96.48% (576/597)
+2025-05-10 19:15:57,366 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 19:15:57,366 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:15:57,366 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 19:15:57,366 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 19:15:57,368 - INFO - 
+Confusion Matrix:
+[[576  11   1   4   5]
+ [ 16 132   1   0   7]
+ [  1   1 314   8   2]
+ [  0   0  10 208   0]
+ [  6   1   0   0 156]]
+2025-05-10 19:15:57,375 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.91      0.85      0.88       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.92      0.96      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 19:15:58,192 - INFO - New best model saved with accuracy: 94.93%
+2025-05-10 19:17:56,814 - INFO - [Epoch 89] Train Loss: 0.2157, Accuracy: 99.97%
+2025-05-10 19:18:22,725 - INFO - Validation Loss: 60.5889, Accuracy: 94.11%
+2025-05-10 19:18:22,725 - INFO -   Class [asphalt] Accuracy: 93.63% (559/597)
+2025-05-10 19:18:22,725 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 19:18:22,725 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:18:22,725 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 19:18:22,725 - INFO -   Class [unpaved] Accuracy: 98.77% (161/163)
+2025-05-10 19:18:22,727 - INFO - 
+Confusion Matrix:
+[[559  20   4   4  10]
+ [ 14 132   1   0   9]
+ [  1   1 314   8   2]
+ [  0   0  10 208   0]
+ [  1   1   0   0 161]]
+2025-05-10 19:18:22,734 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.94      0.95       597
+     concrete       0.86      0.85      0.85       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.88      0.99      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.94      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:20:20,949 - INFO - [Epoch 90] Train Loss: 0.4360, Accuracy: 99.98%
+2025-05-10 19:20:44,173 - INFO - Validation Loss: 66.3734, Accuracy: 94.45%
+2025-05-10 19:20:44,173 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 19:20:44,173 - INFO -   Class [concrete] Accuracy: 83.33% (130/156)
+2025-05-10 19:20:44,173 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 19:20:44,173 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 19:20:44,173 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 19:20:44,175 - INFO - 
+Confusion Matrix:
+[[575  10   4   2   6]
+ [ 19 130   2   0   5]
+ [  1   0 316   8   1]
+ [  0   0  12 206   0]
+ [  8   3   0   0 152]]
+2025-05-10 19:20:44,183 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.91      0.83      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.95      0.94      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:22:45,003 - INFO - [Epoch 91] Train Loss: 0.3615, Accuracy: 99.98%
+2025-05-10 19:23:08,048 - INFO - Validation Loss: 62.0890, Accuracy: 93.70%
+2025-05-10 19:23:08,049 - INFO -   Class [asphalt] Accuracy: 93.63% (559/597)
+2025-05-10 19:23:08,049 - INFO -   Class [concrete] Accuracy: 87.82% (137/156)
+2025-05-10 19:23:08,049 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 19:23:08,049 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 19:23:08,049 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 19:23:08,051 - INFO - 
+Confusion Matrix:
+[[559  26   4   4   4]
+ [ 14 137   1   0   4]
+ [  1   1 315   8   1]
+ [  0   0  11 207   0]
+ [  8   4   1   0 150]]
+2025-05-10 19:23:08,058 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.94      0.95       597
+     concrete       0.82      0.88      0.85       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.94      0.92      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.92      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:25:08,950 - INFO - [Epoch 92] Train Loss: 0.0257, Accuracy: 100.00%
+2025-05-10 19:25:33,553 - INFO - Validation Loss: 63.1264, Accuracy: 94.45%
+2025-05-10 19:25:33,554 - INFO -   Class [asphalt] Accuracy: 95.31% (569/597)
+2025-05-10 19:25:33,554 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 19:25:33,554 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:25:33,554 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 19:25:33,554 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 19:25:33,556 - INFO - 
+Confusion Matrix:
+[[569  15   3   4   6]
+ [ 17 131   1   0   7]
+ [  1   1 314   9   1]
+ [  0   0   9 209   0]
+ [  5   2   0   0 156]]
+2025-05-10 19:25:33,563 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.88      0.84      0.86       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.94      0.96      0.95       218
+      unpaved       0.92      0.96      0.94       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:27:34,445 - INFO - [Epoch 93] Train Loss: 0.1405, Accuracy: 100.00%
+2025-05-10 19:27:57,521 - INFO - Validation Loss: 69.3822, Accuracy: 94.32%
+2025-05-10 19:27:57,521 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 19:27:57,522 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 19:27:57,522 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 19:27:57,522 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 19:27:57,522 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 19:27:57,524 - INFO - 
+Confusion Matrix:
+[[571  14   4   2   6]
+ [ 16 131   1   0   8]
+ [  1   1 317   6   1]
+ [  0   0  13 205   0]
+ [  9   1   0   0 153]]
+2025-05-10 19:27:57,530 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.89      0.84      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.91      0.94      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:29:58,790 - INFO - [Epoch 94] Train Loss: 0.5102, Accuracy: 99.98%
+2025-05-10 19:30:21,882 - INFO - Validation Loss: 69.1446, Accuracy: 94.45%
+2025-05-10 19:30:21,882 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 19:30:21,882 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 19:30:21,882 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 19:30:21,882 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 19:30:21,882 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 19:30:21,884 - INFO - 
+Confusion Matrix:
+[[574  13   3   4   3]
+ [ 17 131   1   0   7]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [  8   2   1   0 152]]
+2025-05-10 19:30:21,891 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.89      0.84      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:32:21,249 - INFO - [Epoch 95] Train Loss: 0.2864, Accuracy: 99.93%
+2025-05-10 19:32:44,548 - INFO - Validation Loss: 63.5002, Accuracy: 94.25%
+2025-05-10 19:32:44,548 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 19:32:44,549 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 19:32:44,549 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 19:32:44,549 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 19:32:44,549 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 19:32:44,551 - INFO - 
+Confusion Matrix:
+[[570  15   4   5   3]
+ [ 19 132   1   0   4]
+ [  1   1 316   7   1]
+ [  0   0  11 207   0]
+ [ 10   1   1   0 151]]
+2025-05-10 19:32:44,558 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.95      0.93      0.94       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:34:45,410 - INFO - [Epoch 96] Train Loss: 0.2051, Accuracy: 99.98%
+2025-05-10 19:35:08,659 - INFO - Validation Loss: 61.1868, Accuracy: 94.52%
+2025-05-10 19:35:08,659 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 19:35:08,659 - INFO -   Class [concrete] Accuracy: 83.33% (130/156)
+2025-05-10 19:35:08,659 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 19:35:08,659 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 19:35:08,659 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 19:35:08,662 - INFO - 
+Confusion Matrix:
+[[573  13   3   3   5]
+ [ 17 130   1   0   8]
+ [  1   1 313  10   1]
+ [  0   0   9 209   0]
+ [  7   1   0   0 155]]
+2025-05-10 19:35:08,669 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.90      0.83      0.86       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.94      0.96      0.95       218
+      unpaved       0.92      0.95      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.94      1460
+
+2025-05-10 19:37:07,339 - INFO - [Epoch 97] Train Loss: 0.1065, Accuracy: 100.00%
+2025-05-10 19:37:30,273 - INFO - Validation Loss: 60.5614, Accuracy: 94.25%
+2025-05-10 19:37:30,273 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 19:37:30,273 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 19:37:30,273 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 19:37:30,273 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 19:37:30,273 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 19:37:30,275 - INFO - 
+Confusion Matrix:
+[[571  14   4   4   4]
+ [ 17 131   1   0   7]
+ [  1   2 313   9   1]
+ [  0   0  11 207   0]
+ [  8   1   0   0 154]]
+2025-05-10 19:37:30,282 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.89      0.84      0.86       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.94      0.95      0.95       218
+      unpaved       0.93      0.94      0.94       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:39:29,737 - INFO - [Epoch 98] Train Loss: 0.0238, Accuracy: 100.00%
+2025-05-10 19:39:55,574 - INFO - Validation Loss: 63.8103, Accuracy: 94.66%
+2025-05-10 19:39:55,574 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 19:39:55,574 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 19:39:55,574 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 19:39:55,574 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 19:39:55,574 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 19:39:55,576 - INFO - 
+Confusion Matrix:
+[[575  10   4   2   6]
+ [ 16 132   1   0   7]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [  8   1   1   0 153]]
+2025-05-10 19:39:55,584 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.91      0.85      0.88       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.92      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 19:41:56,244 - INFO - [Epoch 99] Train Loss: 0.1821, Accuracy: 99.98%
+2025-05-10 19:42:19,268 - INFO - Validation Loss: 61.6959, Accuracy: 94.11%
+2025-05-10 19:42:19,269 - INFO -   Class [asphalt] Accuracy: 94.64% (565/597)
+2025-05-10 19:42:19,269 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 19:42:19,269 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 19:42:19,269 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 19:42:19,269 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 19:42:19,271 - INFO - 
+Confusion Matrix:
+[[565  20   4   3   5]
+ [ 16 134   1   0   5]
+ [  1   2 317   5   1]
+ [  0   0  13 205   0]
+ [  7   2   1   0 153]]
+2025-05-10 19:42:19,278 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.95       597
+     concrete       0.85      0.86      0.85       156
+paving_stones       0.94      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.94      0.94       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:44:17,704 - INFO - [Epoch 100] Train Loss: 0.1129, Accuracy: 100.00%
+2025-05-10 19:44:43,624 - INFO - Validation Loss: 62.2991, Accuracy: 94.66%
+2025-05-10 19:44:43,624 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 19:44:43,624 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 19:44:43,624 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:44:43,624 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 19:44:43,624 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 19:44:43,627 - INFO - 
+Confusion Matrix:
+[[574  12   4   1   6]
+ [ 17 132   1   0   6]
+ [  1   2 314   8   1]
+ [  0   0  11 207   0]
+ [  7   1   0   0 155]]
+2025-05-10 19:44:43,633 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.90      0.85      0.87       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.92      0.95      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 19:46:41,615 - INFO - [Epoch 101] Train Loss: 0.2067, Accuracy: 99.97%
+2025-05-10 19:47:05,160 - INFO - Validation Loss: 63.5077, Accuracy: 94.59%
+2025-05-10 19:47:05,161 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 19:47:05,161 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 19:47:05,161 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 19:47:05,161 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 19:47:05,161 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 19:47:05,163 - INFO - 
+Confusion Matrix:
+[[570  17   4   2   4]
+ [ 16 133   1   0   6]
+ [  1   1 317   6   1]
+ [  0   0  12 206   0]
+ [  7   1   0   0 155]]
+2025-05-10 19:47:05,170 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.95      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 19:49:06,688 - INFO - [Epoch 102] Train Loss: 0.0896, Accuracy: 99.98%
+2025-05-10 19:49:29,620 - INFO - Validation Loss: 66.1778, Accuracy: 94.04%
+2025-05-10 19:49:29,620 - INFO -   Class [asphalt] Accuracy: 94.97% (567/597)
+2025-05-10 19:49:29,620 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 19:49:29,620 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 19:49:29,620 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 19:49:29,620 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 19:49:29,623 - INFO - 
+Confusion Matrix:
+[[567  19   5   2   4]
+ [ 15 134   1   0   6]
+ [  1   1 316   7   1]
+ [  0   0  12 206   0]
+ [ 11   2   0   0 150]]
+2025-05-10 19:49:29,629 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.86      0.86      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.92      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:51:29,133 - INFO - [Epoch 103] Train Loss: 0.3148, Accuracy: 99.98%
+2025-05-10 19:51:55,044 - INFO - Validation Loss: 61.0787, Accuracy: 94.18%
+2025-05-10 19:51:55,044 - INFO -   Class [asphalt] Accuracy: 94.97% (567/597)
+2025-05-10 19:51:55,044 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 19:51:55,044 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 19:51:55,044 - INFO -   Class [sett] Accuracy: 95.87% (209/218)
+2025-05-10 19:51:55,044 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 19:51:55,047 - INFO - 
+Confusion Matrix:
+[[567  16   4   3   7]
+ [ 17 132   1   0   6]
+ [  1   1 313  10   1]
+ [  0   0   9 209   0]
+ [  7   2   0   0 154]]
+2025-05-10 19:51:55,053 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.95       597
+     concrete       0.87      0.85      0.86       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.94      0.96      0.95       218
+      unpaved       0.92      0.94      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:53:53,718 - INFO - [Epoch 104] Train Loss: 0.0646, Accuracy: 100.00%
+2025-05-10 19:54:16,725 - INFO - Validation Loss: 69.1575, Accuracy: 94.52%
+2025-05-10 19:54:16,726 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 19:54:16,726 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 19:54:16,726 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:54:16,726 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 19:54:16,726 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 19:54:16,728 - INFO - 
+Confusion Matrix:
+[[574  14   4   2   3]
+ [ 16 133   1   0   6]
+ [  1   1 314   9   1]
+ [  0   0  11 207   0]
+ [ 10   1   0   0 152]]
+2025-05-10 19:54:16,735 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.94      0.93      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.94      1460
+
+2025-05-10 19:56:16,642 - INFO - [Epoch 105] Train Loss: 0.0257, Accuracy: 100.00%
+2025-05-10 19:56:39,636 - INFO - Validation Loss: 61.4986, Accuracy: 94.11%
+2025-05-10 19:56:39,637 - INFO -   Class [asphalt] Accuracy: 95.14% (568/597)
+2025-05-10 19:56:39,637 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 19:56:39,637 - INFO -   Class [paving_stones] Accuracy: 96.32% (314/326)
+2025-05-10 19:56:39,637 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 19:56:39,637 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 19:56:39,639 - INFO - 
+Confusion Matrix:
+[[568  16   4   3   6]
+ [ 15 132   1   0   8]
+ [  1   1 314   9   1]
+ [  0   0  11 207   0]
+ [  9   1   0   0 153]]
+2025-05-10 19:56:39,646 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.95       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.91      0.94      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 19:58:38,104 - INFO - [Epoch 106] Train Loss: 1.4203, Accuracy: 99.97%
+2025-05-10 19:59:04,067 - INFO - Validation Loss: 57.3679, Accuracy: 94.25%
+2025-05-10 19:59:04,068 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 19:59:04,068 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 19:59:04,068 - INFO -   Class [paving_stones] Accuracy: 94.48% (308/326)
+2025-05-10 19:59:04,068 - INFO -   Class [sett] Accuracy: 96.79% (211/218)
+2025-05-10 19:59:04,068 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 19:59:04,070 - INFO - 
+Confusion Matrix:
+[[570  16   3   2   6]
+ [ 13 135   1   0   7]
+ [  1   2 308  14   1]
+ [  0   0   7 211   0]
+ [  8   3   0   0 152]]
+2025-05-10 19:59:04,077 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.87      0.87      0.87       156
+paving_stones       0.97      0.94      0.96       326
+         sett       0.93      0.97      0.95       218
+      unpaved       0.92      0.93      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:01:05,114 - INFO - [Epoch 107] Train Loss: 0.5165, Accuracy: 99.93%
+2025-05-10 20:01:28,065 - INFO - Validation Loss: 62.1251, Accuracy: 94.45%
+2025-05-10 20:01:28,065 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 20:01:28,065 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 20:01:28,065 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 20:01:28,065 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:01:28,065 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 20:01:28,067 - INFO - 
+Confusion Matrix:
+[[574  14   3   2   4]
+ [ 16 133   1   0   6]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [ 11   2   0   0 150]]
+2025-05-10 20:01:28,075 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.88      0.85      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.93      0.92      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:03:28,504 - INFO - [Epoch 108] Train Loss: 0.0523, Accuracy: 100.00%
+2025-05-10 20:03:51,512 - INFO - Validation Loss: 62.9396, Accuracy: 94.45%
+2025-05-10 20:03:51,512 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 20:03:51,512 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 20:03:51,513 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:03:51,513 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 20:03:51,513 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 20:03:51,515 - INFO - 
+Confusion Matrix:
+[[573  15   3   3   3]
+ [ 17 133   1   0   5]
+ [  1   2 316   6   1]
+ [  0   0  12 206   0]
+ [ 10   2   0   0 151]]
+2025-05-10 20:03:51,522 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:05:52,372 - INFO - [Epoch 109] Train Loss: 0.0399, Accuracy: 100.00%
+2025-05-10 20:06:18,552 - INFO - Validation Loss: 58.9762, Accuracy: 94.93%
+2025-05-10 20:06:18,553 - INFO -   Class [asphalt] Accuracy: 96.48% (576/597)
+2025-05-10 20:06:18,553 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 20:06:18,553 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:06:18,553 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 20:06:18,553 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 20:06:18,555 - INFO - 
+Confusion Matrix:
+[[576  12   2   4   3]
+ [ 16 134   1   0   5]
+ [  1   2 316   6   1]
+ [  0   0  10 208   0]
+ [  9   2   0   0 152]]
+2025-05-10 20:06:18,562 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.89      0.86      0.88       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.94      0.93      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:08:19,687 - INFO - [Epoch 110] Train Loss: 0.0100, Accuracy: 100.00%
+2025-05-10 20:08:42,848 - INFO - Validation Loss: 62.6140, Accuracy: 94.52%
+2025-05-10 20:08:42,848 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 20:08:42,848 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 20:08:42,848 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:08:42,848 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 20:08:42,848 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 20:08:42,850 - INFO - 
+Confusion Matrix:
+[[574  11   3   2   7]
+ [ 16 133   1   0   6]
+ [  1   2 316   6   1]
+ [  0   0  13 205   0]
+ [  9   2   0   0 152]]
+2025-05-10 20:08:42,857 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.90      0.85      0.88       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.92      0.93      0.92       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.94      1460
+
+2025-05-10 20:10:42,403 - INFO - [Epoch 111] Train Loss: 0.1863, Accuracy: 99.97%
+2025-05-10 20:11:08,613 - INFO - Validation Loss: 59.8655, Accuracy: 94.59%
+2025-05-10 20:11:08,613 - INFO -   Class [asphalt] Accuracy: 95.31% (569/597)
+2025-05-10 20:11:08,613 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 20:11:08,613 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:11:08,613 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:11:08,613 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 20:11:08,616 - INFO - 
+Confusion Matrix:
+[[569  16   3   3   6]
+ [ 13 135   1   0   7]
+ [  1   2 316   6   1]
+ [  0   0  11 207   0]
+ [  7   2   0   0 154]]
+2025-05-10 20:11:08,623 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.87      0.87      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.92      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.93      0.94      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:13:06,800 - INFO - [Epoch 112] Train Loss: 0.3392, Accuracy: 99.95%
+2025-05-10 20:13:31,152 - INFO - Validation Loss: 58.0419, Accuracy: 94.11%
+2025-05-10 20:13:31,152 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 20:13:31,152 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 20:13:31,152 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 20:13:31,152 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 20:13:31,152 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 20:13:31,155 - INFO - 
+Confusion Matrix:
+[[570  17   3   3   4]
+ [ 16 133   1   0   6]
+ [  1   2 313   9   1]
+ [  0   0  10 208   0]
+ [ 11   2   0   0 150]]
+2025-05-10 20:13:31,162 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.86      0.85      0.86       156
+paving_stones       0.96      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.93      0.92      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:15:32,043 - INFO - [Epoch 113] Train Loss: 0.0117, Accuracy: 100.00%
+2025-05-10 20:15:55,084 - INFO - Validation Loss: 57.7245, Accuracy: 94.25%
+2025-05-10 20:15:55,084 - INFO -   Class [asphalt] Accuracy: 95.31% (569/597)
+2025-05-10 20:15:55,084 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 20:15:55,084 - INFO -   Class [paving_stones] Accuracy: 96.01% (313/326)
+2025-05-10 20:15:55,084 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:15:55,084 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 20:15:55,086 - INFO - 
+Confusion Matrix:
+[[569  17   3   3   5]
+ [ 16 134   1   0   5]
+ [  1   3 313   8   1]
+ [  0   0  11 207   0]
+ [  8   2   0   0 153]]
+2025-05-10 20:15:55,093 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.86      0.86      0.86       156
+paving_stones       0.95      0.96      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.93      0.94      0.94       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:17:55,155 - INFO - [Epoch 114] Train Loss: 0.7217, Accuracy: 99.97%
+2025-05-10 20:18:18,778 - INFO - Validation Loss: 59.6371, Accuracy: 94.52%
+2025-05-10 20:18:18,779 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 20:18:18,779 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 20:18:18,779 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:18:18,779 - INFO -   Class [sett] Accuracy: 94.04% (205/218)
+2025-05-10 20:18:18,779 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 20:18:18,781 - INFO - 
+Confusion Matrix:
+[[572  14   3   3   5]
+ [ 16 134   1   0   5]
+ [  1   2 316   6   1]
+ [  0   0  13 205   0]
+ [  8   2   0   0 153]]
+2025-05-10 20:18:18,788 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.88      0.86      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.94      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:20:19,579 - INFO - [Epoch 115] Train Loss: 0.0455, Accuracy: 100.00%
+2025-05-10 20:20:42,658 - INFO - Validation Loss: 61.3016, Accuracy: 94.59%
+2025-05-10 20:20:42,658 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 20:20:42,658 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 20:20:42,658 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:20:42,658 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 20:20:42,658 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 20:20:42,661 - INFO - 
+Confusion Matrix:
+[[570  15   3   4   5]
+ [ 16 132   1   0   7]
+ [  1   1 316   7   1]
+ [  0   0  10 208   0]
+ [  6   2   0   0 155]]
+2025-05-10 20:20:42,668 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.96       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.92      0.95      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.93      0.94      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:22:40,806 - INFO - [Epoch 116] Train Loss: 0.1855, Accuracy: 99.98%
+2025-05-10 20:23:03,775 - INFO - Validation Loss: 68.3200, Accuracy: 94.52%
+2025-05-10 20:23:03,776 - INFO -   Class [asphalt] Accuracy: 96.65% (577/597)
+2025-05-10 20:23:03,776 - INFO -   Class [concrete] Accuracy: 82.69% (129/156)
+2025-05-10 20:23:03,776 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 20:23:03,776 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 20:23:03,776 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 20:23:03,778 - INFO - 
+Confusion Matrix:
+[[577  10   3   3   4]
+ [ 19 129   1   0   7]
+ [  1   2 317   5   1]
+ [  0   0  12 206   0]
+ [ 11   1   0   0 151]]
+2025-05-10 20:23:03,785 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.97      0.96       597
+     concrete       0.91      0.83      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.94      1460
+
+2025-05-10 20:25:04,761 - INFO - [Epoch 117] Train Loss: 0.5251, Accuracy: 99.97%
+2025-05-10 20:25:28,180 - INFO - Validation Loss: 63.4430, Accuracy: 94.25%
+2025-05-10 20:25:28,180 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 20:25:28,180 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 20:25:28,180 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 20:25:28,180 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 20:25:28,180 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 20:25:28,182 - INFO - 
+Confusion Matrix:
+[[570  16   4   2   5]
+ [ 18 131   1   0   6]
+ [  1   2 317   5   1]
+ [  0   0  12 206   0]
+ [  9   2   0   0 152]]
+2025-05-10 20:25:28,189 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.87      0.84      0.85       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.97      0.94      0.96       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:27:26,464 - INFO - [Epoch 118] Train Loss: 0.0851, Accuracy: 99.98%
+2025-05-10 20:27:49,791 - INFO - Validation Loss: 68.2197, Accuracy: 94.45%
+2025-05-10 20:27:49,791 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 20:27:49,791 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 20:27:49,791 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 20:27:49,791 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:27:49,791 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 20:27:49,794 - INFO - 
+Confusion Matrix:
+[[574  14   3   2   4]
+ [ 19 132   1   0   4]
+ [  1   1 317   6   1]
+ [  0   0  11 207   0]
+ [ 13   1   0   0 149]]
+2025-05-10 20:27:49,801 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.95       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.94      0.91      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:29:51,160 - INFO - [Epoch 119] Train Loss: 0.0532, Accuracy: 99.98%
+2025-05-10 20:30:14,331 - INFO - Validation Loss: 60.8525, Accuracy: 94.66%
+2025-05-10 20:30:14,331 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 20:30:14,331 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 20:30:14,331 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:30:14,331 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 20:30:14,331 - INFO -   Class [unpaved] Accuracy: 94.48% (154/163)
+2025-05-10 20:30:14,334 - INFO - 
+Confusion Matrix:
+[[573  13   3   3   5]
+ [ 17 131   1   0   7]
+ [  1   1 316   7   1]
+ [  0   0  10 208   0]
+ [  7   2   0   0 154]]
+2025-05-10 20:30:14,341 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.89      0.84      0.86       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.92      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:32:15,611 - INFO - [Epoch 120] Train Loss: 0.0093, Accuracy: 100.00%
+2025-05-10 20:32:41,823 - INFO - Validation Loss: 64.6390, Accuracy: 94.45%
+2025-05-10 20:32:41,824 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 20:32:41,824 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 20:32:41,824 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 20:32:41,824 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:32:41,824 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 20:32:41,826 - INFO - 
+Confusion Matrix:
+[[574  12   3   2   6]
+ [ 18 131   1   0   6]
+ [  1   1 317   6   1]
+ [  0   0  11 207   0]
+ [ 12   1   0   0 150]]
+2025-05-10 20:32:41,833 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.90      0.84      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.92      0.92      0.92       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:34:42,890 - INFO - [Epoch 121] Train Loss: 0.0078, Accuracy: 100.00%
+2025-05-10 20:35:05,958 - INFO - Validation Loss: 59.0437, Accuracy: 94.73%
+2025-05-10 20:35:05,958 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 20:35:05,958 - INFO -   Class [concrete] Accuracy: 83.33% (130/156)
+2025-05-10 20:35:05,958 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:35:05,958 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 20:35:05,958 - INFO -   Class [unpaved] Accuracy: 95.09% (155/163)
+2025-05-10 20:35:05,961 - INFO - 
+Confusion Matrix:
+[[574  11   3   3   6]
+ [ 17 130   1   0   8]
+ [  1   1 316   7   1]
+ [  0   0  10 208   0]
+ [  6   2   0   0 155]]
+2025-05-10 20:35:05,968 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.90      0.83      0.87       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.91      0.95      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:37:06,924 - INFO - [Epoch 122] Train Loss: 0.0041, Accuracy: 100.00%
+2025-05-10 20:37:32,918 - INFO - Validation Loss: 62.5302, Accuracy: 94.73%
+2025-05-10 20:37:32,918 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 20:37:32,918 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 20:37:32,918 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 20:37:32,918 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:37:32,918 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 20:37:32,920 - INFO - 
+Confusion Matrix:
+[[573  13   3   2   6]
+ [ 17 133   1   0   5]
+ [  1   1 317   6   1]
+ [  0   0  11 207   0]
+ [  8   2   0   0 153]]
+2025-05-10 20:37:32,928 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.93      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:39:33,808 - INFO - [Epoch 123] Train Loss: 0.1334, Accuracy: 99.97%
+2025-05-10 20:39:56,714 - INFO - Validation Loss: 67.3290, Accuracy: 94.52%
+2025-05-10 20:39:56,714 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 20:39:56,714 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 20:39:56,714 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 20:39:56,714 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:39:56,714 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 20:39:56,717 - INFO - 
+Confusion Matrix:
+[[575  13   3   2   4]
+ [ 18 131   1   0   6]
+ [  1   1 317   6   1]
+ [  0   0  11 207   0]
+ [ 11   2   0   0 150]]
+2025-05-10 20:39:56,724 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.89      0.84      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.93      0.92      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.94      1460
+
+2025-05-10 20:41:57,455 - INFO - [Epoch 124] Train Loss: 0.0103, Accuracy: 100.00%
+2025-05-10 20:42:20,550 - INFO - Validation Loss: 64.8277, Accuracy: 94.52%
+2025-05-10 20:42:20,551 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 20:42:20,551 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 20:42:20,551 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:42:20,551 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:42:20,551 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 20:42:20,553 - INFO - 
+Confusion Matrix:
+[[574  14   3   2   4]
+ [ 18 132   1   0   5]
+ [  1   2 316   6   1]
+ [  0   0  11 207   0]
+ [ 10   2   0   0 151]]
+2025-05-10 20:42:20,560 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.94      1460
+
+2025-05-10 20:44:21,823 - INFO - [Epoch 125] Train Loss: 0.1934, Accuracy: 99.98%
+2025-05-10 20:44:47,740 - INFO - Validation Loss: 69.6709, Accuracy: 94.52%
+2025-05-10 20:44:47,741 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 20:44:47,741 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 20:44:47,741 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:44:47,741 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:44:47,741 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 20:44:47,743 - INFO - 
+Confusion Matrix:
+[[574  16   3   2   2]
+ [ 17 134   1   0   4]
+ [  1   2 316   6   1]
+ [  0   0  11 207   0]
+ [ 12   2   0   0 149]]
+2025-05-10 20:44:47,750 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.86      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.96      0.91      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:46:48,777 - INFO - [Epoch 126] Train Loss: 0.0074, Accuracy: 100.00%
+2025-05-10 20:47:11,806 - INFO - Validation Loss: 71.0161, Accuracy: 94.38%
+2025-05-10 20:47:11,806 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 20:47:11,806 - INFO -   Class [concrete] Accuracy: 83.33% (130/156)
+2025-05-10 20:47:11,806 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 20:47:11,806 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:47:11,806 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 20:47:11,809 - INFO - 
+Confusion Matrix:
+[[573  15   3   2   4]
+ [ 18 130   1   0   7]
+ [  1   3 315   6   1]
+ [  0   0  11 207   0]
+ [  8   2   0   0 153]]
+2025-05-10 20:47:11,816 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.83      0.85       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.93      0.94      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:49:11,684 - INFO - [Epoch 127] Train Loss: 0.3110, Accuracy: 99.97%
+2025-05-10 20:49:36,253 - INFO - Validation Loss: 63.3972, Accuracy: 94.45%
+2025-05-10 20:49:36,253 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 20:49:36,253 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 20:49:36,253 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 20:49:36,253 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 20:49:36,253 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 20:49:36,255 - INFO - 
+Confusion Matrix:
+[[572  18   3   2   2]
+ [ 16 133   1   0   6]
+ [  1   2 315   7   1]
+ [  0   0  10 208   0]
+ [ 10   2   0   0 151]]
+2025-05-10 20:49:36,262 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.86      0.85      0.86       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:51:33,724 - INFO - [Epoch 128] Train Loss: 0.3816, Accuracy: 99.97%
+2025-05-10 20:51:57,103 - INFO - Validation Loss: 60.0814, Accuracy: 94.86%
+2025-05-10 20:51:57,103 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 20:51:57,103 - INFO -   Class [concrete] Accuracy: 86.54% (135/156)
+2025-05-10 20:51:57,103 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:51:57,103 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:51:57,103 - INFO -   Class [unpaved] Accuracy: 95.71% (156/163)
+2025-05-10 20:51:57,106 - INFO - 
+Confusion Matrix:
+[[571  16   3   2   5]
+ [ 13 135   1   0   7]
+ [  1   1 316   7   1]
+ [  0   0  11 207   0]
+ [  5   2   0   0 156]]
+2025-05-10 20:51:57,113 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.97      0.96      0.96       597
+     concrete       0.88      0.87      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.92      0.96      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.94      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 20:53:57,845 - INFO - [Epoch 129] Train Loss: 0.1759, Accuracy: 99.98%
+2025-05-10 20:54:20,852 - INFO - Validation Loss: 66.7527, Accuracy: 94.38%
+2025-05-10 20:54:20,852 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 20:54:20,852 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 20:54:20,852 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 20:54:20,852 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:54:20,852 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 20:54:20,855 - INFO - 
+Confusion Matrix:
+[[571  16   3   2   5]
+ [ 17 132   1   0   6]
+ [  1   1 317   6   1]
+ [  0   0  11 207   0]
+ [ 10   2   0   0 151]]
+2025-05-10 20:54:20,862 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.95       597
+     concrete       0.87      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:56:21,875 - INFO - [Epoch 130] Train Loss: 0.0080, Accuracy: 100.00%
+2025-05-10 20:56:47,888 - INFO - Validation Loss: 60.7169, Accuracy: 94.38%
+2025-05-10 20:56:47,889 - INFO -   Class [asphalt] Accuracy: 95.31% (569/597)
+2025-05-10 20:56:47,889 - INFO -   Class [concrete] Accuracy: 87.18% (136/156)
+2025-05-10 20:56:47,889 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 20:56:47,889 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 20:56:47,889 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 20:56:47,891 - INFO - 
+Confusion Matrix:
+[[569  20   3   2   3]
+ [ 16 136   1   0   3]
+ [  1   2 316   6   1]
+ [  0   0  12 206   0]
+ [  9   3   0   0 151]]
+2025-05-10 20:56:47,898 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.95      0.95       597
+     concrete       0.84      0.87      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.96      0.93      0.94       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 20:58:48,989 - INFO - [Epoch 131] Train Loss: 0.0274, Accuracy: 100.00%
+2025-05-10 20:59:12,162 - INFO - Validation Loss: 73.5882, Accuracy: 94.79%
+2025-05-10 20:59:12,163 - INFO -   Class [asphalt] Accuracy: 96.65% (577/597)
+2025-05-10 20:59:12,163 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 20:59:12,163 - INFO -   Class [paving_stones] Accuracy: 97.24% (317/326)
+2025-05-10 20:59:12,163 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 20:59:12,163 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 20:59:12,165 - INFO - 
+Confusion Matrix:
+[[577  13   3   2   2]
+ [ 18 132   1   0   5]
+ [  1   1 317   6   1]
+ [  0   0  11 207   0]
+ [ 11   1   0   0 151]]
+2025-05-10 20:59:12,172 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.97      0.96       597
+     concrete       0.90      0.85      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.95      0.93      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 21:01:12,866 - INFO - [Epoch 132] Train Loss: 0.0546, Accuracy: 99.98%
+2025-05-10 21:01:35,862 - INFO - Validation Loss: 64.2813, Accuracy: 94.52%
+2025-05-10 21:01:35,862 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 21:01:35,863 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 21:01:35,863 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 21:01:35,863 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:01:35,863 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 21:01:35,865 - INFO - 
+Confusion Matrix:
+[[572  15   3   2   5]
+ [ 17 132   1   0   6]
+ [  1   2 316   6   1]
+ [  0   0  11 207   0]
+ [  9   1   0   0 153]]
+2025-05-10 21:01:35,872 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.93      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.95      1460
+
+2025-05-10 21:03:36,916 - INFO - [Epoch 133] Train Loss: 0.0388, Accuracy: 100.00%
+2025-05-10 21:04:02,782 - INFO - Validation Loss: 66.8237, Accuracy: 94.45%
+2025-05-10 21:04:02,782 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 21:04:02,782 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 21:04:02,782 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:04:02,782 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 21:04:02,782 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 21:04:02,784 - INFO - 
+Confusion Matrix:
+[[575  15   3   2   2]
+ [ 18 132   1   0   5]
+ [  1   2 315   7   1]
+ [  0   0  10 208   0]
+ [ 12   2   0   0 149]]
+2025-05-10 21:04:02,791 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.85      0.86       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.95      0.91      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 21:05:58,780 - INFO - [Epoch 134] Train Loss: 0.1328, Accuracy: 99.98%
+2025-05-10 21:06:21,828 - INFO - Validation Loss: 63.9054, Accuracy: 94.32%
+2025-05-10 21:06:21,828 - INFO -   Class [asphalt] Accuracy: 95.48% (570/597)
+2025-05-10 21:06:21,828 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 21:06:21,828 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:06:21,828 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 21:06:21,828 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 21:06:21,831 - INFO - 
+Confusion Matrix:
+[[570  17   3   2   5]
+ [ 16 133   1   0   6]
+ [  1   2 315   7   1]
+ [  0   0  10 208   0]
+ [ 10   2   0   0 151]]
+2025-05-10 21:06:21,838 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.95      0.95       597
+     concrete       0.86      0.85      0.86       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 21:08:21,225 - INFO - [Epoch 135] Train Loss: 0.4452, Accuracy: 99.98%
+2025-05-10 21:08:44,543 - INFO - Validation Loss: 64.0768, Accuracy: 94.45%
+2025-05-10 21:08:44,543 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 21:08:44,543 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 21:08:44,543 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:08:44,543 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 21:08:44,543 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 21:08:44,545 - INFO - 
+Confusion Matrix:
+[[573  16   3   3   2]
+ [ 17 133   1   0   5]
+ [  1   2 315   7   1]
+ [  0   0  10 208   0]
+ [ 11   2   0   0 150]]
+2025-05-10 21:08:44,552 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.85      0.86       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.95      0.92      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 21:10:45,482 - INFO - [Epoch 136] Train Loss: 0.0268, Accuracy: 100.00%
+2025-05-10 21:11:11,326 - INFO - Validation Loss: 65.2712, Accuracy: 94.32%
+2025-05-10 21:11:11,326 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 21:11:11,326 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 21:11:11,327 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 21:11:11,327 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 21:11:11,327 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 21:11:11,329 - INFO - 
+Confusion Matrix:
+[[571  18   3   2   3]
+ [ 15 133   1   0   7]
+ [  1   2 316   6   1]
+ [  0   0  12 206   0]
+ [ 10   2   0   0 151]]
+2025-05-10 21:11:11,336 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.86      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 21:13:11,688 - INFO - [Epoch 137] Train Loss: 0.2583, Accuracy: 99.97%
+2025-05-10 21:13:34,429 - INFO - Validation Loss: 64.6277, Accuracy: 94.52%
+2025-05-10 21:13:34,429 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 21:13:34,429 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 21:13:34,429 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:13:34,429 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:13:34,429 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 21:13:34,431 - INFO - 
+Confusion Matrix:
+[[574  16   3   2   2]
+ [ 17 134   1   0   4]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [ 11   2   0   0 150]]
+2025-05-10 21:13:34,438 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.86      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.96      0.92      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 21:15:34,223 - INFO - [Epoch 138] Train Loss: 0.0398, Accuracy: 100.00%
+2025-05-10 21:15:58,470 - INFO - Validation Loss: 65.7714, Accuracy: 94.59%
+2025-05-10 21:15:58,470 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 21:15:58,470 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 21:15:58,470 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 21:15:58,470 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:15:58,470 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 21:15:58,473 - INFO - 
+Confusion Matrix:
+[[575  15   3   2   2]
+ [ 19 132   1   0   4]
+ [  1   2 316   6   1]
+ [  0   0  11 207   0]
+ [ 11   1   0   0 151]]
+2025-05-10 21:15:58,480 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.88      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.96      0.93      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 21:17:55,030 - INFO - [Epoch 139] Train Loss: 0.0317, Accuracy: 100.00%
+2025-05-10 21:18:20,646 - INFO - Validation Loss: 69.8967, Accuracy: 94.52%
+2025-05-10 21:18:20,647 - INFO -   Class [asphalt] Accuracy: 96.65% (577/597)
+2025-05-10 21:18:20,647 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 21:18:20,647 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:18:20,647 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:18:20,647 - INFO -   Class [unpaved] Accuracy: 91.41% (149/163)
+2025-05-10 21:18:20,649 - INFO - 
+Confusion Matrix:
+[[577  13   3   2   2]
+ [ 19 132   1   0   4]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [ 12   2   0   0 149]]
+2025-05-10 21:18:20,656 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.97      0.96       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.96      0.91      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.94      1460
+
+2025-05-10 21:20:19,907 - INFO - [Epoch 140] Train Loss: 0.0128, Accuracy: 100.00%
+2025-05-10 21:20:42,582 - INFO - Validation Loss: 66.8738, Accuracy: 94.59%
+2025-05-10 21:20:42,582 - INFO -   Class [asphalt] Accuracy: 96.31% (575/597)
+2025-05-10 21:20:42,582 - INFO -   Class [concrete] Accuracy: 85.26% (133/156)
+2025-05-10 21:20:42,582 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 21:20:42,582 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 21:20:42,582 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 21:20:42,584 - INFO - 
+Confusion Matrix:
+[[575  13   3   2   4]
+ [ 17 133   1   0   5]
+ [  1   2 316   6   1]
+ [  0   0  12 206   0]
+ [ 10   2   0   0 151]]
+2025-05-10 21:20:42,591 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.89      0.85      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 21:22:42,752 - INFO - [Epoch 141] Train Loss: 0.0305, Accuracy: 100.00%
+2025-05-10 21:23:06,015 - INFO - Validation Loss: 74.2624, Accuracy: 94.52%
+2025-05-10 21:23:06,015 - INFO -   Class [asphalt] Accuracy: 96.65% (577/597)
+2025-05-10 21:23:06,015 - INFO -   Class [concrete] Accuracy: 82.69% (129/156)
+2025-05-10 21:23:06,015 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 21:23:06,015 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:23:06,015 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 21:23:06,017 - INFO - 
+Confusion Matrix:
+[[577  12   3   2   3]
+ [ 20 129   1   0   6]
+ [  1   1 316   7   1]
+ [  0   0  11 207   0]
+ [ 11   1   0   0 151]]
+2025-05-10 21:23:06,024 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.97      0.96       597
+     concrete       0.90      0.83      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.94      1460
+
+2025-05-10 21:25:08,365 - INFO - [Epoch 142] Train Loss: 0.0398, Accuracy: 100.00%
+2025-05-10 21:25:33,957 - INFO - Validation Loss: 67.3173, Accuracy: 94.38%
+2025-05-10 21:25:33,957 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 21:25:33,957 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 21:25:33,957 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 21:25:33,957 - INFO -   Class [sett] Accuracy: 94.50% (206/218)
+2025-05-10 21:25:33,957 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 21:25:33,959 - INFO - 
+Confusion Matrix:
+[[572  16   3   2   4]
+ [ 17 132   1   0   6]
+ [  1   2 316   6   1]
+ [  0   0  12 206   0]
+ [  9   2   0   0 152]]
+2025-05-10 21:25:33,967 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.94      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 21:27:32,950 - INFO - [Epoch 143] Train Loss: 0.0227, Accuracy: 100.00%
+2025-05-10 21:27:56,064 - INFO - Validation Loss: 65.5017, Accuracy: 94.32%
+2025-05-10 21:27:56,064 - INFO -   Class [asphalt] Accuracy: 95.98% (573/597)
+2025-05-10 21:27:56,065 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 21:27:56,065 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:27:56,065 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:27:56,065 - INFO -   Class [unpaved] Accuracy: 92.02% (150/163)
+2025-05-10 21:27:56,067 - INFO - 
+Confusion Matrix:
+[[573  16   3   2   3]
+ [ 18 132   1   0   5]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [ 11   2   0   0 150]]
+2025-05-10 21:27:56,075 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.95       597
+     concrete       0.87      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.94      0.92      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 21:29:58,275 - INFO - [Epoch 144] Train Loss: 0.4650, Accuracy: 99.98%
+2025-05-10 21:30:24,422 - INFO - Validation Loss: 63.2823, Accuracy: 94.45%
+2025-05-10 21:30:24,423 - INFO -   Class [asphalt] Accuracy: 95.81% (572/597)
+2025-05-10 21:30:24,423 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 21:30:24,423 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:30:24,423 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:30:24,423 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 21:30:24,425 - INFO - 
+Confusion Matrix:
+[[572  16   3   2   4]
+ [ 16 134   1   0   5]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [ 10   2   0   0 151]]
+2025-05-10 21:30:24,432 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.86      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 21:32:23,351 - INFO - [Epoch 145] Train Loss: 0.0084, Accuracy: 100.00%
+2025-05-10 21:32:47,085 - INFO - Validation Loss: 67.5771, Accuracy: 94.59%
+2025-05-10 21:32:47,085 - INFO -   Class [asphalt] Accuracy: 96.48% (576/597)
+2025-05-10 21:32:47,085 - INFO -   Class [concrete] Accuracy: 83.97% (131/156)
+2025-05-10 21:32:47,085 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:32:47,085 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:32:47,085 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 21:32:47,088 - INFO - 
+Confusion Matrix:
+[[576  12   3   2   4]
+ [ 18 131   1   0   6]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [  9   2   0   0 152]]
+2025-05-10 21:32:47,095 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.89      0.84      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 21:34:49,130 - INFO - [Epoch 146] Train Loss: 0.0313, Accuracy: 99.98%
+2025-05-10 21:35:12,504 - INFO - Validation Loss: 68.6761, Accuracy: 94.52%
+2025-05-10 21:35:12,504 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 21:35:12,505 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 21:35:12,505 - INFO -   Class [paving_stones] Accuracy: 96.93% (316/326)
+2025-05-10 21:35:12,505 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:35:12,505 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 21:35:12,507 - INFO - 
+Confusion Matrix:
+[[574  15   3   2   3]
+ [ 19 132   1   0   4]
+ [  1   2 316   6   1]
+ [  0   0  11 207   0]
+ [ 10   2   0   0 151]]
+2025-05-10 21:35:12,519 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.87      0.85      0.86       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.96       218
+      unpaved       0.95      0.93      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.94      0.95      0.95      1460
+
+2025-05-10 21:37:11,492 - INFO - [Epoch 147] Train Loss: 0.0402, Accuracy: 100.00%
+2025-05-10 21:37:36,166 - INFO - Validation Loss: 66.7430, Accuracy: 94.32%
+2025-05-10 21:37:36,166 - INFO -   Class [asphalt] Accuracy: 95.64% (571/597)
+2025-05-10 21:37:36,166 - INFO -   Class [concrete] Accuracy: 84.62% (132/156)
+2025-05-10 21:37:36,166 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:37:36,166 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:37:36,166 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 21:37:36,168 - INFO - 
+Confusion Matrix:
+[[571  17   3   2   4]
+ [ 17 132   1   0   6]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [  9   2   0   0 152]]
+2025-05-10 21:37:36,175 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.96      0.96       597
+     concrete       0.86      0.85      0.85       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.93      0.93      0.93       163
+
+     accuracy                           0.94      1460
+    macro avg       0.93      0.93      0.93      1460
+ weighted avg       0.94      0.94      0.94      1460
+
+2025-05-10 21:39:35,652 - INFO - [Epoch 148] Train Loss: 0.0526, Accuracy: 99.98%
+2025-05-10 21:39:58,918 - INFO - Validation Loss: 67.2924, Accuracy: 94.66%
+2025-05-10 21:39:58,918 - INFO -   Class [asphalt] Accuracy: 96.48% (576/597)
+2025-05-10 21:39:58,918 - INFO -   Class [concrete] Accuracy: 83.33% (130/156)
+2025-05-10 21:39:58,918 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:39:58,918 - INFO -   Class [sett] Accuracy: 95.41% (208/218)
+2025-05-10 21:39:58,918 - INFO -   Class [unpaved] Accuracy: 93.87% (153/163)
+2025-05-10 21:39:58,920 - INFO - 
+Confusion Matrix:
+[[576  12   3   3   3]
+ [ 17 130   1   0   8]
+ [  1   2 315   7   1]
+ [  0   0  10 208   0]
+ [  8   2   0   0 153]]
+2025-05-10 21:39:58,928 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.89      0.83      0.86       156
+paving_stones       0.96      0.97      0.96       326
+         sett       0.95      0.95      0.95       218
+      unpaved       0.93      0.94      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 21:42:00,071 - INFO - [Epoch 149] Train Loss: 0.0071, Accuracy: 100.00%
+2025-05-10 21:42:26,310 - INFO - Validation Loss: 63.9220, Accuracy: 94.59%
+2025-05-10 21:42:26,310 - INFO -   Class [asphalt] Accuracy: 96.15% (574/597)
+2025-05-10 21:42:26,310 - INFO -   Class [concrete] Accuracy: 85.90% (134/156)
+2025-05-10 21:42:26,310 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:42:26,310 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:42:26,310 - INFO -   Class [unpaved] Accuracy: 92.64% (151/163)
+2025-05-10 21:42:26,313 - INFO - 
+Confusion Matrix:
+[[574  15   3   2   3]
+ [ 16 134   1   0   5]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [ 10   2   0   0 151]]
+2025-05-10 21:42:26,320 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.96      0.96      0.96       597
+     concrete       0.88      0.86      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.94      0.93      0.93       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.93      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 21:44:26,100 - INFO - [Epoch 150] Train Loss: 0.0032, Accuracy: 100.00%
+2025-05-10 21:44:49,274 - INFO - Validation Loss: 74.0656, Accuracy: 94.59%
+2025-05-10 21:44:49,275 - INFO -   Class [asphalt] Accuracy: 96.65% (577/597)
+2025-05-10 21:44:49,275 - INFO -   Class [concrete] Accuracy: 83.33% (130/156)
+2025-05-10 21:44:49,275 - INFO -   Class [paving_stones] Accuracy: 96.63% (315/326)
+2025-05-10 21:44:49,275 - INFO -   Class [sett] Accuracy: 94.95% (207/218)
+2025-05-10 21:44:49,275 - INFO -   Class [unpaved] Accuracy: 93.25% (152/163)
+2025-05-10 21:44:49,277 - INFO - 
+Confusion Matrix:
+[[577  11   3   2   4]
+ [ 20 130   1   0   5]
+ [  1   2 315   7   1]
+ [  0   0  11 207   0]
+ [ 11   0   0   0 152]]
+2025-05-10 21:44:49,284 - INFO - 
+Classification Report:
+               precision    recall  f1-score   support
+
+      asphalt       0.95      0.97      0.96       597
+     concrete       0.91      0.83      0.87       156
+paving_stones       0.95      0.97      0.96       326
+         sett       0.96      0.95      0.95       218
+      unpaved       0.94      0.93      0.94       163
+
+     accuracy                           0.95      1460
+    macro avg       0.94      0.93      0.94      1460
+ weighted avg       0.95      0.95      0.95      1460
+
+2025-05-10 21:45:19,898 - INFO - Test Loss: 101.0616, Accuracy: 94.58%
+2025-05-10 21:45:19,899 - INFO -   Class [asphalt] Accuracy: 96.39% (720/747)
+2025-05-10 21:45:19,899 - INFO -   Class [concrete] Accuracy: 79.38% (154/194)
+2025-05-10 21:45:19,899 - INFO -   Class [paving_stones] Accuracy: 97.79% (399/408)
+2025-05-10 21:45:19,899 - INFO -   Class [sett] Accuracy: 95.97% (262/273)
+2025-05-10 21:45:19,899 - INFO -   Class [unpaved] Accuracy: 94.09% (191/203)

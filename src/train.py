@@ -5,8 +5,7 @@ from trainer import RoadSurfaceTrainer
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_name', default='convnext_small', type=str,
-                   choices=['resnet50', 'efficientnet_b4', 'convnext_small', 
-                           'vit_b16', 'swin_b', 'convnext_large'],
+                   choices=['resnet50', 'efficientnet_b4', 'convnext_small'],
                    help='Model architecture to use')
     parser.add_argument('--models_dir', default='./models', type=str, help='path to model')
     parser.add_argument('--lr', default=0.001, type=float, help='learning rate')
@@ -20,6 +19,7 @@ def main():
     print(f"Using Cuda: {torch.cuda.is_available()}")
     trainer = RoadSurfaceTrainer(args)
     trainer.train()
+    trainer.test(confusion_matrix=True)
 
 
 if __name__ == "__main__":

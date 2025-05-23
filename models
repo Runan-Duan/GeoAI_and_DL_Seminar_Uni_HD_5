@@ -1,7 +1,0 @@
-Pre-trained models are accessible on Google Drive:
-https://drive.google.com/drive/folders/1_mC9GtHLWvZ2WQ0Zakghj8fR4reTABjI?usp=sharing
-
-Models are fine-tuning over 50 epochs on pretrained model from torchvision, including:
-* convnext_small 
-* efficientnet_b4
-* resnet50
